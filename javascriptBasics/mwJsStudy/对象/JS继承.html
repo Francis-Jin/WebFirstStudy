@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript">
+		function Person(name,sex){
+			this.name=name;
+			this.sex=sex;
+		}
+
+		Person.prototype.showName=function()
+		{
+			alert(this.name);
+		} 
+
+		Person.prototype.showSex=function()
+		{
+			alert(this.sex);
+		}
+
+		/*var oP1 = new Person('json','男');
+		oP1.showName();
+		oP1.showSex();*/
+
+		function Worker(name,sex,job)
+		{
+			// 构造函数伪装  调用父级的构造函数。为了继承属性
+			// this是New出来的Worker对象
+			Person.call(this,name,sex);
+			this.job = job;
+		}
+//通过原型的方法来继承父级的方法
+		Worker.prototype=Person.prototype;
+
+		Worker.prototype.showJob=function()
+		{
+			alert(this.job);
+		}
+
+		var wk1=new Worker('张三','男','打杂的');
+		wk1.showName();
+		wk1.showSex();
+		wk1.showJob();
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

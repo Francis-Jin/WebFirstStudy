@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>基本选择器2</title>
+    <script type="text/javascript" src="../js/jquery-3.2.1.js"></script>
+    <style>
+        .focused {
+            background: #2344ef;
+        }
+    </style>
+</head>
+<body>
+<h1>header1</h1>
+<p></p>
+<h2>header2</h2>
+<p></p>
+<h3>header3</h3>
+<p></p>
+<h4>header4</h4>
+<p></p>
+<h5>header5</h5>
+<ul>
+    <li class="myClass">myClass</li>
+    <li class="myClass">myClass</li>
+    <li class="myClass">myClass</li>
+    <li class="myClass">myClass</li>
+    <li></li>
+    <li class="not">not</li>
+    <li class="notClass">class</li>
+    <li class="notClass">class</li>
+    <li></li>
+    <li id="myId">myId</li>
+</ul>
+<button>run</button>
+<div class="animate" style="width:20px; height:20px; background: red; position: absolute;left:0;"></div>
+
+<div id="content">
+    <input tabIndex="1">
+    <input tabIndex="2">
+    <select tabIndex="3">
+        <option>select menu</option>
+    </select>
+    <div tabIndex="4">
+        a div
+    </div>
+</div>
+</body>
+</html>
+<script type="text/javascript" charset="utf-8">
+   $('li').css({
+        'margin-bottom':'10px',
+        'height':'30px'
+    });
+     /*$('li.myClass').css('background','yellow');
+    $('li.notClass').css('background','pink');
+    $('.not').css('background','#0ff');
+    $('#myId').css('background','#f0f');*/
+//    $('li:even').css('background','red')
+//    $('li:odd').css('background','#0f0')
+//    $('li:odd').css('background','#0f0')
+//    $(':header').css('background','#0f0');
+//    $('li:lt(4)').css('background','#0f0');
+//    $('li:gt(4)').css('background','#0f0');
+//    $('li:gt(4)').css('background','#0f0');
+    $('button').click(function () {
+        $('.animate').animate({
+            left:'1000px',
+            height:'200px'
+        },5000).animate({
+            left:'0',
+            height:'20px'
+        },5000)
+    });
+
+    $('#content').delegate('*','focus blur',function () {
+       var elem = $(this);
+       setTimeout(function () {
+            elem.toggleClass('focused',elem.is(':focus'));
+       },0)
+    })
+
+
+</script>

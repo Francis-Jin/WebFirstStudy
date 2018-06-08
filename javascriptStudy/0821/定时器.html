@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>定时器</title>
+	<style type="text/css">
+		div#box{
+			width: 200px;
+			height: 200px;
+			background: #f00;
+			position: absolute;
+			left: 0;
+			top: 50px;
+		}
+	</style>
+</head>
+<body>
+	<input type="button" name="" value="向右运动">
+	<input type="button" name="" value="停止运动">
+	<div id="box"></div>
+	<script type="text/javascript">
+		var btn1 = document.getElementsByTagName('input')[0];
+		var btn2 = document.getElementsByTagName('input')[1];
+		var oBox = document.getElementById('box');
+		btn1.onclick = function () {
+			oBox.style.left=10+'px';
+		}
+	</script>
+</body>
+</html>

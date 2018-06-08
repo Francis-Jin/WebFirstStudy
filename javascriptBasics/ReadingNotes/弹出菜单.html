@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		#box{
+			width:300px;
+			height: 500px;
+			background: #e0e0e0;
+			display: none;
+		}
+	</style>
+	<script type="text/javascript">
+		window.onload = function (){
+			var oInput = document.getElementsByTagName('input')[0];
+			var oDiv = document.getElementById('box');
+			oInput.addEventListener('click',function(e){
+				var oEvent = e || event;
+				oDiv.style['display'] = 'block';
+				oEvent.cancelBubble = true;
+			})
+			document.addEventListener('click',function(e){
+				oDiv.style['display'] = 'none';
+			})
+		}
+	</script>
+</head>
+<body>
+	<input type="button" value="显示" name="">
+	<div id="box"></div>
+</body>
+</html>

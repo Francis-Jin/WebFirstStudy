@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Testing</title>
+    <script src="../js/jquery-3.2.1.js"></script>
+    <style>
+        .wrap {
+            position: relative;
+            height: 200px;
+            width: 1000px;
+            border:5px solid #FCF;
+        }
+        .wrap div {
+            position: absolute;
+            left: 0;top: 0;
+            height: 50px;
+            width: 50px;
+            background: #FA0;
+        }
+        #box{
+
+        }
+    </style>
+</head>
+<body>
+<input type="button" id="btn1" value="停止当前动画">
+<input type="button" id="btn2" value="停止所有动画">
+<input type="button" id="btn3" value="停止所有动画，到达终点">
+<div class="wrap">
+    <div id="box">动</div>
+</div>
+<script>
+    function moveX(){
+        $('.wrap div').animate({'left':'950px'},5000).animate({'left':'0px'},5000);
+    } moveX();
+
+    $('#btn1').click(function(){
+        $('.wrap div').stop(); // 停止当前动画,沿路返回起点，若是返回过程中再点击，会暂停在路中
+//        clearInterval();
+    })
+
+    $('#btn2').click(function(){
+        $('.wrap div').stop(true); // 停止所有动画 去的路程中点击停止会直接到达终点，若是返回过程中再点击，会暂停在路中
+    })
+
+    $('#btn3').click(function(){
+        $('.wrap div').stop(true,true); // 停止所有动画 ，去的路程中点击停止会直接到达终点，若是返回过程中再点击，会停止到在起点
+    })
+
+    // .stop() // 停止当前动画
+    // .stop(true) // 停止所有动画
+    // .stop(true,true) // 停止所有动画，到达动画终点
+</script>
+</body>
+</html>

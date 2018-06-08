@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Vue-singleton-module-transition</title>
+	<script type="text/javascript" src="../1.vue_start_1/node_modules/vue/dist/vue.min.js"></script>
+</head>
+<body>
+<style type="text/css">
+	.fade-enter-active,.fade-leave-active{
+		transition:opacity .5s
+	}
+	.fade-enter,.fade-leave-to{
+		opacity:0;
+	}
+</style>
+	<div id="demo1">
+		<button @click.prenent.stop='show = !show'>toggle</button>
+		<transition name="fade">
+			<p v-if="show">Hello singleton module transition</p>
+		</transition>	
+	</div>
+
+	<script type="text/javascript">
+		/**
+			v-enter,v-active; v-leave
+		*/
+
+		new Vue({
+			el:"#demo1",
+			data:{
+				show:true
+			}
+		});
+
+
+	</script>
+</body>
+</html>

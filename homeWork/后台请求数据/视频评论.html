@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>视频评论</title>
+    <style>
+        .box{
+            width:1000px;
+            margin:0 auto;
+        }
+        table,input,textarea,video{
+            outline: none;
+            width:100%;
+        }
+        input {
+            tab-index: 2em;
+            height: 30px;
+            font-size: 18px;
+        }
+        textarea{
+            text-indent:2em;
+            font-size: 18px;
+        }
+        td,th{
+            font-size:20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <video src="video/PARTY.mp4" controls>
+            你的浏览器不支持video标签
+        </video>
+        <h3>name：</h3>
+        <input type="text">
+        <h3>message:</h3>
+        <textarea  rows="5"></textarea>
+        <button>发表评论</button>
+        <h3>消息列表</h3>
+        <table border="1" cellspacing="0" cellpadding="20">
+            <thead>
+            <tr>
+                <th>name</th>
+                <th>message</th>
+            </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>123</td>
+                    <td>xmggdslafjalj</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
+
+
+<script type="text/javascript">
+    var sendAjaxBtn = document.getElementsByTagName('button')[0];
+
+    sendAjaxBtn.addEventListener('click',function () {
+        var xmlHttp;
+        var usernameDom = document.getElementsByTagName('input')[0].value;
+        var contentDom = document.getElementsByTagName('textarea')[0].value;
+//        构造传输字符串（传输数据）；
+        var data = "";
+        data = data.concat('username=').concat(usernameDom).concat('&content=').concat(contentDom);
+
+        //
+        xmlHttp = new XMLHttpRequest();
+
+        xmlHttp.onreadystatechange = function () {
+            if(xmlHttp.readyState === 4 && xmlHttp.status === 200)
+            {
+                var res = xmlHttp.responseText;
+                painData(res);
+            }
+        }
+        function painData(res) {
+            var jsonData = JSON.parse(res.replace("(","").replace(")",""));
+//            console.log(typeof jsonData);
+            var tr = document.createElement('tr');
+            var nameTd = document.createElement('td');
+            var contentTd = document.createElement('td');
+            //从解析之后的JSON 数据里获取name message；
+            var uName = jsonData.username;
+            var content = jsonData.content;
+            nameTd.innerHTML = uName;
+            contentTd.innerHTML = content;
+            tr.appendChild(nameTd);
+            tr.appendChild(contentTd);
+
+            var tBody = document.getElementsByTagName('tbody')[0];
+            tBody.appendChild(tr);
+
+        };
+
+
+
+
+        xmlHttp.open('GET','http://172.93.40.162/demo01/mainHandle.php?'+data);
+        xmlHttp.send();
+
+
+
+    },false);
+
+</script>

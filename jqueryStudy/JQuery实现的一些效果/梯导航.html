@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../jqueryLibrary/jquery-3.2.1.js"></script>
+    <style type="text/css">
+        .dianTi{width: 30px; height: 150px; position: fixed; top: 50%; margin-top: -75px;
+            left: 50%; margin-left: -660px; color: #666; cursor: pointer; display: none;}
+        .dianTi li{height: 29px; border-bottom: 1px dotted #ccc; text-align: center;
+            line-height: 29px; position: relative;}
+        .wenZi{width: 29px; height: 29px; position: absolute; left: 0; top: 0; color: #C81623;
+            background: #fff; display: none;}
+        .dianTi li.current .wenZi{display: block;}
+        .dianTi li:hover .wenZi{display: block; background: #C81623; color: #fff;}
+    </style>
+</head>
+<body>
+    <ul class="dianTi">
+        <li>
+            1F
+            <div class="wenZi">服饰</div>
+        </li>
+        <li>
+            2F
+            <div class="wenZi">美妆</div>
+        </li>
+        <li>
+            3F
+            <div class="wenZi">手机</div>
+        </li>
+        <li>
+            4F
+            <div class="wenZi">家电</div>
+        </li>
+        <li>
+            5F
+            <div class="wenZi">数码</div>
+        </li>
+    </ul>
+</body>
+</html>
+<script>
+    var f1Top=$('.f1').offset().top-100;
+    var f2Top=$('.f2').offset().top-100;
+    var f3Top=$('.f3').offset().top-100;
+    var f4Top=$('.f4').offset().top-100;
+    var f5Top=$('.f5').offset().top-100;
+
+    var jianCe=function(){
+        var windowScrollTop=$(window).scrollTop();
+
+        if(windowScrollTop>=f5Top){
+            console.log('到达5楼');
+            //到达5楼
+            $('.dianTi').show();
+            $('.dianTi li').eq(4).addClass('current').siblings('li').removeClass('current');
+        }else if(windowScrollTop>=f4Top){
+            console.log('到达4楼');
+            //到达4楼
+            $('.dianTi').show();
+            $('.dianTi li').eq(3).addClass('current').siblings('li').removeClass('current');
+        }else if(windowScrollTop>=f3Top){
+            console.log('到达3楼');
+            //到达3楼
+            $('.dianTi').show();
+            $('.dianTi li').eq(2).addClass('current').siblings('li').removeClass('current');
+        }else if(windowScrollTop>=f2Top){
+            console.log('到达2楼');
+            //到达2楼
+            $('.dianTi').show();
+            $('.dianTi li').eq(1).addClass('current').siblings('li').removeClass('current');
+        }else if(windowScrollTop>=f1Top){
+            console.log('到达1楼');
+            //到达一楼
+            $('.dianTi').show();
+            $('.dianTi li').eq(0).addClass('current').siblings('li').removeClass('current');
+        }else{
+            //不再5楼中的任意一层时，让电梯导航隐藏
+            $('.dianTi').hide();
+        }
+
+
+        $('.dianTi li').click(function(event) {
+            //在动画运动的过程中，不希望current特殊类名跟着满世界跑
+            //所以把让current满世界跑的源头掐掉
+            //源头：$(window).scroll()
+            $(window).off('scroll');
+            //因为你移除了scroll事件，当前这个LI具备特殊类名还要再书写一次
+            $(this).addClass('current').siblings('li').removeClass('current');
+            //需要知道现在要往几层楼跳
+            //得到当前这个LI的序号，这个序号加1就是你需要去的楼层
+            var i=$(this).index()+1;
+            if(i==5){
+                //要往第5层跳
+                //检测楼层时，希望的差不多到了；跳转时，需要精确，所以再加上100
+                //f5Top是5层距离document （0，0）点的距离
+                //但是当动画执行完毕了，还要继续检测楼层
+                $('html,body').stop().animate({'scrollTop':f5Top+100}, 500,function(){
+                    $(window).scroll(jianCe);
+                });
+            }else if(i==4){
+                $('html,body').stop().animate({'scrollTop':f4Top+100}, 500,function(){
+                    $(window).scroll(jianCe);
+                });
+            }else if(i==3){
+                $('html,body').stop().animate({'scrollTop':f3Top+100}, 500,function(){
+                    $(window).scroll(jianCe);
+                });
+            }else if(i==2){
+                $('html,body').stop().animate({'scrollTop':f2Top+100}, 500,function(){
+                    $(window).scroll(jianCe);
+                });
+            }else if(i==1){
+                $('html,body').stop().animate({'scrollTop':f1Top+100}, 500,function(){
+                    $(window).scroll(jianCe);
+                });
+            }
+        });
+    }
+</script>

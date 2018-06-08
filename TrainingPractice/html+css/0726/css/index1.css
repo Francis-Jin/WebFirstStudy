@@ -1,0 +1,41 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+.wramp{
+	width: 700px;
+	height: 700px;
+	margin: 50px auto;
+	position: relative;
+	overflow: hidden;
+
+}
+.wramp img{
+	width: 700px;
+	height: 700px;
+}
+.wramp .cnt-img{
+	position: absolute;
+	right: -200px;
+	top:-200px;
+	transition: all 3s ease-in;
+}
+.wramp .cnt-img,.wramp .cnt-img img{
+	width:200px;
+	height: 200px;
+	border-radius:50%; 
+}
+.wramp:hover .cnt-img{
+	right:700px;
+	top: 700px;
+	transition: all 3s ease-in;
+}
+
+
+
+
+
+
+
+
+

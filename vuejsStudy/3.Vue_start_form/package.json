@@ -1,0 +1,15 @@
+{
+  "name": "3.vue_start_form",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Francis",
+  "license": "MIT",
+  "dependencies": {
+    "animate.css": "^3.5.2",
+    "bootstrap": "^3.3.7"
+  }
+}

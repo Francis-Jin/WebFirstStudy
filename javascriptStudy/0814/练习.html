@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>练习</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var a;
+		console.log(typeof a);
+		var s = '1s';
+		console.log(s++);
+		var x = !!"false";
+		console.log(x);
+		console.log(!!undefined);
+		console.log(-Infinity);
+		var y = 10%"0"; 
+		var z = 10%0;
+		console.log(y);
+		console.log(z);
+		console.log(undefined==null);
+		console.log(false==="");
+		var m = "2E+2";
+		console.log(typeof m);
+		var z = 3e+3;
+		z++;
+		console.log(z);
+		var v = !v || 100 || 10 || 0 || null;
+		console.log(v);
+		// 打印9*9乘法表
+		document.write("<h1>"+"九九乘法表"+"</h1>");
+		for(var i=1;i<=9;i++) {
+			document.write("</br>");
+			for(var j=1;j<i+1;j++){
+				document.write(i+"\t"+'x'+"\t"+j+"\t"+"="+"\t"+i*j+"\t");
+			}
+		}
+	</script>
+</body>
+</html>

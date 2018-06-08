@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src = "../jqueryLibrary/jquery-3.2.1.js"></script>
+</head>
+<body>
+<input type="checkbox" name="" id="cr">
+<input type="button" name="" value="点我" id="btn">
+<!-- 列子 -->
+<h2>例子</h2>
+<input type="checkbox" name="" id="cr2"><label for="cr2">我已经阅读了上面的制度</label>
+	<script type="text/javascript">
+	/*	// jquery对象转成DOM对象
+		var $cr = $("#cr"); //jQuery对象
+		var cr = $cr[0]; 	//DOM对象
+		alert(cr.checked);	//检测这个checkbox是否被选中
+		//通过get(index)方法得到DOM对象
+		var $btn = $("#btn");
+		var btn = $btn.get(0);
+		btn.onclick = function (){
+			alert('点我了哦！');
+		};
+		//DOM对象转jquery对象
+		var cr1 = document.getElementById('cr');
+		var $cr1 = $(cr1);
+		$cr1.click(
+			function(){
+				alert("被选中了");
+		});*/
+		// 例子
+		$(document).ready(function(){
+			var $cr2 = $("#cr2");
+			var cr2 = $cr2.get(0);
+			$cr2.click(function(){
+				// if(cr2.checked)			//DOM方式判断
+				if($cr2.is(":checked"))		//jQuery方式判断
+					alert('感谢你的支持！请你继续操作！');
+			});
+		});
+	</script>
+</body>
+</html>

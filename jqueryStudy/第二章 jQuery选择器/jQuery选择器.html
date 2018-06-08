@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="../jqueryLibrary/jquery-3.2.1.js"></script>
+</head>
+<body>
+	<!-- <p id="tt">hahaha</p> -->
+	<p class="text1">第一段文字</p>
+	<p id="text2">第二段文字</p>
+	<p class="text3" name="text3">第三段文字</p>
+	<p class="text4">第四段文字</p>
+	<div class="box">
+		<ul>
+			<li class="item1">1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+			<li>5</li>
+		</ul>
+	</div>
+	<script type="text/javascript">
+	// jQuery中的选择器完全继承了css中的选择器。
+	$(".text1").click(function(){
+			alert("点了第一段文字");
+		});
+	//这里需要判断网页中是否有id为"tt"的元素
+	/*var ott = document.getElementById("tt");
+		if(ott)
+		ott.style.backgroundColor = 'red';*/
+	
+	//这里无需判断。
+	/*$("#tt").css("backgroundColor","red");*/
+		
+	</script>
+</body>
+</html>

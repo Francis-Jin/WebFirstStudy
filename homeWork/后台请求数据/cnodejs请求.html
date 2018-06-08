@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>cnodejs请求</title>
+    <style>
+        #box{
+            width:1000px;
+            margin: 10px auto;
+        }
+        #box li{
+            list-style: none;
+            height: 70px;
+            line-height: 70px;
+            text-align: center;
+            font-size: 22px;
+            color:#333;
+        }
+        #box li:nth-child(2n){
+            color: #F5F5F5;
+            background: darkslategray;
+        }
+        #fenye{
+            width:1000px;
+            margin: 30px auto;
+            text-align: center;
+        }
+        #fenye span,#fenye a{
+            padding: 8px 14px;
+            font-size: 16px;
+            color: #1e1e1e;
+            background:#eee;
+            margin-right: 8px;
+            cursor:pointer;
+        }
+        #fenye span:hover,#fenye a:hover{
+            background:peru;
+            color:#fff;
+         }
+        #fenye a.active{
+            background: peru;
+            color:#fff;
+        }
+    </style>
+</head>
+<body>
+<ul id="box"></ul>
+<div id="fenye"></div>
+<script type="text/javascript">
+    var boxDom = document.getElementById('box');
+    var fenyeDom = document.getElementById('fenye');
+    var xhr = new XMLHttpRequest();
+    var index;
+    xhr.open('GET','https://cnodejs.org/api/v1/topics?page='+index);
+    xhr.send();
+    xhr.onreadystatechange = function () {
+        if(xhr.readyState === 4 && xhr.status === 200)
+        {
+            var res = xhr.responseText;
+            painData(res);
+        }
+    }
+    function painData(res) {
+        var Data = JSON.parse(res);
+        var oData = Data.data
+//        console.log(Object.prototype.toString.call(Data));
+//        console.log(oData.length);
+        var html = '';
+        oData.forEach(function (e, i, res) {
+            html += `<li>${e.title}</li>`;
+        })
+        boxDom.innerHTML = html;
+
+        for(var i = 1 ; i <= 6; i++) {
+            var fenyeLink = document.createElement('a');
+            fenyeLink.innerHTML = i;
+            fenyeDom.appendChild(fenyeLink);
+        }
+        var prev = document.createElement('span');
+        prev.id = 'prev';
+        prev.innerHTML = '首页';
+        var fenyelinks = fenyeDom.getElementsByTagName('a');
+        fenyelinks[0].className = 'active';
+        fenyeDom.insertBefore(prev,fenyelinks[0]);
+        var more = document.createElement('span');
+        more.id='more';
+        more.innerHTML = '...';
+        fenyeDom.appendChild(more);
+        var next = document.createElement('span');
+        next.id = 'next';
+        next.innerHTML = '尾页';
+        fenyeDom.appendChild(next);
+
+    }
+</script>
+</body>
+</html>

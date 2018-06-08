@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<script type="text/javascript" src="js/index.js"></script>
+	<style type="text/css">
+		/* 陈巧巧  header部分start */
+		*{
+			padding: 0;
+			margin: 0;
+		}
+		a{
+			text-decoration: none;
+		}
+		li{
+			list-style: none;
+		}
+		#chen{
+			width: 100%;
+			height: 56px;
+			background: #fff;
+		}	
+		#chen-header{
+			position: relative;
+			width: 980px;
+			height: 56px;
+			margin: 0 auto;
+		}
+		#chen-header .logo{
+			width: 80px;
+			height: 46px;
+			top: 5px;
+			float: left;
+		}
+		#chen-header .logo a{
+			width: 100%;
+			height: 100%;
+			display: block;
+		}
+		#chen-header .logo img{
+			width: 100%;
+			height: 100%;
+		}
+		#chen-header #menu{
+			position: relative;
+			float: left;
+			height: 56px;
+			width: auto;
+			left: 30px;
+		}
+		#menu .header-tab{
+			float: left;
+			height: 56px;
+			list-style: none;
+			padding-right: 2px;
+			position: relative;
+			z-index: 3;
+		}
+		#menu .header-tab a{
+			color: #3c3c3c;
+		    height: 56px;
+		    width: 62px;
+		    line-height: 56px;
+		    display: block;
+		    font-size: 16px;
+		    text-align: center;
+		}
+		#menu .header-tab#menu-pandakill a{
+			color: #3c3c3c;
+		    height: 56px;
+		    width: 90px;
+		    line-height: 56px;
+		    display: block;
+		    font-size: 16px;
+		    text-align: center;
+		}
+		#menu .header-tab#menu-ipande a{
+			color: #3c3c3c;
+		    height: 56px;
+		    width: 72px;
+		    line-height: 56px;
+		    display: block;
+		    font-size: 16px;
+		    text-align: center;
+		}
+		/*#menu .current-tab a{
+			color: #fff;
+		    -webkit-transition: color 200ms ease-in-out 30ms;
+		    transition: color 200ms ease-in-out 30ms;
+		}*/
+		#menu-slider{
+			position: absolute;
+		    top: 0;
+		    width: 62px;
+		    height: 56px;
+		    z-index: 1;
+		    -webkit-transition: all 250ms ease-in-out;
+		    transition: all 250ms ease-in-out;
+		    background-color: #1dd388;
+		}
+		#chen-header .header-tool{
+			float: right;
+		    font-size: 14px;
+		    /*padding: 12px 0;*/
+		    margin-left: 15px;
+            padding-top: 18px;
+		}
+		#chen-header .header-tool .login{
+			color: #8c8c8c;
+			font-size: 14px;
+		}
+		#chen-header .header-tool .login:hover{
+			color: #1dd388;
+		}
+		#chen-header .header-tool b{
+			margin: 0 10px;
+            color: #d9d9d9;
+		}
+		#chen-header .header-tool .regist{
+			color: #8c8c8c;
+			font-size: 14px;
+		}
+		#chen-header .header-tool .regist:hover{
+			color: #1dd388;
+		}
+		#chen-header .header-download{
+			margin: 0 15px;
+			padding: 12px 0;
+			float: right;
+			font-size: 14px;
+		}
+		.header-download .inner{
+			margin-top: 6px;
+		    display: block;
+		    color: #8c8c8c;
+		}
+		.header-download .inner .icon{
+			background-image: url(https://i.h2.pdim.gs/ea32f1335045c7e9a0656a038639a24d.png);
+		    background-position: -32px -36px;
+		    width: 18px;
+		    height: 20px;
+		    display: block;
+    		float: left;
+		}
+		.header-download .inner .text{
+		    margin-left: 4px;
+	        font-size: 14px;
+		}
+		.header-download .inner .text:hover{
+			color: #1dd388;
+		}
+		#chen-header .header-search{
+			position: relative;
+			margin: 0 15px;
+			padding: 12px 0;
+			font-size: 14px;
+			float: right;
+		}
+		.header-search .search-form{
+			position: relative;
+		}
+		#chen-header .header-search .key{
+			color: #cbcbcb;
+			width: 130px;
+		    background-color: #f6f6f6;
+		    height: 24px;
+		    border: 1px solid #e0e0e0;
+		    border-radius: 4px;
+		    font-size: 14px;
+		    line-height: 24px;
+		    padding: 2px 0px 2px 10px;
+		    float: left;
+		}
+		#chen-header .header-search .search-bnt{
+			position: absolute;
+		    top: 0;
+		    right: 0;
+		    height: 25px;
+		    padding: 5px 8px 5px 6px;
+		    zoom: 1;
+		    overflow: hidden;
+		}
+		#chen-header .header-search .search-bnt .submit{
+			display: block;
+		    padding: 0;
+		    width: 20px;
+		    height: 20px;
+		    background: url(https://i.h2.pdim.gs/ea32f1335045c7e9a0656a038639a24d.png) no-repeat;
+		    background-position: -65px -51px;
+		    text-indent: -9999px;
+		    border-width: 0;
+		}
+		#chen-header .header-search .search-bnt .submit:hover{
+			color: #1dd388;
+		}
+		/* 陈巧巧  header部分end */
+	</style>
+</head>
+<body>
+<!-- 陈巧巧  header部分start -->
+	<div id="chen">
+		<div id="chen-header">
+			<div class="logo">
+				<a href="javascrip:void()">
+					<img src="https://i.h2.pdim.gs/b2a97149ec43dfc95eb177508af29f6c.png">
+				</a>
+			</div>
+			<ul id="menu">
+				<li id="menu-shouye" class="header-tab current-tab"><a href="javascrip:void()">首页</a></li>
+				<li id="menu-all" class="header-tab"><a href="javascrip:void()">全部</a></li>
+				<li id="menu-shot" class="header-tab"><a href="javascrip:void()">分类</a></li>
+				<li id="menu-lvxing" class="header-tab"><a href="javascrip:void()">侣行</a></li>
+				<li id="menu-pandakill" class="header-tab"><a href="javascrip:void()">Pandakill</a></li>	
+				<li id="menu-ipande" class="header-tab"><a href="javascrip:void()">iPande</a></li>
+				<li id="menu-slider"></li>
+			</ul>
+			<div class="header-tool">
+				<a href="javascrip:void()" class="login">登录</a>
+				<b>|</b>
+				<a href="javascrip:void()" class="regist">注册</a>
+			</div>
+			<div class="header-download">
+				<a class="inner">
+					<i class="icon"></i>
+					<span class="text">下载</span>
+				</a>
+			</div>
+			<div class="header-search">
+				<form name="room-search" action="/search" class="search-form">
+					<input class="key " type="text" name="kw" value="搜游戏/主播">
+					<div class="search-bnt">
+						<input class="submit">
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+<!-- 陈巧巧  header部分end-->
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>删除数组中的所有假值。</title>
+	<script type="text/javascript">
+		/*function DeFalse(arr){
+			for(var i = 0; i < arr.length; ++i) {
+			    if(!arr[i]) {
+			        arr.splice(i, 1);
+			        i--;
+			    }
+			}
+			return arr;
+		}*/
+
+
+		// function removeFalse(arr){
+
+		// }
+		// console.log(DeFalse(arr));
+		var falseValue = [false,null,0,'',undefined,NaN];
+		var arr = [null,0,'',1,undefined,NaN,false,'0'];
+		var resArr = arr.filter(function(e){
+			if(typeof e === "number" && !isFinite(e)){
+				return false;
+			}
+			return falseValue.indexOf(e) === -1;
+		})
+		console.log(resArr);
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

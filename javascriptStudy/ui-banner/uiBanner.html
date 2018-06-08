@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="http://at.alicdn.com/t/font_383531_w851b9l45nxywrk9.css" />
+	<title>UI-banner</title>
+  <script type="text/javascript" src="js/uiBanner.js"></script>
+</head>
+<body>
+   <style>
+   *{
+   	padding: 0;
+   	margin: 0;
+   }
+   a{
+   	text-decoration: none;
+   }
+   body{
+   	background: #eff3f5;
+   }
+   	#box{
+    position: relative;
+    width: 1180px;
+    height: 350px;
+    margin: 100px auto;
+    background: #eee;
+   	}
+    .unit-wrampper{
+      overflow: hidden;
+    }
+   	#box .unit{
+  	position: absolute;
+  	display: inline-block;
+  	top: 0;
+  	left: 0;
+    opacity: 0;
+  	width: 1180px;
+  	height: 350px;
+  	transition: all 1s ease-in-out;
+   	}
+    #box .unit:nth-child(1){
+      opacity: 1;
+    }
+   	#box .unit img{
+   	width: 1180px;
+   	height: 350px;
+   	   	}
+   	.bt{
+   		display: inline-block;
+   		position: absolute;
+   		text-align: center;
+	   	height: 350px;
+	   	width: 65px;
+	   	top: 0;
+	   	opacity: 0;
+	   	cursor: pointer;
+	   	line-height: 350px;
+	   	background: #eff3f5;
+	   	transition: all 0.4s ease-in-out;
+   	}
+   	#box:hover .bt{
+   		opacity: 1;
+   		transition: all 0.4s ease-in-out;
+   	}
+   	.bt .iconfont{
+   		font-size: 48px;
+   		font-weight: bold;
+   		color: #d2d2d2;
+   	}
+   	#pre{
+   		left: -65px;
+   	}
+   	#next{
+   		right: -65px;
+   	}
+    .fa{
+       font-size: 40px;
+       color: #e3e6eb;
+    }
+    .action{
+    	position: absolute;
+    	bottom: 10px;
+    	left: 511px;    	
+    	padding: 4px 16px;
+    	border-radius: 20px;
+    	text-align: center;
+    	opacity: 1;
+    	background: rgba(0,0,0,.15);
+    	transition: all 0.4s ease-in-out;
+    }
+  
+    .action .btn.active {
+    	width: 30px;
+    }
+    .action .btn{
+    	display: inline-block;
+    	margin-right: 5px;
+    	width: 12px;
+    	height: 12px;
+    	border-radius: 6px;
+    	background-color: rgba(255,255,255,.4);
+    	transition: width 0.6s ease-in-out;
+    }
+   </style>
+   <div id="box">
+     <a id="pre" class="bt"><i class="iconfont icon-jiantoufuben1"></i></a>
+     <a id="next" class="bt"><i class="iconfont icon-jiantoufuben"></i></a>
+     <div class="unit-wrapper">
+  		<a href="javascript:void(0)" class="unit">
+  			<img src="http://img.ui.cn/data/upload/201708/1502360651_876.png" alt="加载失败！" title="我是UI中国的图片">
+  		</a>
+  		<a href="javascript:void(0)" class="unit">
+  			<img src="http://img.ui.cn/data/upload/201708/1502880532_436.gif" alt="加载失败！" title="我是UI中国的图片">
+  		</a>
+  		<a href="javascript:void(0)" class="unit">
+  			<img src="http://img.ui.cn/data/upload/201708/1503023398_766.jpeg" alt="加载失败！" title="我是UI中国的图片">
+  		</a>
+  		<a href="javascript:void(0)" class="unit">
+  			<img src="http://img.ui.cn/data/upload/201707/1500965523_658.jpeg" alt="加载失败！" title="我是UI中国的图片">
+  		</a>
+  		<a href="javascript:void(0)" class="unit">
+  			<img src="http://img.ui.cn/data/upload/201708/1503022090_440.jpeg" alt="加载失败！" title="我是UI中国的图片">
+  		</a>
+  		<a href="javascript:void(0)" class="unit">
+  			<img src="http://img.ui.cn/data/upload/201708/1503022310_710.jpeg" alt="加载失败！" title="我是UI中国的图片">
+  		</a>
+     </div>
+     	
+     <div class="action">
+     	<a href="javascript:void(0)" class="btn active"></a>
+     	<a href="javascript:void(0)" class="btn"></a>
+     	<a href="javascript:void(0)" class="btn"></a>
+     	<a href="javascript:void(0)" class="btn"></a>
+     	<a href="javascript:void(0)" class="btn"></a>
+     	<a href="javascript:void(0)" class="btn"></a>
+     </div>
+   </div>
+	
+</body>
+</html>

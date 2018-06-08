@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="../jqueryLibrary/jquery-3.2.1.js"></script>
+</head>
+<body>
+	<form id="form1">
+		<input type="checkbox" name="check">
+		<input type="checkbox" name="check">
+		<input type="checkbox" name="check">
+		<input type="checkbox" name="check">
+		<input type="checkbox" name="check">
+		<input type="checkbox" name="check">
+		<input type="button" id="btn" value="弹出选中个数">
+	</form>
+
+	<script type="text/javascript">
+		$("#btn").click(function(){
+			var length = $("input[name='check']:checked").length;
+			alert('选中的个数为：'+length);
+		})
+	</script>
+</body>
+</html>

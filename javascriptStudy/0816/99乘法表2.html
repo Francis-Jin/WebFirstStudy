@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		.td{
+			width: 120px;
+			height: 60px;
+			text-align: center;
+			color: #fff;
+			font-size: 26px;
+			background-color: rgba(0,255,255,.5);
+		}
+	</style>
+</head>
+<body>
+	<script type="text/javascript">
+		var divDom = document.createElement('div');
+		var h1Dom = document.createElement('h1');
+		var tableDom = document.createElement('table');
+		var h1Text = document.createTextNode('99乘法表');
+		h1Dom.appendChild(h1Text);
+		divDom.appendChild(h1Dom);
+		for(var i = 1; i < 10; i++){
+			var trDom = document.createElement('tr');
+			for(var j = 1; j < i+1; j++){
+				var tdDom =document.createElement('td');
+				var tdText = document.createTextNode(j+'x'+i+'='+i*j);
+				tdDom.className = 'td';
+				trDom.appendChild(tdDom);
+				tdDom.appendChild(tdText);
+			}
+			tableDom.appendChild(trDom);
+		};
+		divDom.appendChild(tableDom);
+		document.body.appendChild(divDom);
+	</script>
+</body>
+</html>

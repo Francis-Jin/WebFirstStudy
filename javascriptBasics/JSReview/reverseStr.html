@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>字符串翻转</title>
+</head>
+<body>
+	
+	<script type="text/javascript">
+		var str = "Francis";
+		// 方法一
+		var reverse = [];
+		var strLen1 = str.length-1;
+		for(var i = strLen1;i>=0;i--)
+		{
+			reverse.push(str[i]);
+		}
+		console.log("方法一："+reverse.join(""));
+		// 方法二
+		var reverse2 = [];
+		var strLen2 = str.length;
+		for(var i=0;i<strLen2;i++)
+		{
+			reverse2.unshift(str[i]);
+		}
+		console.log("方法二："+reverse2.join(""));
+		var str1="hello world";
+		// 方法三
+		function reverseStr(str)
+		{
+			if(typeof str === "string")
+			{
+				return str.split("").reverse().join("");
+			}
+			else
+			{
+				return "该方法只转换字符串";
+			}
+		}
+		console.log("方法三："+reverseStr(str1));
+	</script>
+</body>
+</html>

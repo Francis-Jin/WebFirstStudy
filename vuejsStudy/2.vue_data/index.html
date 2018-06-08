@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Vue-case</title>
+	<script type="text/javascript" src="../1.vue_start_1/node_modules/vue/dist/vue.min.js"></script>
+</head>
+<!-- registry=http://registry.npm.taobao.org -->
+<body>
+	<div id="app">
+		{{name}}<span>{{gender}}</span>
+		<p>{{typeof cname == "undefined"?"未定义":cname}}</p>
+		</div>
+
+	<script type="text/javascript">
+		var vm = new Vue({
+			el:'#app',
+			data:{
+				name:'Francis',
+				gender:'男'
+			},
+			methods:function(){
+
+			},
+			beforeCreate:function () {
+				// body...
+				console.log('beforeCreate');
+			},
+			created:function(){
+				console.log('create');
+			},
+			beforeMount:function(){
+				console.log('beforeMount');
+			},
+			mounted:function(){
+				console.log('mounted');
+			}
+
+		});
+		vm.$mount('#app');
+		vm.cname = 'Jin';
+		console.log(vm.name);
+		console.log(vm);
+	</script>
+</body>
+</html>

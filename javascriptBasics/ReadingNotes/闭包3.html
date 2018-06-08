@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		function f(arg) {
+			var n = function () {
+				return arg;
+			};
+			arg++;
+			return n;
+		}
+		var m = f(123);
+		console.log(m());//124
+	</script>
+</body>
+</html>

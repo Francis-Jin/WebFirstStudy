@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Vue-animate</title>
+	<script type="text/javascript" src="../1.vue_start_1/node_modules/vue/dist/vue.min.js"></script>
+</head>
+<style type="text/css">
+	.active{
+		background: red;
+	}
+</style>
+<body>
+<div id="app">
+	<p v-text='totel' @click='click' :class="{active:isActive}"></p>
+</div>
+	<script type="text/javascript">
+		new Vue({
+			el:'#app',
+			data:{
+				proA:10,
+				proB:20,
+				totel:0,
+				isActive:true
+			},
+			methods:{
+				click(){
+					this.totel=this.proA+this.proB;
+				}
+			},
+			computed:{
+
+			},
+			filters:{
+				capitalize () {
+					
+				}
+			}
+		});
+		var text = 'hello';
+		console.log(text.charAt(0).toUpperCase()+text.substring(1,text.length-1)
+			+text.charAt(text.length-1).toUpperCase())
+	</script>
+</body>
+</html>

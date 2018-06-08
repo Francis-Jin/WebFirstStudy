@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>无缝滚动</title>
+	<style type="text/css">
+	*{
+		margin: 0;
+		padding: 0;
+	}
+		.WFGD {
+			position: relative;
+			width:950px;
+			height: 200px;
+			background: #eee;
+			margin: 100px auto;
+		}
+		.WFGD a {
+			position: absolute;
+			top: 75px;
+			display: inline-block;
+			width: 50px;
+			height: 50px;
+			color: #fff;
+			font-size: 36px;
+			text-decoration: none;
+			line-height: 50px;
+			text-align: center;
+			background: rgba(0,0,0,.3);
+		}
+		.WFGD .prev {
+			left: 20px;
+		}
+		.WFGD .next {
+			right: 20px;
+		}
+		.wrampper{
+			/*overflow: hidden;*/
+		}
+		.wrampper li:nth-child(1){
+			margin-left: 0;
+		} 
+		.wrampper li{
+			float: left;
+			width: 310px;
+			height: 180px;
+			margin-top: 10px;
+			background: green;
+			margin-left: 10px;
+			list-style: none;
+		}
+		.wrampper ul{
+			position: relative;
+			left: -20px;
+		}
+	</style>
+</head>
+<body>
+	<div class="WFGD">
+		<a class="prev" href="javascript:;"><</a>
+		<a class="next" href="javascript:;">></a>
+		<div class="wrampper" id="wrampper">
+			<ul>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+		</div>	
+	</div>
+	<script type="text/javascript">
+		var oDiv=document.getElementById("wrampper");
+		var oUl=oDiv.getElementsByTagName("ul")[0];
+		var aLi=oUl.getElementsByTagName('li');
+		// oUl.innerHTML += oUl.innerHTML;
+		var a=aLi[0].offsetWidth*aLi.length+(10*aLi.length-10)+'px';
+		console.log(a);
+		oUl.style.Width=aLi[0].offsetWidth*aLi.length+(10*aLi.length-10)+'px';
+		console.log(oUl.offsetWidth);
+	</script>
+</body>
+</html>

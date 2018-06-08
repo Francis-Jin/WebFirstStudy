@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>99乘法表</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var h1Dom = document.createElement('h1');
+		var h1Text = document.createTextNode('99乘法表');
+		var bodyDom = document.body;
+		bodyDom.appendChild(h1Dom);
+		h1Dom.appendChild(h1Text);
+		for(var i = 1; i < 10; i++){
+			document.write('</br>');
+			for(var j = 1; j < i+1; j++){
+				document.write('<span>' + i + 'x' + j + '=' + i*j + '</span>');
+			}
+		}
+		var aSpan = document.getElementsByTagName('span');
+		for( var i = 0; i < aSpan.length; i++){
+			aSpan[i].style.display = 'inline-block';
+			aSpan[i].style.width = '100px';
+			aSpan[i].style.height = '50px';
+			aSpan[i].style.lineHeight = '50px';
+			aSpan[i].style.textAlign = 'center';
+			aSpan[i].style.backgroundColor = '#eee';
+			aSpan[i].style.marginRight = '2px';
+			aSpan[i].style.marginTop = '2px';
+		}
+		/*function changeCss(ele,obj){
+			for(var key in obj){
+				ele.style[key] = obj[key]
+			}
+		}*/
+	</script>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>html5新标签</title>
+</head>
+<body>
+	<header>
+		<h3>我是header标签里的标题</h3>
+	</header>
+
+	<nav>我是导航条</nav>
+	<main>
+		<article>我是主体内容</article>
+		<section>我是内容的目录标签</section>
+		<aside>我是侧边栏附属说明</aside>
+		<progress value="30" max="100">我是进度条</progress>
+		<figure>
+			<figcaption>我是一张图片</figcaption>
+			<img src="img/1.jpg">
+		</figure>
+	</main>
+	<footer>我是页脚</footer>
+	
+	<!-- 视频 controls="controls" loop="loop" autoplay="autoplay" -->
+	<video width="320" height="200" controls="controls">
+		<source src="vidio/PARTY.mp4" type="video/ogg">
+		<source src="vidio/PARTY.mp4" type="video/mp4">
+		<a href="javascript:;">Download</a>
+		Your browser not support the video tag.
+	</video>
+	<!-- 音频 controls="controls" loop="loop" autoplay="autoplay" -->
+	<audio  contorls>
+		<source src="music/極楽浄土.mp3" type="audio/ogg">
+		<source src="music/極楽浄土.mp3" type="audio/mp3">
+		<source src="music/極楽浄土.mp3" type="vidio/wav">
+	</audio>
+	<script type="text/javascript">
+		// sessionStorage.setItem('walker','very handsome');
+		// localStorage.setItem('walker',"hahah");
+	</script>
+	<div></div>
+	<!-- 拖放 -->
+	<script type="text/javascript">
+		function allowDrop(ev){
+			ev.preventDefault();
+		}
+		function drag(ev){
+			ev.dataTransfer.setData("Text",ev.target.id);
+		}
+		function drop(ev){
+			ev.preventDefault();
+			var data=ev.dataTransfer.getData("Text");
+			ev.target.appendChild(document.getElementById(data));
+		}
+	</script>
+	<style type="text/css">
+		#div1, #div2
+		{float:left; width:340px; height:70px; margin:10px;padding:10px;border:1px solid #aaaaaa;}
+	</style>
+	<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+	<img id="drag1" src="img/1.jpg" draggable="true" ondragstart="drag(event)" width="336" height="69">
+	<!--  来回拖放-->
+	<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+  		<img src="img/1.jpg" draggable="true" ondragstart="drag(event)" id="drag1" width="336" height="69" />
+	</div>
+	<div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+	<!-- 画布 canvas-->
+	<div style="clear: fixed;"></div>
+	<canvas id="myCanvas" width="300" height="200" style="border: 1px solid red;">
+		Your browser does not suppotr the canvas element.
+	</canvas>
+
+</body>
+</html>
+<script type="text/javascript">
+		var c=document.getElementById('myCanvas');
+		var cxt=c.getContext('2d');
+		var grd=cxt.createLinearGradient(0,0,175,50);
+		cxt.moveTo(10,10);
+		cxt.lineTo(150,50);
+		cxt.lineTo(10,90);
+		cxt.stroke();
+		cxt.fillStyle="#FF0000";
+		cxt.beginPath();
+		// x轴 y轴 直径 
+		cxt.arc(70,12,20,0,Math.PI*2,true);
+		cxt.closePath();
+		cxt.fill();
+		// 线性背景
+		grd.addColorStop(0,"#FF0000");
+		grd.addColorStop(1,"#00FF00");
+		cxt.fillStyle=grd;
+		cxt.fillRect(0,60,300,200);
+
+
+	</script>

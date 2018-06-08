@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src = "../jqueryLibrary/jquery-3.2.1.js"></script>
+	<script type="text/javascript" src = "../jqueryLibrary/prototype-1.7.3.js"></script>
+</head>
+<body>
+	<p id="pp">test----jQuery</p>
+	<script type="text/javascript">
+		jQuery(function(){					//直接使用jQuery，无需调用jQuery.noConflict()函数
+			jQuery("p").click(function(){
+				alert(jQuery(this).text());
+			});
+		});
+		$('pp').style.display = 'none';
+	</script>
+</body>
+</html>

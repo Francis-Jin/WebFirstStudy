@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>内部私有函数</title>
+</head>
+<body>
+	<script type="text/javascript">
+		function a(param) {
+			function b(theinput){
+				return theinput*2;
+			}
+			return "The result is  " + b(param);
+		}
+		console.log(a(10));
+	</script>
+</body>
+</html>

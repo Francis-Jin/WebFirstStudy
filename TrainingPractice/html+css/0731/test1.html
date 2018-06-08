@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		#edit{
+			margin:0 auto;
+			width: 500px;
+			height: 500px;
+			background: #eee;
+			font-size: 36px;
+		}
+	</style>
+</head>
+<body>
+<div id="edit" contenteditable="true"></div>
+	<form action="" method="get">
+	<p>姓名：<input type="text"></p>
+	<p>密码：<input type="password"></p>
+	<p>性别：<input type="radio" name="gender" value="1">
+			<input type="radio" name="gender" value="0"></p>
+	<p>兴趣爱好：
+		<input type="checkbox" name="hobby">吃饭
+		<input type="checkbox" name="hobby">睡觉
+		<input type="checkbox" name="hobby">游戏
+		<input type="checkbox" name="hobby">篮球
+	</p>
+		<input type="submit" name="" value="提交">
+	</form>
+
+	<p>	
+		<select>
+			<option value="	">1</option>
+			<option value="">2</option>
+			<option value="">3</option>
+			<option value="">4</option>
+			<option value="">5</option>
+			<option value="">6</option>
+			<option value="">7</option>
+			<option value="">8</option>
+			<option value="">9</option>
+			<option value="">10</option>
+		</select>
+	</p>
+	<p>选择文件</p>
+	<input type="file" name="">
+	<p>
+		<textarea cols="20"  rows="20"></textarea>
+	</p>
+</body>
+</html>
+<script type="text/javascript">
+	var editDom=document.getElementById('edit');
+	function getRandomColor(){
+		var r = Math.floor(Math.random()*256);
+		var g = Math.floor(Math.random()*256);
+		var b = Math.floor(Math.random()*256);
+	}
+	/*setInterval(function(){
+		editDom.style.color=rgb(getRandomColor(r,g,b));
+	},1000)*/
+</script>

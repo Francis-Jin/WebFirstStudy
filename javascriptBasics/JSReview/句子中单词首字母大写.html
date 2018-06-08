@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		function isString(str)
+		{
+			if(typeof str === 'string')
+			{
+				return true;
+			}
+			else
+			{
+				return false;
+			}
+		}
+		function captialize(str)
+		{
+			isString(str);
+			var strArr = str.split(" ");
+			var resultArr = [];
+			strArr.forEach(function(e,i){
+				resultArr.push(e.charAt(0).toUpperCase().concat(e.substring(1)));
+			})
+			return resultArr.join(" ");
+		}
+		console.log(captialize("hello world is good"));
+	</script>
+</body>
+</html>

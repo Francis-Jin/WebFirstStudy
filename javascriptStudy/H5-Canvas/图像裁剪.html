@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+<h3>原始图片</h3>
+<img id="img" src="../../allProject/luooPage/img/640x452 (2).jpg">
+<h3>canvas容器</h3>
+	<canvas id="canvas" width="500" height="500" style="border: 2px solid #ccc">
+		不支持
+	</canvas>
+	<script type="text/javascript">
+		var imgDom = document.getElementById('img');
+		var canvasDom = document.getElementById('canvas');
+		// console.log(imgDom,canvasDom);
+		var cxt = canvasDom.getContext('2d');
+		// cxt.drawImage(imgDom,0,0);
+		// cxt.drawImage(imgDom,0,0,200,200);
+		imgDom.onload = function () {
+			cxt.drawImage(imgDom,400,100,400,400,0,0,400,400);
+		}
+		// cxt.closePath();
+	</script>
+</body>
+</html>

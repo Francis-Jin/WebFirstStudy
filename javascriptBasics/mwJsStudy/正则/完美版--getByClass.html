@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript">
+	function getByClass(oParent,sClass)
+	{
+		var aEle=oParent.getElementsByTagName('*');
+		var aResult=[];
+		var re=new RegExp('\\b'+sClass+'\\b');
+		// var re=/\\b+sClass+\\b/g;
+		var i=0;
+		for(;i<aEle.length;i++)
+		{
+			//单词边界
+			// if(aEle[i].className ===sClass)
+			if(re.test(aEle[i].className))
+			{
+				aResult.push(aEle[i]);
+			}
+		}
+		return aResult;
+	}
+		window.onload=function()
+		{
+			var oUl = document.getElementById('ul1');
+			var aBox = getByClass(oUl,'box');
+			var i=0;
+			for(;i<aBox.length;i++)
+			{
+				aBox[i].style.backgroundColor = 'red';
+			}
+		}
+	</script>
+</head>
+<body>
+	<ul id="ul1">
+		<li></li>
+		<li class="box active"></li>
+		<li class="box"></li>
+		<li></li>
+		<li class="box"></li>
+	</ul>
+</body>
+</html>

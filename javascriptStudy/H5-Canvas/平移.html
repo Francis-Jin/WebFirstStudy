@@ -1,0 +1,107 @@
+<!doctype html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <title>Document</title>  
+    <style>  
+      *{  
+        padding:0;  
+        margin:0;  
+      }  
+      canvas{  
+        display: inline-block;  
+      }  
+    </style>  
+</head>  
+<body>  
+    <canvas id="myCanvas1" width='200' height='200' style="border:1px solid #ccc"></canvas>  
+    <canvas id="myCanvas2" width='200' height='200' style="border:1px solid #ccc"></canvas>  
+    <canvas id="myCanvas3" width='200' height='200' style="border:1px solid #ccc"></canvas>  
+    <canvas id="myCanvas4" width='200' height='200' style="border:1px solid #ccc"></canvas>  
+    <script>  
+    //canvas旋转，缩放，平移操作都是对整个画布的操作，如果有多次的话，本次操作是在上一场的操作的基础上操作的  
+    //canvas平移是对中心点的操作  
+       var c1=document.getElementById('myCanvas1');  
+       c1.style.border = '1px dotted red';
+       var ctx=c1.getContext('2d');  
+       ctx.translate(100,0);    //中心点由原来的(0,0)变为(100,0),画布大小，位置不变但是实际上是画布向右平移了100  
+       ctx.fillStyle="red";  
+       ctx.font="20px 微软雅黑";  
+       ctx.fillText("no.1",0,20);  
+       ctx.translate(-50,0);   //画布向左平移100,回到原始位置  
+       ctx.beginPath();  
+       ctx.font="20px 微软雅黑";  
+       ctx.fillText("no.2",0,20);    
+       ctx.closePath();  
+    //canvas缩放  
+       var c2=document.getElementById('myCanvas2');  
+       c2.style.border = '10px dotted blue';
+       var ctx2=c2.getContext('2d');  
+       ctx2.fillStyle="red";  
+       ctx2.font="20px 微软雅黑";  
+       ctx2.fillText("no.1原始",80,100);   
+       ctx2.scale(0.5,0.5);   //实际上是画布缩小了一倍  
+       ctx2.fillStyle="red";  
+       ctx2.font="20px 微软雅黑";  
+       ctx2.fillText("no.1缩放",80,100);   
+       ctx2.scale(0.5,0.5);  //这个缩放一倍是在上次缩放的基础上缩放的  
+       ctx2.fillStyle="red";  
+       ctx2.font="20px 微软雅黑";  
+       ctx2.fillText("no.2缩放",80,100);   
+       ctx2.scale(4,4)      //这个缩放是让画布回到原来的大小  
+       ctx2.fillStyle="red";  
+       ctx2.font="20px 微软雅黑";  
+       ctx2.fillText("no.3缩放",80,120);  
+       ctx2.scale(1.2,1.2)  //在上一场的基础上放大1.2倍  
+       ctx2.fillStyle="red";  
+       ctx2.font="20px 微软雅黑";  
+       ctx2.fillText("no.4缩放",80,120);  
+    //canvas旋转  
+       var c3=document.getElementById('myCanvas3');
+       c3.style.border = '10px dashed red'; 
+       var ctx3=c3.getContext('2d');    
+       ctx3.fillStyle="red";  
+       ctx3.font="20px 微软雅黑";  
+       ctx3.fillText("no.1原始",80,120);   
+       ctx3.rotate(Math.PI/8)    //画布旋转了45度  
+       ctx3.fillStyle="red";  
+       ctx3.font="20px 微软雅黑";  
+       ctx3.fillText("no.1原始",80,120);   
+    //canvas平移和旋转  
+       var c4=document.getElementById('myCanvas4');  
+       var ctx4=c4.getContext('2d');    
+       ctx4.translate(100,100)    //画布中心点在原画布的中心点上，而不是在左上角了  
+       ctx4.fillStyle="red";  
+       ctx4.font="20px 微软雅黑";  
+       ctx4.fillText("no.1原始",0,10);   
+       ctx4.rotate(Math.PI/4)    //画布旋转了45度  
+       ctx4.fillStyle="red";  
+       ctx4.font="20px 微软雅黑";  
+       ctx4.fillText("no.1旋转",0,10);     
+       ctx4.rotate(Math.PI/4)    //画布旋转了90度  
+       ctx4.fillStyle="red";  
+       ctx4.font="20px 微软雅黑";  
+       ctx4.fillText("no.2旋转",0,10);    
+       ctx4.rotate(Math.PI/4)    //画布旋转了135度  
+       ctx4.fillStyle="red";  
+       ctx4.font="20px 微软雅黑";  
+       ctx4.fillText("no.3旋转",0,10);   
+       ctx4.rotate(Math.PI/4)    //画布旋转了180度  
+       ctx4.fillStyle="red";  
+       ctx4.font="20px 微软雅黑";  
+       ctx4.fillText("no.4旋转",0,10);  
+       ctx4.rotate(Math.PI/4)    //画布旋转了225度  
+       ctx4.fillStyle="red";  
+       ctx4.font="20px 微软雅黑";  
+       ctx4.fillText("no.5旋转",0,10);  
+       ctx4.rotate(Math.PI/4)    //画布旋转了270度  
+       ctx4.fillStyle="red";  
+       ctx4.font="20px 微软雅黑";  
+       ctx4.fillText("no.6旋转",0,10);  
+       ctx4.rotate(Math.PI/4)    //画布旋转了360度  
+       ctx4.fillStyle="red";  
+       ctx4.font="20px 微软雅黑";  
+       ctx4.fillText("no.7旋转",0,10);  
+    </script>  
+</body>  
+</html>  

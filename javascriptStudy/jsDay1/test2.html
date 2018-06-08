@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+        <meta charset=UTF-8>
+        <title>
+            RunJS 演示代码
+        </title>
+        <style>
+            #pic{
+                width:400px;
+                height:210px;
+                overflow:hidden;
+                margin:0 auto;
+                margin-top:100px;
+            }
+            #pic div#gg{
+                width:398px;
+                height:198px;
+                position:relative;
+                overflow:hidden;
+                z-index: 1;
+            }
+            #pic div#num{
+                width:100px;
+                height:20px;
+                position:absolute;
+                left: 279px;
+                top: 164px;
+                z-index:3;
+            }
+            #pic div#num span{
+                width:20px;
+                height:20px;
+                cursor:pointer;
+                line-height:20px;
+                float:left;
+                text-align:center;
+                color:#000000;
+            }
+            #pic div#num span.cut{
+                background-color:#000000;
+                color:#FFFFFF;
+            }
+            #pic img{
+                width:400px;
+                height:200px;
+                float:left;
+            }
+             
+            #pic div#ass{
+                width:2000px;
+                position:absolute;
+                z-index:0;
+                height:195px;
+                z-index:2;
+            }
+             
+        </style>
+        
+  </head>
+    <body>
+        <div id="pic">
+            <div id="gg">
+                <div id="ass">
+                    <img src="https://gss0.baidu.com/8_BXsjip0QIZ8tyhnq/timg?wh_rate=0&wapiknow&quality=100&size=w250&sec=0&di=513c25df22650d5a18aee135fdc8ca01&src=http%3A%2F%2Fimg.iknow.bdimg.com%2Fzhidaoribao2014%2F2015year%2F0314%2F4.jpg" />
+                    <img src="https://gss0.baidu.com/8_BXsjip0QIZ8tyhnq/timg?wh_rate=0&wapiknow&quality=100&size=w250&sec=0&di=45039ef63beef48c27123fbfd1d0fa87&src=http%3A%2F%2Fimg.iknow.bdimg.com%2Fzhidaoribao2014%2F2015year%2F0314%2F2.jpg" />
+                    <img src="http://cdn.iknow.bdimg.com/static/question/widget/user/info/daily/img/daily_b734a6b.png" />
+                </div>
+                <div id="num">
+                    <span class="cut">
+                        1
+                    </span>
+                    <span>
+                        2
+                    </span>
+                    <span>
+                        3
+                    </span>
+                </div>
+            </div>
+        </div>
+  </body>
+</html>
+<script id="jquery_180" type="text/javascript" class="library" src="/js/sandbox/jquery/jquery-1.8.0.min.js"></script>
+        <script>
+            jQuery(function($){
+                var w = $("img").width();
+                $("span").hover(function(){
+                    var me = $(this);
+                    me.addClass("cut").siblings("span.cut").removeClass("cut");
+                    $("#ass").stop().animate({
+                        left: "-" + w * me.index() + "px"
+                    }, "slow");
+                });
+            });
+        </script>
+     

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>	轮播图</title>
+</head>
+<body>
+<style type="text/css">
+	*{
+		margin:0;
+		padding: 0;
+	}
+	.banner-box{
+		position:relative;
+		width:296px;
+		margin:0 auto;
+		border:1px solid red;
+		overflow: hidden;
+	}
+	.banner-list{
+		width:1480px;
+		height: 400px;
+		list-style: none;
+		transition: margin-left .5s ease;
+	}
+	.banner-list .unit{
+		width:296px;
+		float: left;
+	}
+	.banner-list .unit img{
+		width:296px;
+		height:400px;
+	}
+	.earlist{
+		width: 100%;
+		height: 50px;
+		line-height: 20px;
+		position:absolute;
+		top:50%;
+		margin-top: -25px;
+	}
+	.earlist .ear{
+		display: inline-block;
+		width:16px;
+		height: 50px;
+		line-height: 50px;
+		text-align: center;
+		color:white;
+		background: rgba(0,0,0,.5);
+	}
+	#right-ear{
+		float: right;
+	}
+	.btnlist{
+		text-align:center;
+	}
+	.btn{
+		padding: 2px 6px;
+		background: pink;
+	}
+	.active{
+		background:blue;
+		color:white;
+	}
+</style>
+	<div class="banner-box">	
+		<ul class="banner-list">
+			<li class="unit"><img src="img/hd1.jpg" alt=""></li>
+			<li class="unit"><img src="img/hd2.jpg" alt=""></li>
+			<li class="unit"><img src="img/hd3.jpg" alt=""></li>
+			<li class="unit"><img src="img/hd4.jpg" alt=""></li>
+			<li class="unit"><img src="img/hd5.jpg" alt=""></li>
+		</ul>
+		<div class="btnlist">
+			<a class="btn active" href="javascript:void(0);">1</a>
+			<a class="btn" href="javascript:void(0);">2</a>
+			<a class="btn" href="javascript:void(0);">3</a>
+			<a class="btn" href="javascript:void(0);">4</a>
+			<a class="btn" href="javascript:void(0);">5</a>
+		</div>
+		<div class="earlist">	
+			<a class="ear" id="left-ear" href="javascript:void(0);">&lt;</a>
+			<a class="ear" id="right-ear" href="javascript:void(0);">&gt;</a>
+		</div>	
+	</div>
+</body>
+<script type="text/javascript">
+ 	var bannerBoxDom = document.getElementsByClassName("banner-box")[0]; 
+	var bannerListDom = document.getElementsByClassName("banner-list")[0];
+	var btnDoms = document.getElementsByClassName("btn");
+	var leftEarDom=document.getElementById("left-ear");
+	var rightEarDom=document.getElementById("right-ear");
+	var btnsDom = Array.prototype.slice.call(btnDoms);
+	var _index=0;
+	var timer;
+	console.log(bannerListDom);
+	btnsDom.forEach(function(e,i){
+		e.addEventListener("click",function(ev){
+			btnsDom.forEach(function(e){
+				e.className = e.className.replace(/\sactive/ig,"");
+			});
+			bannerListDom.style["margin-left"] = -1*i*296+'px';
+			btnsDom[i].className += " active";
+			_index=i;
+		})
+	})
+	leftEarDom.addEventListener("click",function(){
+		_index--;
+		if(_index<0)
+		{
+			_index=btnsDom.length-1;
+		}
+		btnsDom.forEach(function(e){
+			e.className = e.className.replace(/\sactive/ig,"");
+		});
+		bannerListDom.style["margin-left"] = -1*_index*296+'px';
+		btnsDom[_index].className += " active";
+	},false);
+	rightEarDom.addEventListener("click",function(){
+		show();
+	},false);
+	timer=setInterval(function(){
+		show();
+	},1000);
+	function show(){
+		_index++;
+		if(_index>btnsDom.length-1)
+		{
+			_index=0;
+		}
+		btnsDom.forEach(function(e){
+			e.className = e.className.replace(/\sactive/ig,"");
+		});
+		bannerListDom.style["margin-left"] = -1*_index*296+'px';
+		btnsDom[_index].className += " active";
+	}
+	bannerBoxDom.addEventListener("mouseenter",function(){
+		clearInterval(timer);
+	},false);
+	bannerBoxDom.addEventListener("mouseleave",function(){
+		timer=setInterval(function(){
+			show();
+		},1000);
+	},false);
+</script>
+</html>

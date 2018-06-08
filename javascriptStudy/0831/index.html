@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>滚动加载</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		#box,.cnbox{
+			width:200px;
+			margin:0 auto;
+		}
+		.cnbox{
+			height: 200px;
+			background: red;
+			margin-top: 10px;
+		}
+	</style>
+	
+</head>
+<body>
+	<div id="box">
+		<div class="cnbox"></div>
+		<div class="cnbox"></div>
+		<div class="cnbox"></div>
+		<div class="cnbox"></div>
+		<div class="cnbox"></div>
+		<div class="cnbox"></div>
+		<div class="cnbox"></div>
+		<div class="cnbox"></div>
+		<div class="cnbox"></div>
+		<div class="cnbox"></div>
+		<div class="cnbox"></div>
+		<div class="cnbox"></div>
+		<div class="cnbox"></div>
+		<div class="cnbox"></div>
+		<div class="cnbox"></div>
+		<div class="cnbox"></div>
+		<div class="cnbox"></div>
+		<div class="cnbox"></div>
+		<div class="cnbox"></div>
+		<div class="cnbox"></div>
+	</div>
+	<script type="text/javascript">
+		function getRandomColor(){
+			var r = Math.round(Math.random()*255),
+				g = Math.round(Math.random()*255),
+				b = Math.round(Math.random()*255);
+			return 'rgb('+r+','+g+','+b+')';
+		}
+		var boxDom = document.getElementById('box');
+		var cntBoxDom = document.getElementsByClassName('cnbox')[0];
+		document.addEventListener('scroll',function wheel(){
+			var _this = this;
+			var boxDomToTop = boxDom.offsetTop + boxDom.offsetHeight;
+			var scrollToTop = document.body.scrollTop + window.innerHeight;
+			console.log(boxDomToTop,scrollToTop);
+			if(boxDomToTop < (scrollToTop+50)){
+				_this.removeEventListener('scroll',wheel,false);
+				console.log('加载更多.....');
+				var pDom = document.createElement('p');
+				pDom.textContent = '加载更多...';
+				// var testTxt = document.createTextNode('加载更多...');
+				// pDom.appendChild(testTxt);
+				boxDom.appendChild(pDom);
+				setTimeout(function(){
+					var newDom = cntBoxDom.cloneNode(true);
+					newDom .style['background'] = getRandomColor();
+					boxDom.appendChild(newDom);
+					_this.addEventListener('scroll',wheel,false);
+				},30);
+			}
+		},false);
+
+	</script>
+</body>
+</html>

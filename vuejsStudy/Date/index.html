@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vue时间控件</title>
+    <link rel="stylesheet" href="layui/css/layui.css">
+    <script type="text/javascript" src="layui/layui.js"></script>
+    <script type="text/javascript" src="layui/jquery.min.js"></script>
+    <style>
+        #start,#end{
+            max-width: 200px;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+<div class="layui-row">
+    <input class="layui-input" placeholder="创建时间" name="start" id="start">
+        <lable>至</lable>
+    <input class="layui-input" placeholder="创建时间" name="end" id="end">
+</div>
+<script type="text/javascript">
+  layui.use('laydate', function(){
+    var laydate = layui.laydate;
+    //执行一个laydate实例
+    laydate.render({
+      elem: '#start', //指定元素,
+      done:function (value) {
+        console.log(value);
+      }
+    });
+    //执行一个laydate实例
+    laydate.render({
+      elem: '#end', //指定元素
+      done:function (value) {
+        console.log(value);
+      }
+    });
+  })
+</script>
+</body>
+</html>

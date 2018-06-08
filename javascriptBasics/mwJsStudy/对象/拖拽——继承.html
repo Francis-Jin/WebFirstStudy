@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		*{
+			margin:0;
+			padding: 0;
+			cursor:move;
+		}
+		#boxwramp{
+			margin: 50px auto;
+			width:300px;
+			height: 300px;
+			background: #eee;
+			position:relative;
+		}
+		#div1,#div2,#div3,#div4,#div5,#div6,#div7,#div8,#div9{
+			width:100px;
+			height: 100px;
+			position: absolute;
+			line-height: 100px;
+			text-align: center;
+			font-size: 100px;
+		}
+		#div1{
+			left: 0;
+			top:0;
+			background: #f0a;
+		}
+		#div2{
+			left: 100px;
+			top:0px;
+			background: #ffd;
+		}
+		#div3{
+			left: 200px;
+			top:0px;
+			background: #0fc;
+		}
+		#div4{
+			left: 0px;
+			top:100px;
+			background: #0fa;
+		}
+		#div5{
+			left: 100px;
+			top:100px;
+			background: #00f;
+		}
+		#div6{
+			left: 200px;
+			top:100px;
+			background: #ff0;
+		}
+		#div7{
+			left: 0px;
+			top:200px;
+			background: #aff;
+		}
+		#div8{
+			left: 100px;
+			top:200px;
+			background: #faf;
+		}
+		#div9{
+			left: 200px;
+			top:200px;
+			background: #af0;
+		}
+	</style>
+	<script type="text/javascript" src="js/Drag.js"></script>
+	<script type="text/javascript" src="js/LimitDrag.js"></script>
+	<script type="text/javascript">
+		window.addEventListener('DOMContentLoaded',function(){
+			new LimitDrag('div1');
+			new LimitDrag('div2');
+			new LimitDrag('div3');
+			new LimitDrag('div4');
+			new LimitDrag('div5');
+			new LimitDrag('div6');
+			new LimitDrag('div7');
+			new LimitDrag('div8');
+			new LimitDrag('div9');
+			
+		},false);
+	</script>
+</head>
+<body>
+	<div id="boxwramp">
+		<div id="div1">1</div>
+		<div id="div2">2</div>
+		<div id="div3">3</div>
+		<div id="div4">4</div>
+		<div id="div5">5</div>
+		<div id="div6">6</div>
+		<div id="div7">7</div>
+		<div id="div8">8</div>
+		<div id="div9">9</div>
+	</div>
+</body>
+</html>

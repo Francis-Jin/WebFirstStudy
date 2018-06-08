@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ajax</title>
+    <script src="../js/jquery-3.2.1.js"></script>
+    <script>
+        $(document).ready(function (ev) {
+            $('button').click(function (ev) {
+                $.ajax({
+                    url:'http://127.0.0.1/studyphp/array.php',
+                    success:function (res) {
+                        $('h3').html(res);
+                    }
+                })
+            })
+        })
+    </script>
+</head>
+<body>
+    <button>loading...</button>
+    <h3></h3>
+</body>
+</html>

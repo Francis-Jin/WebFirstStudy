@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>落网 - 独立音乐推荐</title>
+		<link type="image/x-icon" rel="icon" href="img/favicon.ico"/><!--标题前面的小图标-->
+		<link rel="stylesheet" type="text/css" href="css/rest.css"/><!--重置默认样式-->
+		<link rel="stylesheet" type="text/css" href="css/main.css"/>
+		<script src="js/lunbo.js" type="text/javascript" charset="utf-8"></script><!--轮播图js-->
+	</head>
+	<body>
+		<!--头部-->
+		<div class="header">
+			<div class="header-wrap">
+					<a href="javaScript:;" class="header-logo fl"></a>
+				<div class="header-nav fl">
+					<a href="javascript:;">期刊</a>
+					<a href="javascript:;">单曲</a>
+					<a href="javascript:;">专栏</a>
+					<a href="javascript:;">活动</a>
+					<a href="javascript:;">APP</a>
+				</div>
+				<div class="header-search fl">
+					<input type="text" name="text" id="text" autocomplete="off"/>
+					<button class="btn">
+						<span class="btn-logo"></span>
+					</button>
+				</div>
+				<div class="header-member fr">
+					<p>注册/登录</p>
+				</div>
+			</div>
+		</div><!--头部-->
+		
+		<!--主体部分-->
+		<div class="wrap">
+			<!--轮播图-->
+			<div class="lunbo" id="lunbo">
+				<div id="list" style="left: -960px;">
+					<img src="img/3.jpg" alt="3" title="第三张图片"/>
+					<img src="img/1.jpg" alt="1" title="第一张图片"/>
+					<img src="img/2.jpg" alt="2" title="第二张图片"/>
+					<img src="img/3.jpg" alt="3" title="第三张图片"/>
+					<img src="img/1.jpg" alt="1" title="第一张图片"/>
+				</div>                   
+				<div class="buttons" id="buttons">
+					<span index="1" class="on"></span>
+					<span index="2"></span>
+					<span index="3"></span>
+				</div>
+				<span href="javascript:;" id="prev" class="arrow">&lt;</span>
+				<a href="javascript:;" id="next" class="arrow">&gt;</a>
+			</div>
+			<!--音乐期刊-->
+			<div class="periodical">
+				<div class="Perd-nav">
+					<h1>音乐期刊</h1>
+					<ul class="pred-text fr">
+						<li><a href="javascript:;">摇滚</a></li>
+						<li><a href="javascript:;">另类</a></li>
+						<li><a href="javascript:;">民谣</a></li>
+						<li><a href="javascript:;">流行</a></li>
+						<li><a href="javascript:;">电子</a></li>
+						<li><a href="javascript:;">古典</a></li>
+						<li><a href="javascript:;">暗潮</a></li>
+						<li><a href="javascript:;">爵士</a></li>
+						<li><a href="javascript:;">金属</a></li>
+						<li><a href="javascript:;">更多&gt;</a></li>
+					</ul>
+				</div><!--pred导航结束-->
+				
+				<div class="pred-image">
+					<div class="pred-image-l fl">
+							<img src="img/640x452 (2).jpg" class="img_lg"/>
+							<p>vol.932 微小相见</p>
+							<span class="back-Image"></span>
+					</div>
+					<div class="pred-image-r fr">
+						<div class="pred-image-r-t">
+							<img src="img/640x452 (1).jpg"/>
+							<p>vol.931 GameBoy & GameGirl</p>
+						</div>
+						<div class="pred-image-b">
+							<img src="img/640x452.jpg"/>
+							<p>vol.930 Life's A Struggle</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--原创音乐-->
+			<div class="Original">
+				<div class="Orig-nav">
+					<h1>原创推荐</h1>
+					<ul class="Orig-text fr">
+						<li><a href="javascript:;">单曲</a></li>
+						<li><a href="javascript:;">专栏</a></li>
+						<li><a href="javascript:;">更多&gt;</a></li>
+					</ul>
+				</div>
+				<div class="Orig-ImgTxt-wrap">
+					<div class="Orig-ImgTxt-l fl">
+						<div class="Orig-Img-l fl">
+							<img src="img/i_597096374a6c9.jpg"/>
+						</div>
+						<div class="Orig-Txt-l fr">
+							<h1><a href="javascript:;">Sala Men</a></h1>
+							<p id="Name">Mr.asbo</p>
+							<p id="Days">2017 - 07 - 21</p>
+						</div>
+						<div class="Orig-Txt-bottom">
+							<span class="Mark-before"></span>
+							<span class="Txt"> 误入椰林婆娑普吉岛，决定住下便是故事的开始。猜是在某个暗夜，Mr.asbo 用他浑厚低沉的嗓音，陈述这个故事：在泰国的一处岛屿上，“占有”了一个叫做 SALA 的酒店，就在那义无反顾的进入的创作的状态，为了制作一张符合 Mr.asbo 特质的唱片，asbo 与 Huzi 两位艺术家被同一个理由圈进氤氲着性感和不可思议的海边，任由无边际的想法蔓延，把视觉，触觉，嗅觉都变成听觉，成为现在你们听到的《Sala Men》。</span>
+							<span class="Mark-later"></span>
+						</div>
+					</div>
+					<div class="Orig-ImgTxt-m fl">
+						<img src="img/Ft457Lu5ddOeAJ21UK10DzTIARMV.png"/>
+						<p><a href="javascript:;">别介意，我只是想和你一起玩摇<br />滚</a></p>
+						<p>eyelight</p>
+					</div>
+					<div class="Orig-ImgTxt-r fr">
+						<img src="img/FgoMTwfSaFCOEpBLH0_4RkQqA9U8.jpg"/>
+						<p><a href="javascript:;">摇滚死不死，和朴树有什么关<br />系？</a></p>
+						<p>张珞阳</p>
+					</div>
+				</div>
+			</div>
+			<!--热门活动-->
+			<div class="hot">
+				<div class="hot-nav">
+					<h1>热门活动</h1>
+					<ul class="hot-navBar fr">
+						<li><a href="javascript:;">北京        </a></li>
+						<li><a href="javascript:;">上海</a></li>
+						<li><a href="javascript:;">广州</a></li>
+						<li><a href="javascript:;">深圳</a></li>
+						<li><a href="javascript:;">武汉</a></li>
+						<li><a href="javascript:;">成都</a></li>
+						<li><a href="javascript:;">台湾</a></li>
+						<li><a href="javascript:;">香港</a></li>
+						<li><a href="javascript:;">更多&gt;</a></li>
+					</ul>
+				</div>
+				<div class="hot-imgTxt-l fl">
+					<div class="hot-nav-imgTxt">
+						<div class="hot-l-img fl">
+							<img src="img/180x225 (1).jpg"/>
+						</div>
+						<div class="hot-l-txt fl">
+								<h1><a href="javascript:;">俄罗斯后朋克<br />Motorama中国巡演</a></h1>
+								<p>时间：2017-09-21</p>
+								<p>地点：深圳</p>
+								<p>场所：B10现场</p>
+								<p>费用：100元 - 120元</p>
+						</div>
+					</div>
+					<div class="hot-nav-imgTxt">
+						<div class="hot-l-img fl">
+							<img src="img/180x225 (1).jpg"/>
+						</div>
+						<div class="hot-l-txt fl">
+								<h1><a href="javascript:;">俄罗斯后朋克<br />Motorama中国巡演</a></h1>
+								<p>时间：2017-09-20</p>
+								<p>地点：广州</p>
+								<p>场所：Tu凸空间</p>
+								<p>费用：100元 - 120元</p>
+						</div>
+					</div>
+				</div>
+				<div class="hot-imgTxt-m fl">
+					<div class="hot-nav-imgTxt">
+						<div class="hot-l-img fl">
+							<img src="img/180x225 (1).jpg"/>
+						</div>
+						<div class="hot-l-txt fl">
+								<h1><a href="javascript:;">俄罗斯后朋克<br />Motorama中国巡演</a></h1>
+								<p>时间：2017-09-15</p>
+								<p>地点：北京</p>
+								<p>场所：愚公移山</p>
+								<p>费用：100元 - 150元</p>
+						</div>
+					</div>
+					<div class="hot-nav-imgTxt">
+						<div class="hot-l-img fl">
+							<img src="img/180x225.jpg"/>
+						</div>
+						<div class="hot-l-txt fl">
+								<h1><a href="javascript:;">瑞典摇滚乐团the <br />Royal Concept中国巡演</a></h1>
+								<p>时间：2017-08-29</p>
+								<p>地点：武汉</p>
+								<p>场所：VOXLIVEHOUSE</p>
+								<p>费用：100元 - 150元</p>
+						</div>
+					</div>
+				</div>
+				<div class="hot-imgTxt-r fr">
+					<div class="hot-nav-imgTxt">
+						<div class="hot-l-img fl">
+							<img src="img/180x225 (1).jpg"/>
+						</div>
+						<div class="hot-l-txt fl">
+								<h1><a href="javascript:;">俄罗斯后朋克<br />Motorama中国巡演</a></h1>
+								<p>时间：2017-09-19</p>
+								<p>地点：武汉</p>
+								<p>场所：VOXLIVEHOUSE</p>
+								<p>费用：100元 - 120元</p>
+						</div>
+					</div>
+					<div class="hot-nav-imgTxt">
+						<div class="hot-l-img fl">
+							<img src="img/180x225.jpg"/>
+						</div>
+						<div class="hot-l-txt fl">
+								<h1><a href="javascript:;">瑞典摇滚乐团the<br />Royal Concept中国巡演</a></h1>
+								<p>时间：2017-08-27</p>
+								<p>地点：成都</p>
+								<p>场所：小酒馆空间</p>
+								<p>费用：100元 - 150元</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div><!--主体部分-->
+		<!--页脚部分-->
+		<div class="footer">
+			<div class="foWrap">
+				<div class="footer-l fl">
+					<h3>关于</h3>
+					<p><a href="javascript:;">关于落网</a></p>
+					<p><a href="javascript:;">加入我们</a></p>
+					<p><a href="javascript:;">联系合作</a></p>
+					<p><a href="javascript:;">反馈建议</a></p>
+					<p><a href="javascript:;">友情链接</a></p>
+				</div>
+				<div class="footer-m fl">
+					<h3>关于</h3>
+					<p><a href="javascript:;">关于落网</a></p>
+					<p><a href="javascript:;">加入我们</a></p>
+					<p><a href="javascript:;">联系合作</a></p>
+					<p><a href="javascript:;">反馈建议</a></p>
+					<p><a href="javascript:;">友情链接</a></p>
+				</div>
+				<div class="footer-r fr">
+					<h3>关于</h3>
+					<p><a href="javascript:;">关于落网</a></p>
+					<p><a href="javascript:;">加入我们</a></p>
+					<p><a href="javascript:;">联系合作</a></p>
+					<p><a href="javascript:;">反馈建议</a></p>
+					<p><a href="javascript:;">友情链接</a></p>
+				</div>
+			</div>
+		</div>	<!--页脚部分-->
+	</body>
+</html>

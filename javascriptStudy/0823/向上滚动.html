@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+	#demo {
+		background: #FFF;
+		overflow: hidden;
+		border: 1px dashed #CCC;
+		width: 200px;
+		height: 200px;
+		margin:50px auto;
+		/*text-align: center;*/
+		/*float: left*/
+	}
+	#demo img {
+		width:200px;
+		height: 100px;
+		border: 3px solid #F2F2F2;
+		display: block
+	}
+	</style>
+</head>
+<body>
+	<div id="demo">
+		<div id="demo1">
+			<a href="#"><img src="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=3590939736,1590458890&fm=11&gp=0.jpg" border="0" /></a>
+			<a href="#"><img src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=523662363,397891064&fm=26&gp=0.jpg" border="0" /></a>
+			<a href="#"><img src="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=3479001473,3214547075&fm=26&gp=0.jpg" border="0" /></a>
+			<a href="#"><img src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=2542971004,419662501&fm=26&gp=0.jpg" border="0" /></a>
+			<a href="#"><img src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3747731476,1894636403&fm=26&gp=0.jpg" border="0" /></a>
+		</div>
+		<div id="demo2"></div>
+	</div>
+	<script>
+
+
+	var speed=5; //数字越大速度越慢
+
+	var tab=document.getElementById("demo");
+
+	var tab1=document.getElementById("demo1");
+
+	var tab2=document.getElementById("demo2");
+
+	tab2.innerHTML=tab1.innerHTML; //克隆demo1为demo2
+
+	function Marquee(){
+
+		if(tab2.offsetTop-tab.scrollTop<=0)//当滚动至demo1与demo2交界时
+
+			tab.scrollTop -= tab1.offsetHeight //demo跳到最顶端
+
+		else{
+
+			tab.scrollTop++
+
+		}
+
+	}
+
+	var MyMar=setInterval(Marquee,speed);
+
+	tab.onmouseover=function() {clearInterval(MyMar)};//鼠标移上时清除定时器达到滚动停止的目的
+
+	tab.onmouseout=function() {MyMar=setInterval(Marquee,speed)};//鼠标移开时重设定时器
+
+
+	</script>
+</body>
+</html>

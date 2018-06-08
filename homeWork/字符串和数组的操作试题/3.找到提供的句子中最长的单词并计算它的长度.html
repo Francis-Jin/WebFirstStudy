@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>3、找到提供的句子中最长的单词，并计算它的长度。</title>
+	<script type="text/javascript">
+
+		var str = 'Find hope from despair, life will become brilliant.';
+		// var a = findLongestWord(str);
+		// console.log(a);
+		/*function findLongestWord(str) {
+		        var s = str.split([' ']);
+		        var max=0;
+		        var t=0;
+		        for (var i = 0; i < s.length; i++) {
+		            t=s[i].length
+		        if(t>max){
+		           max= t;
+		        }
+		  }
+		        return max;
+		}*/
+		function getMaxLen(str){
+			var strArr = str.split(' ');
+			var maxLen = 0;
+			var maxIndex = 0;
+			strArr.forEach(function(e,i){
+				if(maxLen < e.length){
+					maxLen = e.length;
+					maxIndex = i;
+				}
+				return maxLen,strArr[maxIndex];
+			})
+		}
+		console.log(getMaxLen(str));
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

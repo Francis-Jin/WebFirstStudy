@@ -1,0 +1,157 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+a{
+	background-color: transparent;
+	text-decoration: none;
+	list-style: none;
+}
+em,a{
+	font-style: normal;
+}
+.box{
+	margin: 20px auto;
+    width: 224px;
+    height: 410px;
+    overflow: hidden;
+}
+.box .box-top{
+	width: 100%;
+    height: 26px;
+    line-height: 26px;
+    margin-bottom: 20px;
+}
+.box .box-top .til{
+	font-size: 18px;
+    float: left;
+    padding-left: 0;
+    height: 26px;
+    background: url(http://img.hunantv.com/imgotv-channel/ef22ca7e/indexicon/til-top.png) no-repeat -10px -5px;
+    width: 56px;
+    text-indent: -300%;
+    overflow: hidden;
+}
+.box .box-top p{
+	display: inline-block;
+    width: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.box .box-top p a{
+    font-size: 14px;
+    color: #525252;
+}
+.box .box-top .more{
+    margin-top: 4px;
+	background: url(http://img.hunantv.com/imgotv-channel/ef22ca7e/indexicon/til-line-1.png) no-repeat left 7px;
+    height: 24px;
+    overflow: hidden;
+    float: left;
+}
+/* 上end*/
+
+.box .box-bottom{
+	width: 100%;
+    overflow: hidden;
+}
+.box .box-bottom li{
+	border-bottom: 1px solid #ddd;
+    height: 36px;
+    line-height: 36px;
+    overflow: hidden;
+}
+.box .box-bottom li.sel{
+    height: 109px;
+    border: 0;
+}
+.box .box-bottom li p.txt{
+	display: block;
+    width: 100%;
+    height: 100%;
+    font-size: 14px;
+}
+.active{
+    display: none !important;
+}
+.box .box-bottom p.txt .on{
+	color: #ff5f00;
+}
+.box .box-bottom li p.txt em{
+	display: block;
+    width: 40px;
+    height: 100%;
+    float: left;
+    color: #868686;
+    text-indent: 5px;
+    /*overflow: hidden;*/
+    font-weight: 700;
+
+}
+.box .box-bottom li p.txt span{
+	display: block;
+    width: 194px;
+    height: 100%;
+}
+.box .box-bottom li a{
+	color: #333;
+}
+.box .box-bottom .con{
+    margin-top: -36px;
+	width: 224px;
+    height: 109px;
+    background-color: #e7e7e7;
+}
+.box .box-bottom li p.con .shot {
+    position: relative;
+    width: 75px;
+    height: 105px;
+    border: 2px solid #ddd;
+    overflow: hidden;
+    background: url(http://img.hunantv.com/imgotv-channel/ef22ca7e/loadingimg/img220-125.jpg) no-repeat center center;
+    float: left;
+    margin-right: 10px;
+}
+.box .box-bottom li p.con span.shot img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.box .box-bottom li p.con span.shot i {
+    display: inline-block;
+    position: absolute;
+}
+.box .box-bottom li p.con span.shot i.num {
+    left: 0;
+    top: 0;
+    width: 24px;
+    height: 24px;
+    color: #fff;
+    text-align: center;
+    font-size: 14px;
+    line-height: 24px;
+    background: url(http://img.hunantv.com/imgotv-channel/ef22ca7e/indexicon/transparent-9-orange.png) repeat;
+}
+.box .box-bottom li p.con span.title {
+    font-size: 14px;
+    line-height: 25px;
+    overflow: hidden;
+    color: #333;
+    width: 130px;
+    padding: 8px 0 2px;
+}
+.box .box-bottom li p.con span.name {
+    float: left;
+    width: 130px;
+    font-size: 12px;
+    line-height: 22px;
+    color: #999;
+    height: 66px;
+    overflow: hidden;
+}
+/*.box .box-bottom li.sel {
+    height: 109px;
+    border: 0;
+}*/

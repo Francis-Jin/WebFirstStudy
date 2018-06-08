@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>currentStyle</title>
+	<style type="text/css">
+		#div1{
+			width: 100px;
+			height: 100px;
+			background-color: red;
+		}
+		#btn{
+			margin:0 auto;
+		}
+	</style>
+	<script type="text/javascript">
+		function getStyle(obj, attr){
+			if(obj.currentStyle){
+				return obj.currentStyle[attr];
+			}
+			else{
+				return getComputedStyle(obj, false)[attr];
+			}
+		}
+		function css(obj,attr,value){
+			if(arguments==2){
+				return getStyle(obj,attr);
+			}else{
+				return obj.style[attr]=value;
+			}
+		}
+		window.onload=function(){
+			var oDiv=document.getElementById('div1');
+			var oBtn=document.getElementById('btn');
+			oDiv.style.backgroundColor='yellow';
+			oBtn.onmouseover=function(){
+				oDiv.style.width='200px';
+				oDiv.style.height='200px';
+				oDiv.style.backgroundColor='green';
+			}
+			oBtn.onmouseout=function(){
+				oDiv.style.width='300px';
+				oDiv.style.height='300px';
+				oDiv.style.backgroundColor='red';
+			}
+		}
+	</script>
+</head>
+<body>
+	<input type="button" name="" id="btn" value="样式">
+	<div id="div1"></div>
+</body>
+</html>

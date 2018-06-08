@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>求素数</title>
+</head>
+<body>
+	<script type="text/javascript"> 
+	/*
+	创建susu.html文件，判断101-200之间有多少个素数，并将所有素数装在p标签中显示在页面。
+	*/
+	var arr = [];
+	function getSushu(){
+		for (var i = 101; i <= 200; i++){  
+		    for (var j = 2; j < i; j++){  
+		        if (i % j == 0)   
+               		break;  
+	        }  
+		//判断循环是否提前跳出，如果j<i说明在2~j之间,i有可整除的数  
+	        if (j >= i){  
+	        	arr.push(i);
+	        }  
+	    }
+	    return arr;
+	}
+	getSushu();
+	// console.log(arr);
+	for(var i = 0; i < arr.length; i++){
+			var pDom = document.createElement('p');
+			document.body.appendChild(pDom);
+			pDom.innerHTML = "我是101~200内的第"+(i+1)+"个素数:"+arr[i]+",我在第"+(i+1)+"个p标签里面";
+		}
+
+	</script>
+</body>
+</html>

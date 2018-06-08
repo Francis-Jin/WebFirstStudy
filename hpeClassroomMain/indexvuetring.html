@@ -1,0 +1,3539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HPE课堂-JAVA、WEB、软件测试、大数据在线学习</title>
+    <!--<script src="js/jquery-3.2.1.js"></script>-->
+    <link rel="icon" href="img/title-icon.png">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/main1.css">
+    <link rel="stylesheet" href="iconfont/icon/style.css">
+    <link href="http://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <script src="js/vue.js"></script>
+    <script src="js/main1.js"></script>
+    <script src="js/velocity.min.js"></script>
+
+    <style>
+        .guodu-enter{
+            margin-left: -100%;
+        }
+        .guodu-leave-to{
+
+            margin-left: 100%;
+        }
+        .guodu-enter-active,.guodu-leave-active{
+            transition: all 1s;
+        }
+
+        .prev-enter{
+            margin-left: 100%;
+        }
+        .prev-leave-to{
+
+            margin-left: -100%;
+        }
+        .prev-enter-active,.prev-leave-active{
+            transition: all 1s;
+        }
+
+    </style>
+</head>
+<body>
+<!--头部导航 开始-->
+<header class="header-wrapper">
+    <div class="logoBar">
+        <div class="logo">
+            <img src="img/logo3.png" alt="logo">
+        </div>
+        <div class="userBox">
+            <button class="icFont shopCar"></button>
+            <button class="icFont user">
+            </button>
+
+        </div>
+        <div class="top-search">
+            <div class="inputBox">
+                <input type="text" placeholder="Searching...">
+            </div>
+            <div class="searchBtn">
+                <button class="search"></button>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="header-container">
+
+        <div class="header-nav">
+            <div class="hpelogo">
+                <img src="img/hpelogo.PNG" alt="">
+            </div>
+            <ul class="header-list fr">
+                <li class="header-unit header-hover">
+                    <a href="#" class="head-link" title="网站首页">首页</a>
+                </li>
+                <li class="header-unit">
+                    <a href="#" class="head-link">
+                        介绍
+                    </a>
+                    <div class="header-unit-page">
+                        <ul class="page-unit">
+                            <li class="unit"><a class="page-link" href="javascript:;">园区介绍</a></li>
+                            <li class="unit"><a class="page-link" href="javascript:;">发展历程</a></li>
+                            <li class="unit"><a class="page-link" href="javascript:;">荣誉资质</a></li>
+                            <li class="unit"><a class="page-link" href="javascript:;">学员作品</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="header-unit">
+                    <a href="#" class="head-link">
+                        资讯
+                    </a>
+                    <div class="header-unit-page">
+                        <ul class="page-unit">
+                            <li class="unit"><a class="page-link" href="javascript:;">信息动态</a></li>
+                            <li class="unit"><a class="page-link" href="javascript:;">发展历程</a></li>
+                            <li class="unit"><a class="page-link" href="javascript:;">荣誉资质</a></li>
+                            <li class="unit"><a class="page-link" href="javascript:;">联系我们</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="header-unit">
+                    <a href="#" class="head-link">
+                        主办单位
+                    </a>
+                    <div class="header-unit-page">
+                        <ul class="page-unit">
+                            <li class="unit"><a class="page-link" href="javascript:;">HPE</a></li>
+                            <li class="unit"><a class="page-link" href="javascript:;">HPE大学</a></li>
+                            <li class="unit"><a class="page-link" href="javascript:;">遵义软件园</a></li>
+                            <li class="unit"><a class="page-link" href="javascript:;">遵义市政府</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="header-unit">
+                    <a href="#" class="head-link">
+                        培训课程
+                    </a>
+                    <div class="header-unit-page">
+                        <ul class="page-unit">
+                            <li class="unit"><a class="page-link" href="javascript:;">java课程</a></li>
+                            <li class="unit"><a class="page-link" href="javascript:;">Web前端</a></li>
+                            <li class="unit"><a class="page-link" href="javascript:;">软件测试</a></li>
+                            <li class="unit"><a class="page-link" href="javascript:;">大数据</a></li>
+                        </ul>
+                    </div>
+                </li>
+
+
+                <div class="clearfix"></div>
+            </ul>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+</header>
+<!--头部导航 结束-->
+
+<!--轮播图开始-->
+<div class="slider-unit" id="banner">
+    <div class="navBox clearFix">
+        <div class="nav ">
+            <ul>
+                <li class="navli">
+                    <a href="javascript:void(0);">前端开发</a>
+                    <div class="list-show">
+                        <div class="listBox">
+                            <p class="listTitle1"><span>知识体系</span></p>
+                            <div class="listContent">
+                                <dl>
+                                    <dt><a href="javascript:void(0);">前端基础</a></dt>
+                                    <dd>
+                                        <a href="javascript:void(0);">HTML</a>
+                                        <a href="javascript:void(0);">CSS</a>
+                                        <a href="javascript:void(0);">JavaScript</a>
+                                        <a href="javascript:void(0);">HTML</a>
+                                        <a href="javascript:void(0);">CSS3</a>
+                                        <a href="javascript:void(0);">技术前瞻</a>
+                                    </dd>
+                                </dl>
+                                <dl>
+                                    <dt><a href="javascript:void(0);">前端中级进阶</a></dt>
+                                    <dd>
+                                        <a href="javascript:void(0);">TypeScript</a>
+                                        <a href="javascript:void(0);">项目案例</a>
+                                        <a href="javascript:void(0);">前端安全</a>
+                                    </dd>
+                                </dl>
+                                <dl>
+                                    <dt><a href="javascript:void(0);">前端框架</a></dt>
+                                    <dd>
+                                        <a href="javascript:void(0);">jQuery</a>
+                                        <a href="javascript:void(0);">Ext JS</a>
+                                        <a href="javascript:void(0);">AngularJS</a>
+                                        <a href="javascript:void(0);">ReactJS</a>
+                                        <a href="javascript:void(0);">Bootstrap</a>
+                                        <a href="javascript:void(0);">Three.js</a>
+                                    </dd>
+                                </dl>
+                                <dl>
+                                    <dt><a href="javascript:void(0);">H5</a></dt>
+                                    <dd>
+                                        <a href="javascript:void(0);">Canvas</a>
+                                        <a href="javascript:void(0);">SVG</a>
+                                        <a href="javascript:void(0);">WebGL</a>
+                                        <a href="javascript:void(0);">CreateJS</a>
+                                    </dd>
+                                </dl>
+                            </div>
+                            <p class="listTitle2"><span>推荐入门</span></p>
+                            <ul class="recommend">
+                                <li class="recommendLi">
+                                    <img src="http://jiuye-res.jikexueyuan.com/others/20170705/417c2b75-8df5-4f87-8708-c9e7f91a840b.png"
+                                         alt="">
+                                    <p>
+                                        <a href="javascript:void(0);">Vue.js前端框架详解－基础&进阶&实战</a>
+                                    </p>
+                                </li>
+                                <li class="recommendLi">
+                                    <img src="http://jiuye-res.jikexueyuan.com/others/20170705/417c2b75-8df5-4f87-8708-c9e7f91a840b.png"
+                                         alt="">
+                                    <p>
+                                        <a href="javascript:void(0);">Python利器，超凡蜘蛛带你“爬”世界</a>
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="navli">
+                    <a href="javascript:void(0);">大数据/云计算</a>
+                    <div class="list-show">
+                        <div class="listBox">
+                            <p class="listTitle1"><span>知识体系</span></p>
+                            <div class="listContent">
+                                <dl>
+                                    <dt><a href="javascript:void(0);">大数据</a></dt>
+                                    <dd>
+                                        <a href="javascript:void(0);">Hadoop</a>
+                                        <a href="javascript:void(0);">Storm</a>
+                                        <a href="javascript:void(0);">Hive</a>
+                                        <a href="javascript:void(0);">Zookeeper</a>
+                                        <a href="javascript:void(0);">Hbase</a>
+                                        <a href="javascript:void(0);">数据分析</a>
+                                    </dd>
+                                </dl>
+                                <dl>
+                                    <dt><a href="javascript:void(0);">云计算</a></dt>
+                                    <dd>
+                                        <a href="javascript:void(0);">Docker</a>
+                                        <a href="javascript:void(0);">CloudStack</a>
+                                        <a href="javascript:void(0);">OpenStack</a>
+                                    </dd>
+                                </dl>
+                                <dl>
+                                    <dt><a href="javascript:void(0);">虚拟化</a></dt>
+                                    <dd>
+                                        <a href="javascript:void(0);">VMware</a>
+                                    </dd>
+                                </dl>
+                                <dl>
+                                    <dt><a href="javascript:void(0);">SQL</a></dt>
+                                    <dd>
+                                        <a href="javascript:void(0);">MySql</a>
+                                        <a href="javascript:void(0);">SQL Server</a>
+                                        <a href="javascript:void(0);">SQLite</a>
+                                    </dd>
+                                </dl>
+                                <dl>
+                                    <dt><a href="javascript:void(0);">云主机</a></dt>
+                                    <dd>
+                                        <a href="javascript:void(0);">腾讯云</a>
+                                        <a href="javascript:void(0);">阿里云</a>
+                                    </dd>
+                                </dl>
+                            </div>
+                            <p class="listTitle2"><span>推荐入门</span></p>
+                            <ul class="recommend">
+                                <li class="recommendLi">
+                                    <img src="http://jiuye-res.jikexueyuan.com/others/20170705/417c2b75-8df5-4f87-8708-c9e7f91a840b.png"
+                                         alt="">
+                                    <p>
+                                        <a href="javascript:void(0);">Vue.js前端框架详解－基础&进阶&实战</a>
+                                    </p>
+                                </li>
+                                <li class="recommendLi">
+                                    <img src="http://jiuye-res.jikexueyuan.com/others/20170705/417c2b75-8df5-4f87-8708-c9e7f91a840b.png"
+                                         alt="">
+                                    <p>
+                                        <a href="javascript:void(0);">Python利器，超凡蜘蛛带你“爬”世界</a>
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="navli">
+                    <a href="javascript:void(0);">后端开发</a>
+                    <div class="list-show">
+                        <div class="listBox">
+                            <p class="listTitle1"><span>知识体系</span></p>
+                            <div class="listContent">
+                                <dl>
+                                    <dt><a href="javascript:void(0);">Python</a></dt>
+                                    <dd>
+                                        <a href="javascript:void(0);">Python基础</a>
+                                        <a href="javascript:void(0);">Web2dpy</a>
+                                        <a href="javascript:void(0);">Django</a>
+                                        <a href="javascript:void(0);">GUI</a>
+                                        <a href="javascript:void(0);">Flask</a>
+                                        <a href="javascript:void(0);">数据挖掘与分析</a>
+                                    </dd>
+                                </dl>
+                                <dl>
+                                    <dt><a href="javascript:void(0);">PHP</a></dt>
+                                    <dd>
+                                        <a href="javascript:void(0);">PHP基础</a>
+                                        <a href="javascript:void(0);">YII</a>
+                                        <a href="javascript:void(0);">ThinkPHP</a>
+                                    </dd>
+                                </dl>
+                                <dl>
+                                    <dt><a href="javascript:void(0);">Node.js</a></dt>
+                                    <dd>
+                                        <a href="javascript:void(0);">Node基础</a>
+                                        <a href="javascript:void(0);">express</a>
+                                        <a href="javascript:void(0);">Hexo</a>
+                                    </dd>
+                                </dl>
+                                <dl>
+                                    <dt><a href="javascript:void(0);">ASP.NET</a></dt>
+                                    <dd>
+                                        <a href="javascript:void(0);">c#</a>
+                                        <a href="javascript:void(0);">ASP.NET MVC</a>
+                                        <a href="javascript:void(0);">WPF</a>
+                                    </dd>
+                                </dl>
+                                <dl>
+                                    <dt><a href="javascript:void(0);">J2EE</a></dt>
+                                    <dd>
+                                        <a href="javascript:void(0);">JSP</a>
+                                        <a href="javascript:void(0);">Spring</a>
+                                        <a href="javascript:void(0);">Spring MVC</a>
+                                        <a href="javascript:void(0);">Maven</a>
+                                        <a href="javascript:void(0);">常用框架</a>
+                                        <a href="javascript:void(0);">项目实战</a>
+                                    </dd>
+                                </dl>
+                                <dl>
+                                    <dt><a href="javascript:void(0);">Ruby</a></dt>
+                                    <dd>
+                                        <a href="javascript:void(0);">Ruby基础</a>
+                                        <a href="javascript:void(0);">Ruby on Rails</a>
+                                        <a href="javascript:void(0);">Grape</a>
+                                        <a href="javascript:void(0);">Ruby进阶</a>
+                                    </dd>
+                                </dl>
+                            </div>
+                            <p class="listTitle2"><span>推荐入门</span></p>
+                            <ul class="recommend">
+                                <li class="recommendLi">
+                                    <img src="http://jiuye-res.jikexueyuan.com/others/20170705/417c2b75-8df5-4f87-8708-c9e7f91a840b.png"
+                                         alt="">
+                                    <p>
+                                        <a href="javascript:void(0);">Vue.js前端框架详解－基础&进阶&实战</a>
+                                    </p>
+                                </li>
+                                <li class="recommendLi">
+                                    <img src="http://jiuye-res.jikexueyuan.com/others/20170705/417c2b75-8df5-4f87-8708-c9e7f91a840b.png"
+                                         alt="">
+                                    <p>
+                                        <a href="javascript:void(0);">Python利器，超凡蜘蛛带你“爬”世界</a>
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="navli">
+                    <a href="javascript:void(0);">硬件/物联网</a>
+                    <div class="list-show">
+                        <div class="listBox">
+                            <p class="listTitle1"><span>知识体系</span></p>
+                            <div class="listContent">
+                                <dl>
+                                    <dt><a href="javascript:void(0);">硬件架构</a></dt>
+                                    <dd>
+                                        <a href="javascript:void(0);">C51</a>
+                                        <a href="javascript:void(0);">ARM</a>
+                                        <a href="javascript:void(0);">AVR</a>
+                                        <a href="javascript:void(0);">Cortex-M</a>
+                                        <a href="javascript:void(0);">Cortex-A</a>
+                                    </dd>
+                                </dl>
+                                <dl>
+                                    <dt><a href="javascript:void(0);">物联网操作系统</a></dt>
+                                    <dd>
+                                        <a href="javascript:void(0);">Android</a>
+                                        <a href="javascript:void(0);">Wear</a>
+                                        <a href="javascript:void(0);">Apple</a>
+                                        <a href="javascript:void(0);">Watchkit</a>
+                                        <a href="javascript:void(0);">RTOS</a>
+                                    </dd>
+                                </dl>
+                                <dl>
+                                    <dt><a href="javascript:void(0);">Node.js</a></dt>
+                                    <dd>
+                                        <a href="javascript:void(0);">Node基础</a>
+                                        <a href="javascript:void(0);">express</a>
+                                        <a href="javascript:void(0);">Hexo</a>
+                                    </dd>
+                                </dl>
+                                <dl>
+                                    <dt><a href="javascript:void(0);">开源硬件平台</a></dt>
+                                    <dd>
+                                        <a href="javascript:void(0);">树莓派</a>
+                                        <a href="javascript:void(0);">GoKit</a>
+                                        <a href="javascript:void(0);">Guitar</a>
+                                        <a href="javascript:void(0);">Arduino</a>
+                                        <a href="javascript:void(0);">mbed</a>
+                                    </dd>
+                                </dl>
+                                <dl>
+                                    <dt><a href="javascript:void(0);">通信链接技术</a></dt>
+                                    <dd>
+                                        <a href="javascript:void(0);">无线WiFi</a>
+                                        <a href="javascript:void(0);">蓝牙</a>
+                                        <a href="javascript:void(0);">NFC</a>
+                                        <a href="javascript:void(0);">移动通信</a>
+                                    </dd>
+                                </dl>
+                                <dl>
+                                    <dt><a href="javascript:void(0);">信息感知处理技术</a></dt>
+                                    <dd>
+                                        <a href="javascript:void(0);">传感器</a>
+                                        <a href="javascript:void(0);">数据挖掘</a>
+                                    </dd>
+                                </dl>
+                                <dl>
+                                    <dt><a href="javascript:void(0);">人机交互技术</a></dt>
+                                    <dd>
+                                        <a href="javascript:void(0);">人脸识别</a>
+                                        <a href="javascript:void(0);">语音识别</a>
+                                        <a href="javascript:void(0);">手势识别</a>
+                                    </dd>
+                                </dl>
+
+                                <p class="listTitle2"><span>推荐入门</span></p>
+                                <ul class="recommend">
+                                    <li class="recommendLi">
+                                        <img src="http://jiuye-res.jikexueyuan.com/others/20170705/417c2b75-8df5-4f87-8708-c9e7f91a840b.png"
+                                             alt="">
+                                        <p>
+                                            <a href="javascript:void(0);">Vue.js前端框架详解－基础&进阶&实战</a>
+                                        </p>
+                                    </li>
+                                    <li class="recommendLi">
+                                        <img src="http://jiuye-res.jikexueyuan.com/others/20170705/417c2b75-8df5-4f87-8708-c9e7f91a840b.png"
+                                             alt="">
+                                        <p>
+                                            <a href="javascript:void(0);">Python利器，超凡蜘蛛带你“爬”世界</a>
+                                        </p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="navli">
+                    <a href="javascript:void(0);">测试/设计</a>
+                    <div class="list-show">
+                        <div class="listBox">
+                            <p class="listTitle1"><span>知识体系</span></p>
+                            <div class="listContent">
+                                <dl>
+                                    <dt><a href="javascript:void(0);">设计基础</a></dt>
+                                    <dd>
+                                        <a href="javascript:void(0);">Photoshop</a>
+                                        <a href="javascript:void(0);">Flash</a>
+                                        <a href="javascript:void(0);">Sketch</a>
+                                        <a href="javascript:void(0);">Illustrator</a>
+                                    </dd>
+                                </dl>
+
+                                <dl>
+                                    <dt><a href="javascript:void(0);">游戏设计</a></dt>
+                                    <dd>
+                                        <a href="javascript:void(0);">界面设计</a>
+                                        <a href="javascript:void(0);">角色设计</a>
+                                    </dd>
+                                </dl>
+                                <dl>
+                                    <dt><a href="javascript:void(0);">视觉设计</a></dt>
+                                    <dd>
+                                        <a href="javascript:void(0);">应用UI设计</a>
+                                        <a href="javascript:void(0);">网页UI设计</a>
+                                        <a href="javascript:void(0);">设计理论</a>
+                                        <a href="javascript:void(0);">图形设计</a>
+                                    </dd>
+                                </dl>
+                                <dl>
+                                    <dt><a href="javascript:void(0);">产品经理</a></dt>
+                                    <dd>
+                                        <a href="javascript:void(0);">需求分析</a>
+                                        <a href="javascript:void(0);">项目实战</a>
+                                    </dd>
+                                </dl>
+                            </div>
+                            <p class="listTitle2"><span>推荐入门</span></p>
+                            <ul class="recommend">
+                                <li class="recommendLi">
+                                    <img src="http://jiuye-res.jikexueyuan.com/others/20170705/417c2b75-8df5-4f87-8708-c9e7f91a840b.png"
+                                         alt="">
+                                    <p>
+                                        <a href="javascript:void(0);">Vue.js前端框架详解－基础&进阶&实战</a>
+                                    </p>
+                                </li>
+                                <li class="recommendLi">
+                                    <img src="http://jiuye-res.jikexueyuan.com/others/20170705/417c2b75-8df5-4f87-8708-c9e7f91a840b.png"
+                                         alt="">
+                                    <p>
+                                        <a href="javascript:void(0);">Python利器，超凡蜘蛛带你“爬”世界</a>
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="navli">
+                    <a href="javascript:void(0);">移动开发</a>
+                    <div class="list-show">
+                        <div class="listBox">
+                            <p class="listTitle1"><span>知识体系</span></p>
+                            <div class="listContent">
+                                <dl>
+                                    <dt><a href="javascript:void(0);">硬件架构</a></dt>
+                                    <dd>
+                                        <a href="javascript:void(0);">C51</a>
+                                        <a href="javascript:void(0);">ARM</a>
+                                        <a href="javascript:void(0);">AVR</a>
+                                        <a href="javascript:void(0);">Cortex-M</a>
+                                        <a href="javascript:void(0);">Cortex-A</a>
+                                    </dd>
+                                </dl>
+                                <dl>
+                                    <dt><a href="javascript:void(0);">物联网操作系统</a></dt>
+                                    <dd>
+                                        <a href="javascript:void(0);">Android</a>
+                                        <a href="javascript:void(0);">Wear</a>
+                                        <a href="javascript:void(0);">Apple</a>
+                                        <a href="javascript:void(0);">Watchkit</a>
+                                        <a href="javascript:void(0);">RTOS</a>
+                                    </dd>
+                                </dl>
+                                <dl>
+                                    <dt><a href="javascript:void(0);">Node.js</a></dt>
+                                    <dd>
+                                        <a href="javascript:void(0);">Node基础</a>
+                                        <a href="javascript:void(0);">express</a>
+                                        <a href="javascript:void(0);">Hexo</a>
+                                    </dd>
+                                </dl>
+                                <dl>
+                                    <dt><a href="javascript:void(0);">开源硬件平台</a></dt>
+                                    <dd>
+                                        <a href="javascript:void(0);">树莓派</a>
+                                        <a href="javascript:void(0);">GoKit</a>
+                                        <a href="javascript:void(0);">Guitar</a>
+                                        <a href="javascript:void(0);">Arduino</a>
+                                        <a href="javascript:void(0);">mbed</a>
+                                    </dd>
+                                </dl>
+                                <dl>
+                                    <dt><a href="javascript:void(0);">通信链接技术</a></dt>
+                                    <dd>
+                                        <a href="javascript:void(0);">无线WiFi</a>
+                                        <a href="javascript:void(0);">蓝牙</a>
+                                        <a href="javascript:void(0);">NFC</a>
+                                        <a href="javascript:void(0);">移动通信</a>
+                                    </dd>
+                                </dl>
+                                <dl>
+                                    <dt><a href="javascript:void(0);">信息感知处理技术</a></dt>
+                                    <dd>
+                                        <a href="javascript:void(0);">传感器</a>
+                                        <a href="javascript:void(0);">数据挖掘</a>
+                                    </dd>
+                                </dl>
+                                <dl>
+                                    <dt><a href="javascript:void(0);">人机交互技术</a></dt>
+                                    <dd>
+                                        <a href="javascript:void(0);">人脸识别</a>
+                                        <a href="javascript:void(0);">语音识别</a>
+                                        <a href="javascript:void(0);">手势识别</a>
+                                    </dd>
+                                </dl>
+                                <p class="listTitle2"><span>推荐入门</span></p>
+                                <ul class="recommend">
+                                    <li class="recommendLi">
+                                        <img src="http://jiuye-res.jikexueyuan.com/others/20170705/417c2b75-8df5-4f87-8708-c9e7f91a840b.png"
+                                             alt="">
+                                        <p>
+                                            <a href="javascript:void(0);">Vue.js前端框架详解－基础&进阶&实战</a>
+                                        </p>
+                                    </li>
+                                    <li class="recommendLi">
+                                        <img src="http://jiuye-res.jikexueyuan.com/others/20170705/417c2b75-8df5-4f87-8708-c9e7f91a840b.png"
+                                             alt="">
+                                        <p>
+                                            <a href="javascript:void(0);">Python利器，超凡蜘蛛带你“爬”世界</a>
+                                        </p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="navli">
+                    <a href="javascript:void(0);">人工智能</a>
+
+                    <div class="list-show">
+                        <div class="listBox">
+                            <p class="listTitle1"><span>知识体系</span></p>
+                            <div class="listContent">
+                                <dl>
+                                    <dt><a href="javascript:void(0);">硬件架构</a></dt>
+                                    <dd>
+                                        <a href="javascript:void(0);">C51</a>
+                                        <a href="javascript:void(0);">ARM</a>
+                                        <a href="javascript:void(0);">AVR</a>
+                                        <a href="javascript:void(0);">Cortex-M</a>
+                                        <a href="javascript:void(0);">Cortex-A</a>
+                                    </dd>
+                                </dl>
+                                <dl>
+                                    <dt><a href="javascript:void(0);">物联网操作系统</a></dt>
+                                    <dd>
+                                        <a href="javascript:void(0);">Android</a>
+                                        <a href="javascript:void(0);">Wear</a>
+                                        <a href="javascript:void(0);">Apple</a>
+                                        <a href="javascript:void(0);">Watchkit</a>
+                                        <a href="javascript:void(0);">RTOS</a>
+                                    </dd>
+                                </dl>
+                                <dl>
+                                    <dt><a href="javascript:void(0);">Node.js</a></dt>
+                                    <dd>
+                                        <a href="javascript:void(0);">Node基础</a>
+                                        <a href="javascript:void(0);">express</a>
+                                        <a href="javascript:void(0);">Hexo</a>
+                                    </dd>
+                                </dl>
+                                <dl>
+                                    <dt><a href="javascript:void(0);">开源硬件平台</a></dt>
+                                    <dd>
+                                        <a href="javascript:void(0);">树莓派</a>
+                                        <a href="javascript:void(0);">GoKit</a>
+                                        <a href="javascript:void(0);">Guitar</a>
+                                        <a href="javascript:void(0);">Arduino</a>
+                                        <a href="javascript:void(0);">mbed</a>
+                                    </dd>
+                                </dl>
+                                <dl>
+                                    <dt><a href="javascript:void(0);">通信链接技术</a></dt>
+                                    <dd>
+                                        <a href="javascript:void(0);">无线WiFi</a>
+                                        <a href="javascript:void(0);">蓝牙</a>
+                                        <a href="javascript:void(0);">NFC</a>
+                                        <a href="javascript:void(0);">移动通信</a>
+                                    </dd>
+                                </dl>
+                                <dl>
+                                    <dt><a href="javascript:void(0);">信息感知处理技术</a></dt>
+                                    <dd>
+                                        <a href="javascript:void(0);">传感器</a>
+                                        <a href="javascript:void(0);">数据挖掘</a>
+                                    </dd>
+                                </dl>
+                                <dl>
+                                    <dt><a href="javascript:void(0);">人机交互技术</a></dt>
+                                    <dd>
+                                        <a href="javascript:void(0);">人脸识别</a>
+                                        <a href="javascript:void(0);">语音识别</a>
+                                        <a href="javascript:void(0);">手势识别</a>
+                                    </dd>
+                                </dl>
+
+                                </dl>
+                                <p class="listTitle2"><span>推荐入门</span></p>
+                                <ul class="recommend">
+                                    <li class="recommendLi">
+                                        <img src="http://jiuye-res.jikexueyuan.com/others/20170705/417c2b75-8df5-4f87-8708-c9e7f91a840b.png"
+                                             alt="">
+                                        <p>
+                                            <a href="javascript:void(0);">Vue.js前端框架详解－基础&进阶&实战</a>
+                                        </p>
+                                    </li>
+                                    <li class="recommendLi">
+                                        <img src="http://jiuye-res.jikexueyuan.com/others/20170705/417c2b75-8df5-4f87-8708-c9e7f91a840b.png"
+                                             alt="">
+                                        <p>
+                                            <a href="javascript:void(0);">Python利器，超凡蜘蛛带你“爬”世界</a>
+                                        </p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="navli">
+                    <a href="javascript:void(0);">技术前沿</a>
+
+                    <div class="list-show">
+                        <div class="listBox">
+                            <p class="listTitle1"><span>知识体系</span></p>
+                            <div class="listContent">
+                                <dl>
+                                    <dt><a href="javascript:void(0);">硬件架构</a></dt>
+                                    <dd>
+                                        <a href="javascript:void(0);">C51</a>
+                                        <a href="javascript:void(0);">ARM</a>
+                                        <a href="javascript:void(0);">AVR</a>
+                                        <a href="javascript:void(0);">Cortex-M</a>
+                                        <a href="javascript:void(0);">Cortex-A</a>
+                                    </dd>
+                                </dl>
+                                <dl>
+                                    <dt><a href="javascript:void(0);">物联网操作系统</a></dt>
+                                    <dd>
+                                        <a href="javascript:void(0);">Android</a>
+                                        <a href="javascript:void(0);">Wear</a>
+                                        <a href="javascript:void(0);">Apple</a>
+                                        <a href="javascript:void(0);">Watchkit</a>
+                                        <a href="javascript:void(0);">RTOS</a>
+                                    </dd>
+                                </dl>
+                                <dl>
+                                    <dt><a href="javascript:void(0);">Node.js</a></dt>
+                                    <dd>
+                                        <a href="javascript:void(0);">Node基础</a>
+                                        <a href="javascript:void(0);">express</a>
+                                        <a href="javascript:void(0);">Hexo</a>
+                                    </dd>
+                                </dl>
+                                <dl>
+                                    <dt><a href="javascript:void(0);">开源硬件平台</a></dt>
+                                    <dd>
+                                        <a href="javascript:void(0);">树莓派</a>
+                                        <a href="javascript:void(0);">GoKit</a>
+                                        <a href="javascript:void(0);">Guitar</a>
+                                        <a href="javascript:void(0);">Arduino</a>
+                                        <a href="javascript:void(0);">mbed</a>
+                                    </dd>
+                                </dl>
+                                <dl>
+                                    <dt><a href="javascript:void(0);">通信链接技术</a></dt>
+                                    <dd>
+                                        <a href="javascript:void(0);">无线WiFi</a>
+                                        <a href="javascript:void(0);">蓝牙</a>
+                                        <a href="javascript:void(0);">NFC</a>
+                                        <a href="javascript:void(0);">移动通信</a>
+                                    </dd>
+                                </dl>
+                                <dl>
+                                    <dt><a href="javascript:void(0);">信息感知处理技术</a></dt>
+                                    <dd>
+                                        <a href="javascript:void(0);">传感器</a>
+                                        <a href="javascript:void(0);">数据挖掘</a>
+                                    </dd>
+                                </dl>
+                                <dl>
+                                    <dt><a href="javascript:void(0);">人机交互技术</a></dt>
+                                    <dd>
+                                        <a href="javascript:void(0);">人脸识别</a>
+                                        <a href="javascript:void(0);">语音识别</a>
+                                        <a href="javascript:void(0);">手势识别</a>
+                                    </dd>
+                                </dl>
+                                <p class="listTitle2"><span>推荐入门</span></p>
+                                <ul class="recommend">
+                                    <li class="recommendLi">
+                                        <img src="http://jiuye-res.jikexueyuan.com/others/20170705/417c2b75-8df5-4f87-8708-c9e7f91a840b.png"
+                                             alt="">
+                                        <p>
+                                            <a href="javascript:void(0);">Vue.js前端框架详解－基础&进阶&实战</a>
+                                        </p>
+                                    </li>
+                                    <li class="recommendLi">
+                                        <img src="http://jiuye-res.jikexueyuan.com/others/20170705/417c2b75-8df5-4f87-8708-c9e7f91a840b.png"
+                                             alt="">
+                                        <p>
+                                            <a href="javascript:void(0);">Python利器，超凡蜘蛛带你“爬”世界</a>
+                                        </p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <p  id="pre" class="contral prev-contral " v-on:click="prev">
+        </p>
+        <p  id="next" class="contral next-contral " v-on:click="next">
+        </p>
+    </div>
+    <div >
+            <transition-group
+                tag="div"
+                class="slide-list"
+                :name="namechange"
+
+            >
+                <div class="slide-inner" v-for="(val,i) in bannerData" v-bind:key="i" v-if="i === currentIndex">
+                    <div class="item">
+                        <div class="slide-bg ">
+                            <img v-bind:src="val.imgUrl" />
+                        </div>
+                    </div>
+
+                </div>
+            </transition-group>
+
+    <div class="clearfix"></div>
+    <div  class="wrapper-unit">
+        <!--<ul class="wrapper-ul">-->
+            <transition-group
+                tag="ul"
+                class="wrapper-ul"
+            >
+                <li class="wrapper-il" v-for="(val,i) in bannerData" :key="i" :class="{'wrapper-il-chosen': i===currentIndex }" v-on:click="clickBannerLi(i)">
+
+                </li>
+            </transition-group>
+
+        <!--</ul>-->
+    </div>
+
+    </div>
+</div>
+<!--轮播图结束-->
+<!--新上好看&推荐好课开始-->
+<!-- 实战推荐 start -->
+<div class="xh-section floor">
+    <div class="xh-content">
+        <h3 class="xh-title">实战推荐</h3>
+        <a href="javascript:void(0)" class="xh-more">更多</a>
+        <div class="clearfix"></div>
+        <div class="xh-content-type">
+            <div class="xh-container-card xh-card-left">
+                <a href="javascript:void(0)" class="xh-card-course">
+                    <div class="xh-course-stat">NEW</div>
+                    <div class="xh-card-top">
+                        <img src="img/javagaoji.jpg" class="xh-course-img">
+                    </div>
+                    <div class="xh-card-content">
+                        <h3 class="xh-card-tit">Java开发高级专题课程Java开发高级专题课程</h3>
+                        <div class="xh-card-mess">
+                            <div class="xh-card-info"><span class="xh-des">java</span>
+                            </div>
+                            <div class="xh-card-teacher">讲师：李老师</div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="xh-container-card">
+                <a href="javascript:void(0)" class="xh-card-course">
+                    <div class="xh-card-top">
+                        <img src="http://www.maiziedu.com/uploads/course/2017/04/Jquery.png" alt="" class="xh-course-img">
+
+                    </div>
+                    <div class="xh-card-content">
+                        <h3 class="xh-card-tit">jquery基础应用</h3>
+                        <div class="xh-card-mess">
+                            <div class="xh-card-info"><span class="xh-des">Javascript</span><span class="xh-des">jQuery</span>
+                            </div>
+                            <div class="xh-card-teacher">讲师：沈老师</div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="xh-container-card">
+                <a href="javascript:void(0)" class="xh-card-course">
+                    <div class="xh-card-top">
+                        <img src="http://www.maiziedu.com/uploads/course/2017/04/JavaScript_jichurumen.png" alt="" class="xh-course-img">
+
+                    </div>
+                    <div class="xh-card-content">
+                        <h3 class="xh-card-tit">javascript基础入门</h3>
+                        <div class="xh-card-mess">
+                            <div class="xh-card-info"><span class="xh-des">Javascript</span><span class="xh-des">jQuery</span>
+                            </div>
+                            <div class="xh-card-teacher">讲师：李老师</div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="xh-container-card">
+                <a href="javascript:void(0)" class="xh-card-course">
+                    <div class="xh-card-top">
+                        <img src="https://s1.51cto.com/images/201609/88b5f3c197c4720aa2c024f57ccdeabb30f50f.jpg" alt="" class="xh-course-img">
+                    </div>
+                    <div class="xh-card-content">
+                        <h3 class="xh-card-tit">Openstack实战部署、运维和管理实战课程</h3>
+                        <div class="xh-card-mess">
+                            <div class="xh-card-info"><span class="xh-des">Openstack</span>
+                            </div>
+                            <div class="xh-card-teacher">讲师：沈老师</div>
+                        </div>
+                    </div>
+
+                </a>
+            </div>
+            <div class="xh-container-card">
+                <a href="javascript:void(0)" class="xh-card-course">
+                    <div class="xh-card-top">
+                        <img src="https://s1.51cto.com/images/201609/651212277ce4c2a828f005d7b943f091279e88.png" alt="" class="xh-course-img">
+
+                    </div>
+                    <div class="xh-card-content">
+                        <h3 class="xh-card-tit">Openstack从入门到放弃课程</h3>
+                        <div class="xh-card-mess">
+                            <div class="xh-card-info"><span class="xh-des">Openstack</span>
+                            </div>
+                            <div class="xh-card-teacher">讲师：沈老师</div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+</div>
+<!-- 实战推荐 end -->
+<!-- 新上好课 start -->
+<div class="qpbg-j floor">
+    <div class="xh-section">
+    <div class="xh-content">
+        <h3 class="xh-title">项目案例</h3>
+        <a href="javascript:void(0)" class="xh-more">更多</a>
+        <div class="clearfix"></div>
+        <div class="xh-content-type">
+            <div class="xh-container-card xh-card-left">
+                <a href="javascript:void(0)" class="xh-card-course">
+                    <div class="xh-card-top">
+                        <img src="https://s1.51cto.com/wyfs02/M00/5B/B0/wKioL1UQ_oHy1GCfAAdGUutgrdI757.jpg" class="xh-course-img">
+                    </div>
+                    <div class="xh-card-content">
+                        <h3 class="xh-card-tit">大数据流处理系统之Apache Kafka专题课程</h3>
+                        <div class="xh-card-mess">
+                            <div class="xh-card-info"><span class="xh-des">Hadoop</span>
+                            </div>
+                            <div class="xh-card-teacher">讲师：李老师</div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="xh-container-card">
+                <a href="javascript:void(0)" class="xh-card-course">
+                    <div class="xh-card-top">
+                        <img src="https://s1.51cto.com/images/201701/c2a491e30bd8294304852794050fed5f319b55.jpg" alt="" class="xh-course-img">
+                    </div>
+                    <div class="xh-card-content">
+                        <h3 class="xh-card-tit">Hadoop实战教学---用Mahout构建职位推荐引擎</h3>
+                        <div class="xh-card-mess">
+                            <div class="xh-card-info"><span class="xh-des">Hadoop</span>
+                            </div>
+                            <div class="xh-card-teacher">讲师：沈老师</div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="xh-container-card">
+                <a href="javascript:void(0)" class="xh-card-course">
+                    <div class="xh-course-stat">NEW</div>
+                    <div class="xh-card-top">
+                        <img src="https://s1.51cto.com/images/201609/f2e5e91595a18bcbb062515bfaf7520cef4aa1.jpg" class="xh-course-img">
+                    </div>
+                    <div class="xh-card-content">
+                        <h3 class="xh-card-tit">大数据——Zookeeper权威指南课程(集群环境搭建+底层API操作+Watcher)（上）</h3>
+                        <div class="xh-card-mess">
+                            <div class="xh-card-info"><span class="xh-des">Hadoop</span>
+                            </div>
+                            <div class="xh-card-teacher">讲师：沈老师</div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="xh-container-card">
+                <a href="javascript:void(0)" class="xh-card-course">
+                    <div class="xh-card-top">
+                        <img src="https://s1.51cto.com/images/201706/05/10cadcb52b8d6713a5be1d2b1f25f6ed.png" alt="" class="xh-course-img">
+                    </div>
+                    <div class="xh-card-content">
+                        <h3 class="xh-card-tit">Hadoop 2.x（一） 大数据基础实战课程</h3>
+                        <div class="xh-card-mess">
+                            <div class="xh-card-info"><span class="xh-des">Hadoop</span>
+                            </div>
+                            <div class="xh-card-teacher">讲师：李老师</div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="xh-container-card">
+                <a href="javascript:void(0)" class="xh-card-course">
+                    <div class="xh-card-top">
+                        <img src="https://s1.51cto.com/images/201603/c7b6b92819c9ace6e9d3073fe2dd08361a0de0.jpg" alt="" class="xh-course-img">
+
+                    </div>
+                    <div class="xh-card-content">
+                        <h3 class="xh-card-tit">IT测试行业职业生涯规划精品课课程（新增了第二章）</h3>
+                        <div class="xh-card-mess">
+                            <div class="xh-card-info"><span class="xh-des">Javascript</span><span class="xh-des">jQuery</span>
+                            </div>
+                            <div class="xh-card-teacher">讲师：沈老师</div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="xh-container-card xh-card-left">
+                <a href="javascript:void(0)" class="xh-card-course">
+                    <div class="xh-course-stat">NEW</div>
+                    <div class="xh-card-top">
+                        <img src="https://s1.51cto.com/images/201703/764bba98812725e33f2462ea9423fe8c843747.png" alt="" class="xh-course-img">
+
+                    </div>
+                    <div class="xh-card-content">
+                        <h3 class="xh-card-tit">Hadoop平台HDFS存储原理、MapReduce与Yarn工作机制课程</h3>
+                        <div class="xh-card-mess">
+                            <div class="xh-card-info"><span class="xh-des">Hadoop</span>
+                            </div>
+                            <div class="xh-card-teacher">讲师：沈老师</div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="xh-container-card">
+                <a href="javascript:void(0)" class="xh-card-course">
+                    <div class="xh-card-top">
+                        <img src="http://img2.mukewang.com/597e96f10001c25f06000338-240-135.jpg" alt="" class="xh-course-img">
+
+                    </div>
+                    <div class="xh-card-content">
+                        <h3 class="xh-card-tit">手把手从零打造企业级电商平台 - 前端实战</h3>
+                        <div class="xh-card-mess">
+                            <div class="xh-card-info"><span class="xh-des">Javascript</span><span class="xh-des">jQuery</span>
+                            </div>
+                            <div class="xh-card-teacher">讲师：李老师</div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="xh-container-card">
+                <a href="javascript:void(0)" class="xh-card-course">
+                    <div class="xh-card-top">
+                        <img src="https://s1.51cto.com/images/201604/221e18e806196b21381145b70d4fbf394c68df.jpg" alt="" class="xh-course-img">
+
+                    </div>
+                    <div class="xh-card-content">
+                        <h3 class="xh-card-tit">Hadoop数据分析实战演练(入门篇)</h3>
+                        <div class="xh-card-mess">
+                            <div class="xh-card-info"><span class="xh-des">Hadoop</span>
+                            </div>
+                            <div class="xh-card-teacher">讲师：沈老师</div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="xh-container-card">
+                <a href="javascript:void(0)" class="xh-card-course">
+                    <div class="xh-course-stat">NEW</div>
+                    <div class="xh-card-top">
+                        <img src="https://s1.51cto.com/images/201706/23/0a46a30e27d7ca030ee492dd5da8bfc8.jpg" alt="" class="xh-course-img">
+
+                    </div>
+                    <div class="xh-card-content">
+                        <h3 class="xh-card-tit">
+                            测试工程职业发展与面试宝典教程【小强测试品牌】</h3>
+                        <div class="xh-card-mess">
+                            <div class="xh-card-info"><span class="xh-des">软件测试</span>
+                            </div>
+                            <div class="xh-card-teacher">讲师：沈老师</div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="xh-container-card">
+                <a href="javascript:void(0)" class="xh-card-course">
+                    <div class="xh-card-top">
+                        <img src="https://s1.51cto.com/images/201707/11/1626bbd23ffd4a97493ce51bb6dc2c0f.jpg" alt="" class="xh-course-img">
+
+                    </div>
+                    <div class="xh-card-content">
+                        <h3 class="xh-card-tit">UFT/QTP零基础实例讲解教程</h3>
+                        <div class="xh-card-mess">
+                            <div class="xh-card-info"><span class="xh-des">Javascript</span><span class="xh-des">jQuery</span>
+                            </div>
+                            <div class="xh-card-teacher">讲师：李老师￥388.00</div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+
+    </div>
+</div>
+</div>
+<!-- 新上好课 end -->
+<!--新上好看&推荐好课结束-->
+
+<!--精品课程开始-->
+<div class="action-hd">
+    <div class="hd-top">
+        <h3 class="hd-title">精品好课</h3>
+
+        <a href="javascript:void(0);" class="hd-gd">更多 &gt;&gt;</a>
+    </div>
+    <div class="jing">
+        <div class="jing-con">
+            <a href="javascript:void(0)" class="pre"><</a>
+            <a href="javascript:void(0)" class="next">></a>
+            <ul class="jing-ul">
+                <li class="jing-unit">
+                    <div class="img">
+                        <img src="http://img4.mukewang.com/5705d31a00013ca706000338-240-135.jpg">
+                    </div>
+                    <div class="text">
+                        <h3 class="text-h3">H5+JS+CSS3实现七夕言情</h3>
+                        <div class="people">
+                            <span>高级</span>
+                            <span>
+								<i class="icon"></i>16396
+							</span>
+                        </div>
+                        <div class="price">￥299</div>
+                    </div>
+                    <div class="btn">
+                        <div class="btn-1">
+                            <button class="join">加入课程</button>
+                            <h3 class="bg">JOIN US</h3>
+                        </div>
+                    </div>
+                </li>
+                <li class="jing-unit">
+                    <div class="img">
+                        <img src="http://img2.mukewang.com/5746746100019fa706000338-240-135.jpg">
+                    </div>
+                    <div class="text">
+                        <h3 class="text-h3">形形色色的下拉菜单</h3>
+                        <div class="people">
+                            <span>中级</span>
+                            <span>
+								<i class="icon"></i>92571
+							</span>
+                        </div>
+                        <div class="price">免费</div>
+                    </div>
+                    <div class="btn">
+                        <div class="btn-1">
+                            <button class="join">加入课程</button>
+                            <h3 class="bg">JOIN US</h3>
+                        </div>
+                    </div>
+                </li>
+                <li class="jing-unit">
+                    <div class="img">
+                        <img src="http://img1.mukewang.com/59195b4a00019b0d06000338-240-135.jpg">
+                    </div>
+                    <div class="text">
+                        <h3 class="text-h3">Java定时任务调度工具详解之Timer篇</h3>
+                        <div class="people">
+                            <span>初级</span>
+                            <span>
+								<i class="icon"></i>12265
+							</span>
+                        </div>
+                        <div class="price">￥199</div>
+                    </div>
+                    <div class="btn">
+                        <div class="btn-1">
+                            <button class="join">加入课程</button>
+                            <h3 class="bg">JOIN US</h3>
+                        </div>
+                    </div>
+                </li>
+                <li class="jing-unit">
+                    <div class="img">
+                        <img src="http://img3.mukewang.com/5922cc5800011d9e06000338-240-135.jpg">
+                    </div>
+                    <div class="text">
+                        <h3 class="text-h3">Python数据分析-基础技术篇</h3>
+                        <div class="people">
+                            <span>中级</span>
+                            <span>
+								<i class="icon"></i>1639
+							</span>
+                        </div>
+                        <div class="price">免费</div>
+                    </div>
+                    <div class="btn">
+                        <div class="btn-1">
+                            <button class="join">加入课程</button>
+                            <h3 class="bg">JOIN US</h3>
+                        </div>
+                    </div>
+                </li>
+                <li class="jing-unit">
+                    <div class="img">
+                        <img src="http://img.mukewang.com/57a2fbab0001179b06000338-240-135.jpg">
+                    </div>
+                    <div class="text">
+                        <h3 class="text-h3">软件测试基础篇</h3>
+                        <div class="people">
+                            <span>初级</span>
+                            <span>
+								<i class="icon"></i>16639
+							</span>
+                        </div>
+                        <div class="price">免费</div>
+                    </div>
+                    <div class="btn">
+                        <div class="btn-1">
+                            <button class="join">加入课程</button>
+                            <h3 class="bg">JOIN US</h3>
+                        </div>
+                    </div>
+                </li>
+                <li class="jing-unit">
+                    <div class="img">
+                        <img src="http://szimg.mukewang.com/59a007f600018d1f05400300-360-202.jpg">
+                    </div>
+                    <div class="text">
+                        <h3 class="text-h3">PHP入门：基础语法到实际运用</h3>
+                        <div class="people">
+                            <span>中级</span>
+                            <span>
+								<i class="icon"></i>1639
+							</span>
+                        </div>
+                        <div class="price">免费</div>
+                    </div>
+                    <div class="btn">
+                        <div class="btn-1">
+                            <button class="join">加入课程</button>
+                            <h3 class="bg">JOIN US</h3>
+                        </div>
+                    </div>
+                </li>
+                <li class="jing-unit">
+                    <div class="img">
+                        <img src="http://img2.mukewang.com/598287cd00014dc606000338-240-135.jpg">
+                    </div>
+                    <div class="text">
+                        <h3 class="text-h3">Python 全栈案例初体验</h3>
+                        <div class="people">
+                            <span>高级</span>
+                            <span>
+								<i class="icon"></i>12339
+							</span>
+                        </div>
+                        <div class="price">￥299</div>
+                    </div>
+                    <div class="btn">
+                        <div class="btn-1">
+                            <button class="join">加入课程</button>
+                            <h3 class="bg">JOIN US</h3>
+                        </div>
+                    </div>
+                </li>
+                <li class="jing-unit">
+                    <div class="img">
+                        <img src="http://img1.mukewang.com/597e973600011a6e06000338-240-135.jpg">
+                    </div>
+                    <div class="text">
+                        <h3 class="text-h3">Docker入门</h3>
+                        <div class="people">
+                            <span>中级</span>
+                            <span>
+								<i class="icon"></i>6639
+							</span>
+                        </div>
+                        <div class="price">￥299</div>
+                    </div>
+                    <div class="btn">
+                        <div class="btn-1">
+                            <button class="join">加入课程</button>
+                            <h3 class="bg">JOIN US</h3>
+                        </div>
+                    </div>
+                </li>
+                <li class="jing-unit">
+                    <div class="img">
+                        <img src="http://img2.mukewang.com/598986ae0001f07706000338-240-135.jpg">
+                    </div>
+                    <div class="text">
+                        <h3 class="text-h3">HBase入门</h3>
+                        <div class="people">
+                            <span>中级</span>
+                            <span>
+								<i class="icon"></i>4639
+							</span>
+                        </div>
+                        <div class="price">￥299</div>
+                    </div>
+                    <div class="btn">
+                        <div class="btn-1">
+                            <button class="join">加入课程</button>
+                            <h3 class="bg">JOIN US</h3>
+                        </div>
+                    </div>
+                </li>
+                <li class="jing-unit">
+                    <div class="img">
+                        <img src="http://img.mukewang.com/59ba4b200001468906000338-240-135.jpg">
+                    </div>
+                    <div class="text">
+                        <h3 class="text-h3">Hadoop进阶</h3>
+                        <div class="people">
+                            <span>中级</span>
+                            <span>
+								<i class="icon"></i>1939
+							</span>
+                        </div>
+                        <div class="price">￥199</div>
+                    </div>
+                    <div class="btn">
+                        <div class="btn-1">
+                            <button class="join">加入课程</button>
+                            <h3 class="bg">JOIN US</h3>
+                        </div>
+                    </div>
+                </li>
+                <li class="jing-unit">
+                    <div class="img">
+                        <img src="http://img3.mukewang.com/56e6177e0001fada06000338-240-135.jpg">
+                    </div>
+                    <div class="text">
+                        <h3 class="text-h3">Java实现SSO单点登录</h3>
+                        <div class="people">
+                            <span>中级</span>
+                            <span>
+								<i class="icon"></i>16396
+							</span>
+                        </div>
+                        <div class="price">免费</div>
+                    </div>
+                    <div class="btn">
+                        <div class="btn-1">
+                            <button class="join">加入课程</button>
+                            <h3 class="bg">JOIN US</h3>
+                        </div>
+                    </div>
+                </li>
+                <li class="jing-unit">
+                    <div class="img">
+                        <img src="http://img4.mukewang.com/589d25820001497206000338-240-135.jpg">
+                    </div>
+                    <div class="text">
+                        <h3 class="text-h3">Java模板引擎之Freemarker</h3>
+                        <div class="people">
+                            <span>中级</span>
+                            <span>
+								<i class="icon"></i>16389
+							</span>
+                        </div>
+                        <div class="price">免费</div>
+                    </div>
+                    <div class="btn">
+                        <div class="btn-1">
+                            <button class="join">加入课程</button>
+                            <h3 class="bg">JOIN US</h3>
+                        </div>
+                    </div>
+                </li>
+                <li class="jing-unit">
+                    <div class="img">
+                        <img src="http://img4.mukewang.com/58f0a2310001ea1306000338-240-135.jpg">
+                    </div>
+                    <div class="text">
+                        <h3 class="text-h3">第一个docker化的java应用</h3>
+                        <div class="people">
+                            <span>中级</span>
+                            <span>
+								<i class="icon"></i>1639
+							</span>
+                        </div>
+                        <div class="price">免费</div>
+                    </div>
+                    <div class="btn">
+                        <div class="btn-1">
+                            <button class="join">加入课程</button>
+                            <h3 class="bg">JOIN US</h3>
+                        </div>
+                    </div>
+                </li>
+                <li class="jing-unit">
+                    <div class="img">
+                        <img src="http://img4.mukewang.com/56f22f160001bac306000338-240-135.jpg">
+                    </div>
+                    <div class="text">
+                        <h3 class="text-h3">进击Node.js基础（二）</h3>
+                        <div class="people">
+                            <span>高级</span>
+                            <span>
+								<i class="icon"></i>16393
+							</span>
+                        </div>
+                        <div class="price">￥266</div>
+                    </div>
+                    <div class="btn">
+                        <div class="btn-1">
+                            <button class="join">加入课程</button>
+                            <h3 class="bg">JOIN US</h3>
+                        </div>
+                    </div>
+                </li>
+                <li class="jing-unit">
+                    <div class="img">
+                        <img src="http://img2.mukewang.com/56f22f3900012d0206000338-240-135.jpg">
+                    </div>
+                    <div class="text">
+                        <h3 class="text-h3">进击Node.js基础（一）</h3>
+                        <div class="people">
+                            <span>中级</span>
+                            <span>
+								<i class="icon"></i>15699
+							</span>
+                        </div>
+                        <div class="price">免费</div>
+                    </div>
+                    <div class="btn">
+                        <div class="btn-1">
+                            <button class="join">加入课程</button>
+                            <h3 class="bg">JOIN US</h3>
+                        </div>
+                    </div>
+                </li>
+                <li class="jing-unit">
+                    <div class="img">
+                        <img src="http://img2.mukewang.com/5705d3a3000129d006000338-240-135.jpg">
+                    </div>
+                    <div class="text">
+                        <h3 class="text-h3">JavaScript深入浅出</h3>
+                        <div class="people">
+                            <span>高级</span>
+                            <span>
+								<i class="icon"></i>18398
+							</span>
+                        </div>
+                        <div class="price">￥266</div>
+                    </div>
+                    <div class="btn">
+                        <div class="btn-1">
+                            <button class="join">加入课程</button>
+                            <h3 class="bg">JOIN US</h3>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!--精品课程结束-->
+<!--后段学习开始-->
+
+<div class="action-wrapper">
+    <div class="action-hd">
+        <div class="hd-top">
+            <h3 class="hd-title">后端开发</h3>
+            <ul class="hd-unit">
+                <li class="hd-list active">PHP</li>
+                <li class="hd-list">JAVA</li>
+                <li class="hd-list">Python</li>
+                <li class="hd-list">C</li>
+                <li class="hd-list">C++</li>
+                <li class="hd-list">GO</li>
+                <li class="hd-list">C#</li>
+                <li class="hd-list">Ruby</li>
+            </ul>
+            <a href="javascript:void(0);" class="hd-gd">更多 &gt;&gt;</a>
+        </div>
+        <div class="clearFix"></div>
+        <div class="timetable-wrapper">
+            <ul class="timetable info">
+                <li class="timetable-list active">
+                    <div class="img">
+                        <img src="http://img4.mukewang.com/590c54d40001973c06000338-240-135.jpg" alt="logo">
+                        <div class="fl">
+                            <a href="javascript:void(0);"></a>
+                        </div>
+                    </div>
+                    <div class="active-content">
+                        <h3>Discuz!X二次开发——前台篇</h3>
+                        <div class="name">
+                            <span>实战</span>
+                            <span>讲师：李老师</span>
+                            <span>中级课程</span>
+                        </div>
+                        <div class="title">
+                            <span class="dll">在线学习</span>
+                            <span class="menoy">￥&nbsp;199元</span>
+                        </div>
+                    </div>
+                </li>
+                <li class="timetable-list">
+                    <div class="img">
+                        <img src="http://img3.mukewang.com/59acb1650001adce06000338-240-135.jpg" alt="logo">
+                        <div class="fl">
+                            <a href="javascript:void(0);"></a>
+                        </div>
+                    </div>
+                    <div class="active-content">
+                        <h3>PHP-面向对象</h3>
+                        <div class="name">
+                            <span>实战</span>
+                            <span>讲师：李老师</span>
+                            <span>中级课程</span>
+                        </div>
+                        <div class="title">
+                            <span class="dll">在线学习</span>
+                            <span class="menoy">￥&nbsp;199元</span>
+                        </div>
+                    </div>
+                </li>
+                <li class="timetable-list">
+                    <div class="img">
+                        <img src="http://img3.mukewang.com/5991489e00019f5c06000338-240-135.jpg" alt="logo">
+                        <div class="fl">
+                            <a href="javascript:void(0);"></a>
+                        </div>
+                    </div>
+                    <div class="active-content">
+                        <h3>web安全之SQL注入</h3>
+                        <div class="name">
+                            <span>实战</span>
+                            <span>讲师：李老师</span>
+                            <span>中级课程</span>
+                        </div>
+                        <div class="title">
+                            <span class="dll">在线学习</span>
+                            <span class="menoy">￥&nbsp;199元</span>
+                        </div>
+                    </div>
+                </li>
+                <li class="timetable-list">
+                    <div class="img">
+                        <img src="http://img4.mukewang.com/5977373b0001318505910331-240-135.jpg" alt="logo">
+                        <div class="fl">
+                            <a href="javascript:void(0);"></a>
+                        </div>
+                    </div>
+                    <div class="active-content">
+                        <h3>浅析SQLmap</h3>
+                        <div class="name">
+                            <span>实战</span>
+                            <span>讲师：李老师</span>
+                            <span>中级课程</span>
+                        </div>
+                        <div class="title">
+                            <span class="dll">在线学习</span>
+                            <span class="menoy">￥&nbsp;199元</span>
+                        </div>
+                    </div>
+                </li>
+                <li class="timetable-list">
+                    <div class="img">
+                        <img src="http://img1.mukewang.com/5968262c00011d2606000338-240-135.jpg" alt="logo">
+                        <div class="fl">
+                            <a href="javascript:void(0);"></a>
+                        </div>
+                    </div>
+                    <div class="active-content">
+                        <h3>实例学习 PHP QRCode生成二维码</h3>
+                        <div class="name">
+                            <span>实战</span>
+                            <span>讲师：李老师</span>
+                            <span>中级课程</span>
+                        </div>
+                        <div class="title">
+                            <span class="dll">在线学习</span>
+                            <span class="menoy">￥&nbsp;199元</span>
+                        </div>
+                    </div>
+                </li>
+                <li class="timetable-list">
+                    <div class="img">
+                        <img src="http://img2.mukewang.com/594b40910001a47e06000338-240-135.jpg" alt="logo">
+                        <div class="fl">
+                            <a href="javascript:void(0);"></a>
+                        </div>
+                    </div>
+                    <div class="active-content">
+                        <h3>PHP消息队列实现及应用</h3>
+                        <div class="name">
+                            <span>实战</span>
+                            <span>讲师：李老师</span>
+                            <span>中级课程</span>
+                        </div>
+                        <div class="title">
+                            <span class="dll">在线学习</span>
+                            <span class="menoy">￥&nbsp;199元</span>
+                        </div>
+                    </div>
+                </li>
+                <li class="timetable-list">
+                    <div class="img">
+                        <img src="http://img.mukewang.com/594cf6120001ddaf06000338-240-135.jpg" alt="logo">
+                        <div class="fl">
+                            <a href="javascript:void(0);"></a>
+                        </div>
+                    </div>
+                    <div class="active-content">
+                        <h3>快速入门ThinkPHP 5.0 --模型篇</h3>
+                        <div class="name">
+                            <span>实战</span>
+                            <span>讲师：李老师</span>
+                            <span>中级课程</span>
+                        </div>
+                        <div class="title">
+                            <span class="dll">在线学习</span>
+                            <span class="menoy">￥&nbsp;199元</span>
+                        </div>
+                    </div>
+                </li>
+                <li class="timetable-list">
+                    <div class="img">
+                        <img src="http://img.mukewang.com/5934bac20001a5c906000338-240-135.jpg" alt="logo">
+                        <div class="fl">
+                            <a href="javascript:void(0);"></a>
+                        </div>
+                    </div>
+                    <div class="active-content">
+                        <h3>SVN从入门到放弃</h3>
+                        <div class="name">
+                            <span>实战</span>
+                            <span>讲师：李老师</span>
+                            <span>中级课程</span>
+                        </div>
+                        <div class="title">
+                            <span class="dll">在线学习</span>
+                            <span class="menoy">￥&nbsp;199元</span>
+                        </div>
+                    </div>
+                </li>
+                <li class="timetable-list">
+                    <div class="img">
+                        <img src="http://img3.mukewang.com/58f85fb20001139f06000338-240-135.jpg" alt="">
+                        <div class="fl">
+                            <a href="javascript:void(0);"></a>
+                        </div>
+                    </div>
+                    <div class="active-content">
+                        <h3>PHP函数篇</h3>
+                        <div class="name">
+                            <span>实战</span>
+                            <span>讲师：李老师</span>
+                            <span>中级课程</span>
+                        </div>
+                        <div class="title">
+                            <span class="dll">在线学习</span>
+                            <span class="menoy">￥&nbsp;199元</span>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <div class="clearFix"></div>
+            <ul class="timetable">
+                <li class="timetable-list active">
+                    <div class="img">
+                        <img src="http://img4.mukewang.com/586395f4000145e006000338-240-135.jpg" alt="logo">
+                        <div class="fl">
+                            <a href="javascript:void(0);"></a>
+                        </div>
+                    </div>
+                    <div class="active-content">
+                        <h3>微服务架构在二手交易平台（转转）中的实践</h3>
+                        <div class="name">
+                            <span>实战</span>
+                            <span>讲师：李老师</span>
+                            <span>中级课程</span>
+                        </div>
+                        <div class="title">
+                            <span class="dll">在线学习</span>
+                            <span class="menoy">￥&nbsp;199元</span>
+                        </div>
+                    </div>
+                </li>
+                <li class="timetable-list">
+                    <div class="img">
+                        <img src="http://img.mukewang.com/59b77bac0001985906000338-240-135.jpg" alt="logo">
+                        <div class="fl">
+                            <a href="javascript:void(0);"></a>
+                        </div>
+                    </div>
+                    <div class="active-content">
+                        <h3>ElasticSearch入门 </h3>
+                        <div class="name">
+                            <span>实战</span>
+                            <span>讲师：李老师</span>
+                            <span>中级课程</span>
+                        </div>
+                        <div class="title">
+                            <span class="dll">在线学习</span>
+                            <span class="menoy">￥&nbsp;199元</span>
+                        </div>
+                    </div>
+                </li>
+                <li class="timetable-list">
+                    <div class="img">
+                        <img src="http://img4.mukewang.com/597fe9340001624e06000338-240-135.jpg" alt="logo">
+                        <div class="fl">
+                            <a href="javascript:void(0);"></a>
+                        </div>
+                    </div>
+                    <div class="active-content">
+                        <h3>探秘Spring AOP</h3>
+                        <div class="name">
+                            <span>实战</span>
+                            <span>讲师：李老师</span>
+                            <span>中级课程</span>
+                        </div>
+                        <div class="title">
+                            <span class="dll">在线学习</span>
+                            <span class="menoy">￥&nbsp;199元</span>
+                        </div>
+                    </div>
+                </li>
+                <li class="timetable-list">
+                    <div class="img">
+                        <img src="http://img2.mukewang.com/59632b220001afe505960335-240-135.jpg" alt="logo">
+                        <div class="fl">
+                            <a href="javascript:void(0);"></a>
+                        </div>
+                    </div>
+                    <div class="active-content">
+                        <h3>Java消息中间件</h3>
+                        <div class="name">
+                            <span>实战</span>
+                            <span>讲师：李老师</span>
+                            <span>中级课程</span>
+                        </div>
+                        <div class="title">
+                            <span class="dll">在线学习</span>
+                            <span class="menoy">￥&nbsp;199元</span>
+                        </div>
+                    </div>
+                </li>
+                <li class="timetable-list">
+                    <div class="img">
+                        <img src="http://img.mukewang.com/5940992d0001cae906000338-240-135.jpg" alt="logo">
+                        <div class="fl">
+                            <a href="javascript:void(0);"></a>
+                        </div>
+                    </div>
+                    <div class="active-content">
+                        <h3>Java定时任务调度工具详解之Quartz篇</h3>
+                        <div class="name">
+                            <span>实战</span>
+                            <span>讲师：李老师</span>
+                            <span>中级课程</span>
+                        </div>
+                        <div class="title">
+                            <span class="dll">在线学习</span>
+                            <span class="menoy">￥&nbsp;199元</span>
+                        </div>
+                    </div>
+                </li>
+                <li class="timetable-list">
+                    <div class="img">
+                        <img src="http://img1.mukewang.com/593a3b0f0001383606000338-240-135.jpg" alt="logo">
+                        <div class="fl">
+                            <a href="javascript:void(0);"></a>
+                        </div>
+                    </div>
+                    <div class="active-content">
+                        <h3>使用java构建和维护接口自动化测试框架</h3>
+                        <div class="name">
+                            <span>实战</span>
+                            <span>讲师：李老师</span>
+                            <span>中级课程</span>
+                        </div>
+                        <div class="title">
+                            <span class="dll">在线学习</span>
+                            <span class="menoy">￥&nbsp;199元</span>
+                        </div>
+                    </div>
+                </li>
+                <li class="timetable-list">
+                    <div class="img">
+                        <img src="http://img1.mukewang.com/59195b4a00019b0d06000338-240-135.jpg" alt="logo">
+                        <div class="fl">
+                            <a href="javascript:void(0);"></a>
+                        </div>
+                    </div>
+                    <div class="active-content">
+                        <h3>Java定时任务调度工具详解之Timer篇</h3>
+                        <div class="name">
+                            <span>实战</span>
+                            <span>讲师：李老师</span>
+                            <span>中级课程</span>
+                        </div>
+                        <div class="title">
+                            <span class="dll">在线学习</span>
+                            <span class="menoy">￥&nbsp;199元</span>
+                        </div>
+                    </div>
+                </li>
+                <li class="timetable-list">
+                    <div class="img">
+                        <img src="http://img2.mukewang.com/5914272e0001254d06000338-240-135.jpg" alt="logo">
+                        <div class="fl">
+                            <a href="javascript:void(0);"></a>
+                        </div>
+                    </div>
+                    <div class="active-content">
+                        <h3>Redis入门</h3>
+                        <div class="name">
+                            <span>实战</span>
+                            <span>讲师：李老师</span>
+                            <span>中级课程</span>
+                        </div>
+                        <div class="title">
+                            <span class="dll">在线学习</span>
+                            <span class="menoy">￥&nbsp;199元</span>
+                        </div>
+                    </div>
+                </li>
+                <li class="timetable-list">
+                    <div class="img">
+                        <img src="http://img3.mukewang.com/590a904f0001138f06000338-240-135.jpg" alt="">
+                        <div class="fl">
+                            <a href="javascript:void(0);"></a>
+                        </div>
+                    </div>
+                    <div class="active-content">
+                        <h3>新一代构建工具gradle</h3>
+                        <div class="name">
+                            <span>实战</span>
+                            <span>讲师：李老师</span>
+                            <span>中级课程</span>
+                        </div>
+                        <div class="title">
+                            <span class="dll">在线学习</span>
+                            <span class="menoy">￥&nbsp;199元</span>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <div class="clearFix"></div>
+            <ul class="timetable">
+                <li class="timetable-list active">
+                    <div class="img">
+                        <img src="http://img.mukewang.com/58cf6639000183f406000338-240-135.jpg" alt="logo">
+                        <div class="fl">
+                            <a href="javascript:void(0);"></a>
+                        </div>
+                    </div>
+                    <div class="active-content">
+                        <h3>机器学习-实现简单神经网络</h3>
+                        <div class="name">
+                            <span>实战</span>
+                            <span>讲师：李老师</span>
+                            <span>中级课程</span>
+                        </div>
+                        <div class="title">
+                            <span class="dll">在线学习</span>
+                            <span class="menoy">￥&nbsp;199元</span>
+                        </div>
+                    </div>
+                </li>
+                <li class="timetable-list">
+                    <div class="img">
+                        <img src="http://img.mukewang.com/598287cd00014dc606000338-240-135.jpg" alt="logo">
+                        <div class="fl">
+                            <a href="javascript:void(0);"></a>
+                        </div>
+                    </div>
+                    <div class="active-content">
+                        <h3>Python 全栈案例初体验</h3>
+                        <div class="name">
+                            <span>实战</span>
+                            <span>讲师：李老师</span>
+                            <span>中级课程</span>
+                        </div>
+                        <div class="title">
+                            <span class="dll">在线学习</span>
+                            <span class="menoy">￥&nbsp;199元</span>
+                        </div>
+                    </div>
+                </li>
+                <li class="timetable-list">
+                    <div class="img">
+                        <img src="http://img1.mukewang.com/598186000001813106000338-240-135.jpg" alt="logo">
+                        <div class="fl">
+                            <a href="javascript:void(0);"></a>
+                        </div>
+                    </div>
+                    <div class="active-content">
+                        <h3>python自动化运维篇</h3>
+                        <div class="name">
+                            <span>实战</span>
+                            <span>讲师：李老师</span>
+                            <span>中级课程</span>
+                        </div>
+                        <div class="title">
+                            <span class="dll">在线学习</span>
+                            <span class="menoy">￥&nbsp;199元</span>
+                        </div>
+                    </div>
+                </li>
+                <li class="timetable-list">
+                    <div class="img">
+                        <img src="http://img4.mukewang.com/5922cc5800011d9e06000338-240-135.jpg" alt="logo">
+                        <div class="fl">
+                            <a href="javascript:void(0);"></a>
+                        </div>
+                    </div>
+                    <div class="active-content">
+                        <h3>Python数据分析-基础技术篇</h3>
+                        <div class="name">
+                            <span>实战</span>
+                            <span>讲师：李老师</span>
+                            <span>中级课程</span>
+                        </div>
+                        <div class="title">
+                            <span class="dll">在线学习</span>
+                            <span class="menoy">￥&nbsp;199元</span>
+                        </div>
+                    </div>
+                </li>
+                <li class="timetable-list">
+                    <div class="img">
+                        <img src="http://img.mukewang.com/586f60d90001776a06000338-240-135.jpg" alt="logo">
+                        <div class="fl">
+                            <a href="javascript:void(0);"></a>
+                        </div>
+                    </div>
+                    <div class="active-content">
+                        <h3>django入门与实践</h3>
+                        <div class="name">
+                            <span>实战</span>
+                            <span>讲师：李老师</span>
+                            <span>中级课程</span>
+                        </div>
+                        <div class="title">
+                            <span class="dll">在线学习</span>
+                            <span class="menoy">￥&nbsp;199元</span>
+                        </div>
+                    </div>
+                </li>
+                <li class="timetable-list">
+                    <div class="img">
+                        <img src="http://img2.mukewang.com/58257a3b000164cd06000338-240-135.jpg" alt="logo">
+                        <div class="fl">
+                            <a href="javascript:void(0);"></a>
+                        </div>
+                    </div>
+                    <div class="active-content">
+                        <h3>python-web.py开发入门</h3>
+                        <div class="name">
+                            <span>实战</span>
+                            <span>讲师：李老师</span>
+                            <span>中级课程</span>
+                        </div>
+                        <div class="title">
+                            <span class="dll">在线学习</span>
+                            <span class="menoy">￥&nbsp;199元</span>
+                        </div>
+                    </div>
+                </li>
+                <li class="timetable-list">
+                    <div class="img">
+                        <img src="http://img.mukewang.com/580fff7a0001541206000338-240-135.jpg" alt="logo">
+                        <div class="fl">
+                            <a href="javascript:void(0);"></a>
+                        </div>
+                    </div>
+                    <div class="active-content">
+                        <h3>Python-面向对象</h3>
+                        <div class="name">
+                            <span>实战</span>
+                            <span>讲师：李老师</span>
+                            <span>中级课程</span>
+                        </div>
+                        <div class="title">
+                            <span class="dll">在线学习</span>
+                            <span class="menoy">￥&nbsp;199元</span>
+                        </div>
+                    </div>
+                </li>
+                <li class="timetable-list">
+                    <div class="img">
+                        <img src="http://img2.mukewang.com/57fdb282000186df06000338-240-135.jpg" alt="logo">
+                        <div class="fl">
+                            <a href="javascript:void(0);"></a>
+                        </div>
+                    </div>
+                    <div class="active-content">
+                        <h3>Python-走进Requests库</h3>
+                        <div class="name">
+                            <span>实战</span>
+                            <span>讲师：李老师</span>
+                            <span>中级课程</span>
+                        </div>
+                        <div class="title">
+                            <span class="dll">在线学习</span>
+                            <span class="menoy">￥&nbsp;199元</span>
+                        </div>
+                    </div>
+                </li>
+                <li class="timetable-list">
+                    <div class="img">
+                        <img src="http://img4.mukewang.com/57bd19f40001462006000338-240-135.jpg" alt="">
+                        <div class="fl">
+                            <a href="javascript:void(0);"></a>
+                        </div>
+                    </div>
+                    <div class="active-content">
+                        <h3>python遇见数据采集</h3>
+                        <div class="name">
+                            <span>实战</span>
+                            <span>讲师：李老师</span>
+                            <span>中级课程</span>
+                        </div>
+                        <div class="title">
+                            <span class="dll">在线学习</span>
+                            <span class="menoy">￥&nbsp;199元</span>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <div class="clearFix"></div>
+            <ul class="timetable">
+                <li class="timetable-list active">
+                    <div class="img">
+                        <img src="http://f1.howzhi.com/course/2015/12-31/205021d7b731920674.jpg" alt="logo">
+                        <div class="fl">
+                            <a href="javascript:void(0);"></a>
+                        </div>
+                    </div>
+                    <div class="active-content">
+                        <h3>Java开发高级专题课程Java开发高级专题课程</h3>
+                        <div class="name">
+                            <span>实战</span>
+                            <span>讲师：李老师</span>
+                            <span>中级课程</span>
+                        </div>
+                        <div class="title">
+                            <span class="dll">在线学习</span>
+                            <span class="menoy">￥&nbsp;199元</span>
+                        </div>
+                    </div>
+                </li>
+                <li class="timetable-list">
+                    <div class="img">
+                        <img src="https://s1.51cto.com/wyfs02/M00/5B/B0/wKioL1UQ_oHy1GCfAAdGUutgrdI757.jpg" alt="logo">
+                        <div class="fl">
+                            <a href="javascript:void(0);"></a>
+                        </div>
+                    </div>
+                    <div class="active-content">
+                        <h3>Java开发高级专题课程Java开发高级专题课程</h3>
+                        <div class="name">
+                            <span>实战</span>
+                            <span>讲师：李老师</span>
+                            <span>中级课程</span>
+                        </div>
+                        <div class="title">
+                            <span class="dll">在线学习</span>
+                            <span class="menoy">￥&nbsp;199元</span>
+                        </div>
+                    </div>
+                </li>
+                <li class="timetable-list">
+                    <div class="img">
+                        <img src="https://s1.51cto.com/images/201706/05/10cadcb52b8d6713a5be1d2b1f25f6ed.png" alt="logo">
+                        <div class="fl">
+                            <a href="javascript:void(0);"></a>
+                        </div>
+                    </div>
+                    <div class="active-content">
+                        <h3>Java开发高级专题课程Java开发高级专题课程</h3>
+                        <div class="name">
+                            <span>实战</span>
+                            <span>讲师：李老师</span>
+                            <span>中级课程</span>
+                        </div>
+                        <div class="title">
+                            <span class="dll">在线学习</span>
+                            <span class="menoy">￥&nbsp;199元</span>
+                        </div>
+                    </div>
+                </li>
+                <li class="timetable-list">
+                    <div class="img">
+                        <img src="https://s1.51cto.com/images/201706/23/0a46a30e27d7ca030ee492dd5da8bfc8.jpg" alt="logo">
+                        <div class="fl">
+                            <a href="javascript:void(0);"></a>
+                        </div>
+                    </div>
+                    <div class="active-content">
+                        <h3>Java开发高级专题课程Java开发高级专题课程</h3>
+                        <div class="name">
+                            <span>实战</span>
+                            <span>讲师：李老师</span>
+                            <span>中级课程</span>
+                        </div>
+                        <div class="title">
+                            <span class="dll">在线学习</span>
+                            <span class="menoy">￥&nbsp;199元</span>
+                        </div>
+                    </div>
+                </li>
+                <li class="timetable-list">
+                    <div class="img">
+                        <img src="http://www.maiziedu.com/uploads/course/2017/04/Jquery.png" alt="logo">
+                        <div class="fl">
+                            <a href="javascript:void(0);"></a>
+                        </div>
+                    </div>
+                    <div class="active-content">
+                        <h3>Java开发高级专题课程Java开发高级专题课程</h3>
+                        <div class="name">
+                            <span>实战</span>
+                            <span>讲师：李老师</span>
+                            <span>中级课程</span>
+                        </div>
+                        <div class="title">
+                            <span class="dll">在线学习</span>
+                            <span class="menoy">￥&nbsp;199元</span>
+                        </div>
+                    </div>
+                </li>
+                <li class="timetable-list">
+                    <div class="img">
+                        <img src="https://s1.51cto.com/images/201609/88b5f3c197c4720aa2c024f57ccdeabb30f50f.jpg" alt="logo">
+                        <div class="fl">
+                            <a href="javascript:void(0);"></a>
+                        </div>
+                    </div>
+                    <div class="active-content">
+                        <h3>Java开发高级专题课程Java开发高级专题课程</h3>
+                        <div class="name">
+                            <span>实战</span>
+                            <span>讲师：李老师</span>
+                            <span>中级课程</span>
+                        </div>
+                        <div class="title">
+                            <span class="dll">在线学习</span>
+                            <span class="menoy">￥&nbsp;199元</span>
+                        </div>
+                    </div>
+                </li>
+                <li class="timetable-list">
+                    <div class="img">
+                        <img src="http://www.maiziedu.com/uploads/course/2017/04/JavaScript_jichurumen.png" alt="logo">
+                        <div class="fl">
+                            <a href="javascript:void(0);"></a>
+                        </div>
+                    </div>
+                    <div class="active-content">
+                        <h3>Java开发高级专题课程Java开发高级专题课程</h3>
+                        <div class="name">
+                            <span>实战</span>
+                            <span>讲师：李老师</span>
+                            <span>中级课程</span>
+                        </div>
+                        <div class="title">
+                            <span class="dll">在线学习</span>
+                            <span class="menoy">￥&nbsp;199元</span>
+                        </div>
+                    </div>
+                </li>
+                <li class="timetable-list">
+                    <div class="img">
+                        <img src="https://s1.51cto.com/images/201609/651212277ce4c2a828f005d7b943f091279e88.png" alt="logo">
+                        <div class="fl">
+                            <a href="javascript:void(0);"></a>
+                        </div>
+                    </div>
+                    <div class="active-content">
+                        <h3>Java开发高级专题课程Java开发高级专题课程</h3>
+                        <div class="name">
+                            <span>实战</span>
+                            <span>讲师：李老师</span>
+                            <span>中级课程</span>
+                        </div>
+                        <div class="title">
+                            <span class="dll">在线学习</span>
+                            <span class="menoy">￥&nbsp;199元</span>
+                        </div>
+                    </div>
+                </li>
+                <li class="timetable-list">
+                    <div class="img">
+                        <img src="http://f1.howzhi.com/course/2017/02-04/185635347f5b845988.jpg" alt="">
+                        <div class="fl">
+                            <a href="javascript:void(0);"></a>
+                        </div>
+                    </div>
+                    <div class="active-content">
+                        <h3>Java开发高级专题课程Java开发高级专题课程</h3>
+                        <div class="name">
+                            <span>实战</span>
+                            <span>讲师：李老师</span>
+                            <span>中级课程</span>
+                        </div>
+                        <div class="title">
+                            <span class="dll">在线学习</span>
+                            <span class="menoy">￥&nbsp;199元</span>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <div class="clearFix"></div>
+            <ul class="timetable">
+                <li class="timetable-list active">
+                    <div class="img">
+                        <img src="http://f1.howzhi.com/course/2016/02-03/1752386adb80824725.jpg" alt="logo">
+                        <div class="fl">
+                            <a href="javascript:void(0);"></a>
+                        </div>
+                    </div>
+                    <div class="active-content">
+                        <h3>Java开发高级专题课程Java开发高级专题课程</h3>
+                        <div class="name">
+                            <span>实战</span>
+                            <span>讲师：李老师</span>
+                            <span>中级课程</span>
+                        </div>
+                        <div class="title">
+                            <span class="dll">在线学习</span>
+                            <span class="menoy">￥&nbsp;199元</span>
+                        </div>
+                    </div>
+                </li>
+                <li class="timetable-list">
+                    <div class="img">
+                        <img src="https://s1.51cto.com/wyfs02/M00/5B/B0/wKioL1UQ_oHy1GCfAAdGUutgrdI757.jpg" alt="logo">
+                        <div class="fl">
+                            <a href="javascript:void(0);"></a>
+                        </div>
+                    </div>
+                    <div class="active-content">
+                        <h3>Java开发高级专题课程Java开发高级专题课程</h3>
+                        <div class="name">
+                            <span>实战</span>
+                            <span>讲师：李老师</span>
+                            <span>中级课程</span>
+                        </div>
+                        <div class="title">
+                            <span class="dll">在线学习</span>
+                            <span class="menoy">￥&nbsp;199元</span>
+                        </div>
+                    </div>
+                </li>
+                <li class="timetable-list">
+                    <div class="img">
+                        <img src="https://s1.51cto.com/images/201706/05/10cadcb52b8d6713a5be1d2b1f25f6ed.png" alt="logo">
+                        <div class="fl">
+                            <a href="javascript:void(0);"></a>
+                        </div>
+                    </div>
+                    <div class="active-content">
+                        <h3>Java开发高级专题课程Java开发高级专题课程</h3>
+                        <div class="name">
+                            <span>实战</span>
+                            <span>讲师：李老师</span>
+                            <span>中级课程</span>
+                        </div>
+                        <div class="title">
+                            <span class="dll">在线学习</span>
+                            <span class="menoy">￥&nbsp;199元</span>
+                        </div>
+                    </div>
+                </li>
+                <li class="timetable-list">
+                    <div class="img">
+                        <img src="https://s1.51cto.com/images/201706/23/0a46a30e27d7ca030ee492dd5da8bfc8.jpg" alt="logo">
+                        <div class="fl">
+                            <a href="javascript:void(0);"></a>
+                        </div>
+                    </div>
+                    <div class="active-content">
+                        <h3>Java开发高级专题课程Java开发高级专题课程</h3>
+                        <div class="name">
+                            <span>实战</span>
+                            <span>讲师：李老师</span>
+                            <span>中级课程</span>
+                        </div>
+                        <div class="title">
+                            <span class="dll">在线学习</span>
+                            <span class="menoy">￥&nbsp;199元</span>
+                        </div>
+                    </div>
+                </li>
+                <li class="timetable-list">
+                    <div class="img">
+                        <img src="http://www.maiziedu.com/uploads/course/2017/04/Jquery.png" alt="logo">
+                        <div class="fl">
+                            <a href="javascript:void(0);"></a>
+                        </div>
+                    </div>
+                    <div class="active-content">
+                        <h3>Java开发高级专题课程Java开发高级专题课程</h3>
+                        <div class="name">
+                            <span>实战</span>
+                            <span>讲师：李老师</span>
+                            <span>中级课程</span>
+                        </div>
+                        <div class="title">
+                            <span class="dll">在线学习</span>
+                            <span class="menoy">￥&nbsp;199元</span>
+                        </div>
+                    </div>
+                </li>
+                <li class="timetable-list">
+                    <div class="img">
+                        <img src="https://s1.51cto.com/images/201609/88b5f3c197c4720aa2c024f57ccdeabb30f50f.jpg" alt="logo">
+                        <div class="fl">
+                            <a href="javascript:void(0);"></a>
+                        </div>
+                    </div>
+                    <div class="active-content">
+                        <h3>Java开发高级专题课程Java开发高级专题课程</h3>
+                        <div class="name">
+                            <span>实战</span>
+                            <span>讲师：李老师</span>
+                            <span>中级课程</span>
+                        </div>
+                        <div class="title">
+                            <span class="dll">在线学习</span>
+                            <span class="menoy">￥&nbsp;199元</span>
+                        </div>
+                    </div>
+                </li>
+                <li class="timetable-list">
+                    <div class="img">
+                        <img src="http://www.maiziedu.com/uploads/course/2017/04/JavaScript_jichurumen.png" alt="logo">
+                        <div class="fl">
+                            <a href="javascript:void(0);"></a>
+                        </div>
+                    </div>
+                    <div class="active-content">
+                        <h3>Java开发高级专题课程Java开发高级专题课程</h3>
+                        <div class="name">
+                            <span>实战</span>
+                            <span>讲师：李老师</span>
+                            <span>中级课程</span>
+                        </div>
+                        <div class="title">
+                            <span class="dll">在线学习</span>
+                            <span class="menoy">￥&nbsp;199元</span>
+                        </div>
+                    </div>
+                </li>
+                <li class="timetable-list">
+                    <div class="img">
+                        <img src="https://s1.51cto.com/images/201609/651212277ce4c2a828f005d7b943f091279e88.png" alt="logo">
+                        <div class="fl">
+                            <a href="javascript:void(0);"></a>
+                        </div>
+                    </div>
+                    <div class="active-content">
+                        <h3>Java开发高级专题课程Java开发高级专题课程</h3>
+                        <div class="name">
+                            <span>实战</span>
+                            <span>讲师：李老师</span>
+                            <span>中级课程</span>
+                        </div>
+                        <div class="title">
+                            <span class="dll">在线学习</span>
+                            <span class="menoy">￥&nbsp;199元</span>
+                        </div>
+                    </div>
+                </li>
+                <li class="timetable-list">
+                    <div class="img">
+                        <img src="http://f1.howzhi.com/course/2017/02-04/185635347f5b845988.jpg" alt="">
+                        <div class="fl">
+                            <a href="javascript:void(0);"></a>
+                        </div>
+                    </div>
+                    <div class="active-content">
+                        <h3>Java开发高级专题课程Java开发高级专题课程</h3>
+                        <div class="name">
+                            <span>实战</span>
+                            <span>讲师：李老师</span>
+                            <span>中级课程</span>
+                        </div>
+                        <div class="title">
+                            <span class="dll">在线学习</span>
+                            <span class="menoy">￥&nbsp;199元</span>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <div class="clearFix"></div>
+            <ul class="timetable">
+                <li class="timetable-list active">
+                    <div class="img">
+                        <img src="http://f1.howzhi.com/course/2016/02-03/172140467dfc407928.jpg" alt="logo">
+                        <div class="fl">
+                            <a href="javascript:void(0);"></a>
+                        </div>
+                    </div>
+                    <div class="active-content">
+                        <h3>Java开发高级专题课程Java开发高级专题课程</h3>
+                        <div class="name">
+                            <span>实战</span>
+                            <span>讲师：李老师</span>
+                            <span>中级课程</span>
+                        </div>
+                        <div class="title">
+                            <span class="dll">在线学习</span>
+                            <span class="menoy">￥&nbsp;199元</span>
+                        </div>
+                    </div>
+                </li>
+                <li class="timetable-list">
+                    <div class="img">
+                        <img src="https://s1.51cto.com/wyfs02/M00/5B/B0/wKioL1UQ_oHy1GCfAAdGUutgrdI757.jpg" alt="logo">
+                        <div class="fl">
+                            <a href="javascript:void(0);"></a>
+                        </div>
+                    </div>
+                    <div class="active-content">
+                        <h3>Java开发高级专题课程Java开发高级专题课程</h3>
+                        <div class="name">
+                            <span>实战</span>
+                            <span>讲师：李老师</span>
+                            <span>中级课程</span>
+                        </div>
+                        <div class="title">
+                            <span class="dll">在线学习</span>
+                            <span class="menoy">￥&nbsp;199元</span>
+                        </div>
+                    </div>
+                </li>
+                <li class="timetable-list">
+                    <div class="img">
+                        <img src="https://s1.51cto.com/images/201706/05/10cadcb52b8d6713a5be1d2b1f25f6ed.png" alt="logo">
+                        <div class="fl">
+                            <a href="javascript:void(0);"></a>
+                        </div>
+                    </div>
+                    <div class="active-content">
+                        <h3>Java开发高级专题课程Java开发高级专题课程</h3>
+                        <div class="name">
+                            <span>实战</span>
+                            <span>讲师：李老师</span>
+                            <span>中级课程</span>
+                        </div>
+                        <div class="title">
+                            <span class="dll">在线学习</span>
+                            <span class="menoy">￥&nbsp;199元</span>
+                        </div>
+                    </div>
+                </li>
+                <li class="timetable-list">
+                    <div class="img">
+                        <img src="https://s1.51cto.com/images/201706/23/0a46a30e27d7ca030ee492dd5da8bfc8.jpg" alt="logo">
+                        <div class="fl">
+                            <a href="javascript:void(0);"></a>
+                        </div>
+                    </div>
+                    <div class="active-content">
+                        <h3>Java开发高级专题课程Java开发高级专题课程</h3>
+                        <div class="name">
+                            <span>实战</span>
+                            <span>讲师：李老师</span>
+                            <span>中级课程</span>
+                        </div>
+                        <div class="title">
+                            <span class="dll">在线学习</span>
+                            <span class="menoy">￥&nbsp;199元</span>
+                        </div>
+                    </div>
+                </li>
+                <li class="timetable-list">
+                    <div class="img">
+                        <img src="http://www.maiziedu.com/uploads/course/2017/04/Jquery.png" alt="logo">
+                        <div class="fl">
+                            <a href="javascript:void(0);"></a>
+                        </div>
+                    </div>
+                    <div class="active-content">
+                        <h3>Java开发高级专题课程Java开发高级专题课程</h3>
+                        <div class="name">
+                            <span>实战</span>
+                            <span>讲师：李老师</span>
+                            <span>中级课程</span>
+                        </div>
+                        <div class="title">
+                            <span class="dll">在线学习</span>
+                            <span class="menoy">￥&nbsp;199元</span>
+                        </div>
+                    </div>
+                </li>
+                <li class="timetable-list">
+                    <div class="img">
+                        <img src="https://s1.51cto.com/images/201609/88b5f3c197c4720aa2c024f57ccdeabb30f50f.jpg" alt="logo">
+                        <div class="fl">
+                            <a href="javascript:void(0);"></a>
+                        </div>
+                    </div>
+                    <div class="active-content">
+                        <h3>Java开发高级专题课程Java开发高级专题课程</h3>
+                        <div class="name">
+                            <span>实战</span>
+                            <span>讲师：李老师</span>
+                            <span>中级课程</span>
+                        </div>
+                        <div class="title">
+                            <span class="dll">在线学习</span>
+                            <span class="menoy">￥&nbsp;199元</span>
+                        </div>
+                    </div>
+                </li>
+                <li class="timetable-list">
+                    <div class="img">
+                        <img src="http://www.maiziedu.com/uploads/course/2017/04/JavaScript_jichurumen.png" alt="logo">
+                        <div class="fl">
+                            <a href="javascript:void(0);"></a>
+                        </div>
+                    </div>
+                    <div class="active-content">
+                        <h3>Java开发高级专题课程Java开发高级专题课程</h3>
+                        <div class="name">
+                            <span>实战</span>
+                            <span>讲师：李老师</span>
+                            <span>中级课程</span>
+                        </div>
+                        <div class="title">
+                            <span class="dll">在线学习</span>
+                            <span class="menoy">￥&nbsp;199元</span>
+                        </div>
+                    </div>
+                </li>
+                <li class="timetable-list">
+                    <div class="img">
+                        <img src="https://s1.51cto.com/images/201609/651212277ce4c2a828f005d7b943f091279e88.png" alt="logo">
+                        <div class="fl">
+                            <a href="javascript:void(0);"></a>
+                        </div>
+                    </div>
+                    <div class="active-content">
+                        <h3>Java开发高级专题课程Java开发高级专题课程</h3>
+                        <div class="name">
+                            <span>实战</span>
+                            <span>讲师：李老师</span>
+                            <span>中级课程</span>
+                        </div>
+                        <div class="title">
+                            <span class="dll">在线学习</span>
+                            <span class="menoy">￥&nbsp;199元</span>
+                        </div>
+                    </div>
+                </li>
+                <li class="timetable-list">
+                    <div class="img">
+                        <img src="http://f1.howzhi.com/course/2017/02-04/185635347f5b845988.jpg" alt="">
+                        <div class="fl">
+                            <a href="javascript:void(0);"></a>
+                        </div>
+                    </div>
+                    <div class="active-content">
+                        <h3>Java开发高级专题课程Java开发高级专题课程</h3>
+                        <div class="name">
+                            <span>实战</span>
+                            <span>讲师：李老师</span>
+                            <span>中级课程</span>
+                        </div>
+                        <div class="title">
+                            <span class="dll">在线学习</span>
+                            <span class="menoy">￥&nbsp;199元</span>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <div class="clearFix"></div>
+            <ul class="timetable">
+                <li class="timetable-list active">
+                    <div class="img">
+                        <img src="http://f1.howzhi.com/course/2016/08-19/091659b35a5e248280.jpg" alt="logo">
+                        <div class="fl">
+                            <a href="javascript:void(0);"></a>
+                        </div>
+                    </div>
+                    <div class="active-content">
+                        <h3>Java开发高级专题课程Java开发高级专题课程</h3>
+                        <div class="name">
+                            <span>实战</span>
+                            <span>讲师：李老师</span>
+                            <span>中级课程</span>
+                        </div>
+                        <div class="title">
+                            <span class="dll">在线学习</span>
+                            <span class="menoy">￥&nbsp;199元</span>
+                        </div>
+                    </div>
+                </li>
+                <li class="timetable-list">
+                    <div class="img">
+                        <img src="https://s1.51cto.com/wyfs02/M00/5B/B0/wKioL1UQ_oHy1GCfAAdGUutgrdI757.jpg" alt="logo">
+                        <div class="fl">
+                            <a href="javascript:void(0);"></a>
+                        </div>
+                    </div>
+                    <div class="active-content">
+                        <h3>Java开发高级专题课程Java开发高级专题课程</h3>
+                        <div class="name">
+                            <span>实战</span>
+                            <span>讲师：李老师</span>
+                            <span>中级课程</span>
+                        </div>
+                        <div class="title">
+                            <span class="dll">在线学习</span>
+                            <span class="menoy">￥&nbsp;199元</span>
+                        </div>
+                    </div>
+                </li>
+                <li class="timetable-list">
+                    <div class="img">
+                        <img src="https://s1.51cto.com/images/201706/05/10cadcb52b8d6713a5be1d2b1f25f6ed.png" alt="logo">
+                        <div class="fl">
+                            <a href="javascript:void(0);"></a>
+                        </div>
+                    </div>
+                    <div class="active-content">
+                        <h3>Java开发高级专题课程Java开发高级专题课程</h3>
+                        <div class="name">
+                            <span>实战</span>
+                            <span>讲师：李老师</span>
+                            <span>中级课程</span>
+                        </div>
+                        <div class="title">
+                            <span class="dll">在线学习</span>
+                            <span class="menoy">￥&nbsp;199元</span>
+                        </div>
+                    </div>
+                </li>
+                <li class="timetable-list">
+                    <div class="img">
+                        <img src="https://s1.51cto.com/images/201706/23/0a46a30e27d7ca030ee492dd5da8bfc8.jpg" alt="logo">
+                        <div class="fl">
+                            <a href="javascript:void(0);"></a>
+                        </div>
+                    </div>
+                    <div class="active-content">
+                        <h3>Java开发高级专题课程Java开发高级专题课程</h3>
+                        <div class="name">
+                            <span>实战</span>
+                            <span>讲师：李老师</span>
+                            <span>中级课程</span>
+                        </div>
+                        <div class="title">
+                            <span class="dll">在线学习</span>
+                            <span class="menoy">￥&nbsp;199元</span>
+                        </div>
+                    </div>
+                </li>
+                <li class="timetable-list">
+                    <div class="img">
+                        <img src="http://www.maiziedu.com/uploads/course/2017/04/Jquery.png" alt="logo">
+                        <div class="fl">
+                            <a href="javascript:void(0);"></a>
+                        </div>
+                    </div>
+                    <div class="active-content">
+                        <h3>Java开发高级专题课程Java开发高级专题课程</h3>
+                        <div class="name">
+                            <span>实战</span>
+                            <span>讲师：李老师</span>
+                            <span>中级课程</span>
+                        </div>
+                        <div class="title">
+                            <span class="dll">在线学习</span>
+                            <span class="menoy">￥&nbsp;199元</span>
+                        </div>
+                    </div>
+                </li>
+                <li class="timetable-list">
+                    <div class="img">
+                        <img src="https://s1.51cto.com/images/201609/88b5f3c197c4720aa2c024f57ccdeabb30f50f.jpg" alt="logo">
+                        <div class="fl">
+                            <a href="javascript:void(0);"></a>
+                        </div>
+                    </div>
+                    <div class="active-content">
+                        <h3>Java开发高级专题课程Java开发高级专题课程</h3>
+                        <div class="name">
+                            <span>实战</span>
+                            <span>讲师：李老师</span>
+                            <span>中级课程</span>
+                        </div>
+                        <div class="title">
+                            <span class="dll">在线学习</span>
+                            <span class="menoy">￥&nbsp;199元</span>
+                        </div>
+                    </div>
+                </li>
+                <li class="timetable-list">
+                    <div class="img">
+                        <img src="http://www.maiziedu.com/uploads/course/2017/04/JavaScript_jichurumen.png" alt="logo">
+                        <div class="fl">
+                            <a href="javascript:void(0);"></a>
+                        </div>
+                    </div>
+                    <div class="active-content">
+                        <h3>Java开发高级专题课程Java开发高级专题课程</h3>
+                        <div class="name">
+                            <span>实战</span>
+                            <span>讲师：李老师</span>
+                            <span>中级课程</span>
+                        </div>
+                        <div class="title">
+                            <span class="dll">在线学习</span>
+                            <span class="menoy">￥&nbsp;199元</span>
+                        </div>
+                    </div>
+                </li>
+                <li class="timetable-list">
+                    <div class="img">
+                        <img src="https://s1.51cto.com/images/201609/651212277ce4c2a828f005d7b943f091279e88.png" alt="logo">
+                        <div class="fl">
+                            <a href="javascript:void(0);"></a>
+                        </div>
+                    </div>
+                    <div class="active-content">
+                        <h3>Java开发高级专题课程Java开发高级专题课程</h3>
+                        <div class="name">
+                            <span>实战</span>
+                            <span>讲师：李老师</span>
+                            <span>中级课程</span>
+                        </div>
+                        <div class="title">
+                            <span class="dll">在线学习</span>
+                            <span class="menoy">￥&nbsp;199元</span>
+                        </div>
+                    </div>
+                </li>
+                <li class="timetable-list">
+                    <div class="img">
+                        <img src="http://f1.howzhi.com/course/2017/02-04/185635347f5b845988.jpg" alt="">
+                        <div class="fl">
+                            <a href="javascript:void(0);"></a>
+                        </div>
+                    </div>
+                    <div class="active-content">
+                        <h3>Java开发高级专题课程Java开发高级专题课程</h3>
+                        <div class="name">
+                            <span>实战</span>
+                            <span>讲师：李老师</span>
+                            <span>中级课程</span>
+                        </div>
+                        <div class="title">
+                            <span class="dll">在线学习</span>
+                            <span class="menoy">￥&nbsp;199元</span>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <div class="clearFix"></div>
+            <ul class="timetable">
+                <li class="timetable-list active">
+                    <div class="img">
+                        <img src="http://f1.howzhi.com/course/2016/08-19/092546a0242f834103.jpg" alt="logo">
+                        <div class="fl">
+                            <a href="javascript:void(0);"></a>
+                        </div>
+                    </div>
+                    <div class="active-content">
+                        <h3>Java开发高级专题课程Java开发高级专题课程</h3>
+                        <div class="name">
+                            <span>实战</span>
+                            <span>讲师：李老师</span>
+                            <span>中级课程</span>
+                        </div>
+                        <div class="title">
+                            <span class="dll">在线学习</span>
+                            <span class="menoy">￥&nbsp;199元</span>
+                        </div>
+                    </div>
+                </li>
+                <li class="timetable-list">
+                    <div class="img">
+                        <img src="https://s1.51cto.com/wyfs02/M00/5B/B0/wKioL1UQ_oHy1GCfAAdGUutgrdI757.jpg" alt="logo">
+                        <div class="fl">
+                            <a href="javascript:void(0);"></a>
+                        </div>
+                    </div>
+                    <div class="active-content">
+                        <h3>Java开发高级专题课程Java开发高级专题课程</h3>
+                        <div class="name">
+                            <span>实战</span>
+                            <span>讲师：李老师</span>
+                            <span>中级课程</span>
+                        </div>
+                        <div class="title">
+                            <span class="dll">在线学习</span>
+                            <span class="menoy">￥&nbsp;199元</span>
+                        </div>
+                    </div>
+                </li>
+                <li class="timetable-list">
+                    <div class="img">
+                        <img src="https://s1.51cto.com/images/201706/05/10cadcb52b8d6713a5be1d2b1f25f6ed.png" alt="logo">
+                        <div class="fl">
+                            <a href="javascript:void(0);"></a>
+                        </div>
+                    </div>
+                    <div class="active-content">
+                        <h3>Java开发高级专题课程Java开发高级专题课程</h3>
+                        <div class="name">
+                            <span>实战</span>
+                            <span>讲师：李老师</span>
+                            <span>中级课程</span>
+                        </div>
+                        <div class="title">
+                            <span class="dll">在线学习</span>
+                            <span class="menoy">￥&nbsp;199元</span>
+                        </div>
+                    </div>
+                </li>
+                <li class="timetable-list">
+                    <div class="img">
+                        <img src="https://s1.51cto.com/images/201706/23/0a46a30e27d7ca030ee492dd5da8bfc8.jpg" alt="logo">
+                        <div class="fl">
+                            <a href="javascript:void(0);"></a>
+                        </div>
+                    </div>
+                    <div class="active-content">
+                        <h3>Java开发高级专题课程Java开发高级专题课程</h3>
+                        <div class="name">
+                            <span>实战</span>
+                            <span>讲师：李老师</span>
+                            <span>中级课程</span>
+                        </div>
+                        <div class="title">
+                            <span class="dll">在线学习</span>
+                            <span class="menoy">￥&nbsp;199元</span>
+                        </div>
+                    </div>
+                </li>
+                <li class="timetable-list">
+                    <div class="img">
+                        <img src="http://www.maiziedu.com/uploads/course/2017/04/Jquery.png" alt="logo">
+                        <div class="fl">
+                            <a href="javascript:void(0);"></a>
+                        </div>
+                    </div>
+                    <div class="active-content">
+                        <h3>Java开发高级专题课程Java开发高级专题课程</h3>
+                        <div class="name">
+                            <span>实战</span>
+                            <span>讲师：李老师</span>
+                            <span>中级课程</span>
+                        </div>
+                        <div class="title">
+                            <span class="dll">在线学习</span>
+                            <span class="menoy">￥&nbsp;199元</span>
+                        </div>
+                    </div>
+                </li>
+                <li class="timetable-list">
+                    <div class="img">
+                        <img src="https://s1.51cto.com/images/201609/88b5f3c197c4720aa2c024f57ccdeabb30f50f.jpg" alt="logo">
+                        <div class="fl">
+                            <a href="javascript:void(0);"></a>
+                        </div>
+                    </div>
+                    <div class="active-content">
+                        <h3>Java开发高级专题课程Java开发高级专题课程</h3>
+                        <div class="name">
+                            <span>实战</span>
+                            <span>讲师：李老师</span>
+                            <span>中级课程</span>
+                        </div>
+                        <div class="title">
+                            <span class="dll">在线学习</span>
+                            <span class="menoy">￥&nbsp;199元</span>
+                        </div>
+                    </div>
+                </li>
+                <li class="timetable-list">
+                    <div class="img">
+                        <img src="http://www.maiziedu.com/uploads/course/2017/04/JavaScript_jichurumen.png" alt="logo">
+                        <div class="fl">
+                            <a href="javascript:void(0);"></a>
+                        </div>
+                    </div>
+                    <div class="active-content">
+                        <h3>Java开发高级专题课程Java开发高级专题课程</h3>
+                        <div class="name">
+                            <span>实战</span>
+                            <span>讲师：李老师</span>
+                            <span>中级课程</span>
+                        </div>
+                        <div class="title">
+                            <span class="dll">在线学习</span>
+                            <span class="menoy">￥&nbsp;199元</span>
+                        </div>
+                    </div>
+                </li>
+                <li class="timetable-list">
+                    <div class="img">
+                        <img src="https://s1.51cto.com/images/201609/651212277ce4c2a828f005d7b943f091279e88.png" alt="logo">
+                        <div class="fl">
+                            <a href="javascript:void(0);"></a>
+                        </div>
+                    </div>
+                    <div class="active-content">
+                        <h3>Java开发高级专题课程Java开发高级专题课程</h3>
+                        <div class="name">
+                            <span>实战</span>
+                            <span>讲师：李老师</span>
+                            <span>中级课程</span>
+                        </div>
+                        <div class="title">
+                            <span class="dll">在线学习</span>
+                            <span class="menoy">￥&nbsp;199元</span>
+                        </div>
+                    </div>
+                </li>
+                <li class="timetable-list">
+                    <div class="img">
+                        <img src="http://f1.howzhi.com/course/2017/02-04/185635347f5b845988.jpg" alt="">
+                        <div class="fl">
+                            <a href="javascript:void(0);"></a>
+                        </div>
+                    </div>
+                    <div class="active-content">
+                        <h3>Java开发高级专题课程Java开发高级专题课程</h3>
+                        <div class="name">
+                            <span>实战</span>
+                            <span>讲师：李老师</span>
+                            <span>中级课程</span>
+                        </div>
+                        <div class="title">
+                            <span class="dll">在线学习</span>
+                            <span class="menoy">￥&nbsp;199元</span>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <div class="clearFix"></div>
+        </div>
+    </div>
+</div>
+<!--后段学习结束-->
+
+<!--每周推送开始-->
+<div class="action-hd ">
+    <div class="hd-top">
+        <h3 class="hd-title">咨询推送</h3>
+        <a href="javascript:void(0);" class="hd-gd">更多 &gt;&gt;</a>
+    </div>
+</div>
+<div class="Chen">
+
+    <!--<h2 class="chenTitle">咨——询——推——送</h2>-->
+    <div class="Chen-types">
+        <div class="types-lift">
+            <p class="top">
+                <a class="active" href="javascript:void(0);">每周推送</a>
+                <a href="javascript:void(0);">最新文章</a>
+                <a href="javascript:void(0);">热门文章</a>
+            </p>
+            <ul class="stream-list">
+                <li class="stream-list-item">
+                    <div class="blog">
+                        <div class="stream__item-zan">
+                            <span class="stream__item-zan-icon"></span>
+                            <span class="stream__item-zan-number">14</span>
+                        </div>
+                    </div>
+                    <div class="summary">
+                        <h2 class="tit">
+                            <a href="javascript:void(0);"> PHP面试套路怎么玩？上车！360大牛亲自发车！</a>
+                        </h2>
+                        <ul class="author">
+                            <li>
+                                <a href=""><img src="https://sfault-avatar.b0.upaiyun.com/127/161/1271614984-597821396c79d_small"></a>
+                                <span class="vertical">
+										<a href="">有赞前端</a>
+	                    				4 小时前 发布于
+	                    				<a href="">有赞前端团队</a>
+									</span>
+                            </li>
+                            <li class="bookmark">
+                                <span class="bookmark-cion"></span>
+                                <span class="blog--bookmark__text">6 收藏</span>
+                            </li>
+                        </ul>
+                        <p class="summary-excerpt">
+                            PHP开发人才需求量日益增加，但有很多PHP开发求职者却无法找到自己心仪的工作，是技术能力不过关？还是招聘企业的z	要求过高？或是面试前复习的知识点偏差导致面试失败？欢迎参与话题，与360大佬畅聊PHP面试考点！错过等明年！
+                        </p>
+                    </div>
+                </li>
+                <li class="stream-list-item">
+                    <div class="blog">
+                        <div class="stream__item-zan">
+                            <span class="stream__item-zan-icon"></span>
+                            <span class="stream__item-zan-number">7</span>
+                        </div>
+                    </div>
+                    <div class="summary">
+                        <h2 class="tit">
+                            <a href="javascript:void(0);">使用Node.js了解和测量HTTP花费的时间！</a>
+                        </h2>
+                        <ul class="author">
+                            <li>
+                                <a href=""><img src="https://sfault-avatar.b0.upaiyun.com/396/236/3962360519-591a6cfe46a73_small"></a>
+                                <span class="vertical">
+										<a href="">frontoldman</a>
+	                    				2 天前 发布于
+	                    				<a href="">优质翻译文章</a>
+									</span>
+                            </li>
+                            <li class="bookmark">
+                                <span class="bookmark-cion"></span>
+                                <span class="blog--bookmark__text">166 收藏</span>
+                            </li>
+                        </ul>
+                        <p class="summary-excerpt">
+                            了解和测量HTTP时间有助于我们发现客户端到服务器或服务器到服务器之间的通信性能瓶颈。 本文介绍了HTTP请求中的时间开销，并展示了如何在Node.js中进行测量。 在我们开始了解HTTP时间开销之前，让我们来看一些基...
+                        </p>
+                    </div>
+                </li>
+                <li class="stream-list-item">
+                    <div class="blog">
+                        <div class="stream__item-zan">
+                            <span class="stream__item-zan-icon"></span>
+                            <span class="stream__item-zan-number">3</span>
+                        </div>
+                    </div>
+                    <div class="summary">
+                        <h2 class="tit">
+                            <a href="javascript:void(0);">CSS布局说——可能是最全的</a>
+                        </h2>
+                        <ul class="author">
+                            <li>
+                                <a href=""><img src="https://sfault-avatar.b0.upaiyun.com/166/070/1660701561-58cb718a7a415_small"></a>
+                                <span class="vertical">
+										<a href="">Choco</a>
+	                    				4 小时前 发布于
+	                    				<a href="">前端随笔</a>
+									</span>
+                            </li>
+                            <li class="bookmark">
+                                <span class="bookmark-cion"></span>
+                                <span class="blog--bookmark__text">401 收藏</span>
+                            </li>
+                        </ul>
+                        <p class="summary-excerpt">
+                            前言 现在，我们被称为前端工程师。然而，早年给我们的称呼却是页面仔。或许是职责越来越大，整体的前端井喷式的发展，使我们只关注了js，而疏远了css和html。 其实，我们可能经常在聊组件化，咋地咋地。但是，回...
+                        </p>
+                    </div>
+                </li>
+                <li class="stream-list-item">
+                    <div class="blog">
+                        <div class="stream__item-zan">
+                            <span class="stream__item-zan-icon"></span>
+                            <span class="stream__item-zan-number">7</span>
+                        </div>
+                    </div>
+                    <div class="summary">
+                        <h2 class="tit">
+                            <a href="javascript:void(0);">Linux软件“四”种安装原理详解</a>
+                        </h2>
+                        <ul class="author">
+                            <li>
+                                <a href=""><img src="https://sfault-avatar.b0.upaiyun.com/198/156/1981568865-5911a6457a755_small"></a>
+                                <span class="vertical">
+										<a href="">好好地</a>
+	                    				12 小时前 发布于
+	                    				<a href="">好好地</a>
+									</span>
+                            </li>
+                            <li class="bookmark">
+                                <span class="bookmark-cion"></span>
+                                <span class="blog--bookmark__text">66 收藏</span>
+                            </li>
+                        </ul>
+                        <p class="summary-excerpt">
+                            一、Linux软件包分类 1.1 源码包 优点： 开源，如果有足够的能力，可以修改源代码； 可以自由选择所需的功能； 软件是编译安装，所以更加适合自己的系统，更加稳定、效率更高； 卸载方便； 缺点： 安装过程步骤较...
+                        </p>
+                    </div>
+                </li>
+
+            </ul>
+        </div>
+        <div class="types-right">
+            <h2 class="widget-title">热门专栏</h2>
+            <ul class="list-unstyled">
+                <li class="widget-user">
+                    <div class="img-circle">
+                        <span class="order-number">1</span>
+                    </div>
+                    <div class="media-object">
+                        <strong>
+                            <a href="javascript:void(0);">前端学习之路</a>
+                        </strong>
+                        <p class="text-muted">一个前端开发者，记录开发的点滴经历</p>
+                    </div>
+                    <div class="clearfix"></div>
+                </li>
+                <li class="widget-user">
+                    <div class="img-circle">
+                        <span class="order-number">2</span>
+                    </div>
+                    <div class="media-object">
+                        <strong>
+                            <a href="javascript:void(0);">前端随笔</a>
+                        </strong>
+                        <p class="text-muted">或许，我们之间只是一篇文章的距离；知识，只是几分钟的阅读。希望我们能够在此专栏里面一起成长，一起...</p>
+                    </div>
+                    <div class="clearfix"></div>
+                </li>
+                <li class="widget-user">
+                    <div class="img-circle">
+                        <span class="order-number">3</span>
+                    </div>
+                    <div class="media-object">
+                        <strong>
+                            <a href="javascript:void(0);">做工程师不做码农</a>
+                        </strong>
+                        <p class="text-muted">主要是前端技术，但不限于前端</p>
+                    </div>
+                    <div class="clearfix"></div>
+                </li>
+                <li class="widget-user">
+                    <div class="img-circle">
+                        <span class="order-number">4</span>
+                    </div>
+                    <div class="media-object">
+                        <strong>
+                            <a href="javascript:void(0);">Angular 4.x 修仙之路</a>
+                        </strong>
+                        <p class="text-muted">生活在混合应用的世界中，迷失在 Angular 4.x 和 Ionic 3.x 的道路上...</p>
+                    </div>
+                    <div class="clearfix"></div>
+                </li>
+                <li class="widget-user">
+                    <div class="img-circle">
+                        <span class="order-number">5</span>
+                    </div>
+                    <div class="media-object">
+                        <strong>
+                            <a href="javascript:void(0);">stay hungry stay foolish</a>
+                        </strong>
+                        <p class="text-muted">stay hungry stay foolish</p>
+                    </div>
+                    <div class="clearfix"></div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!--每周推送结束-->
+
+<!--吊炸天大佛开始-->
+<div class="ljl">
+    <h3 class="types-title">
+		<span class="tit-icon icon-l">
+			</span>
+        <em>吊</em>／
+        <em>炸</em>／
+        <em>天</em>／
+        <em>未</em>／
+        <em>来</em>／
+        <em>之</em>／
+        <em>星</em>
+        </span>
+        <span class="tit-icon icon-r"></span>
+    </h3>
+    <ul class="goldtea-box">
+        <li>
+            <a class="goldtea1">
+                <div>
+                    <h4 class="font12 tea-tit">="智慧文章王者"=<i class="tea_tag"></i></h4>
+                    <span class="font10 col-a1">无无法师</span>
+                    <p class="desc">一周发布手记 5 篇</p>
+                </div>
+                <img src="http://img4.mukewang.com/59ae58fe0001b7bd01000100-100-100.jpg" alt="刘昊琛-UI设计金牌导师">
+
+            </a>
+            <i class="star-img"></i>
+        </li>
+        <li>
+            <a class="goldtea1">
+                <div>
+                    <h4 class="font12 tea-tit">="智慧文章王者"=<i class="tea_tag"></i></h4>
+                    <span class="font10 col-a1">无无法师</span>
+                    <p class="desc">一周发布手记 5 篇</p>
+                </div>
+                <img src="http://img2.mukewang.com/5333a28f00019e7702100210-100-100.jpg" alt="刘昊琛-UI设计金牌导师">
+
+            </a>
+            <i class="star-img"></i>
+        </li>
+        <li>
+            <a class="goldtea1">
+                <div>
+                    <h4 class="font12 tea-tit">="智慧文章王者"=<i class="tea_tag"></i></h4>
+                    <span class="font10 col-a1">无无法师</span>
+                    <p class="desc">一周发布手记 5 篇</p>
+                </div>
+                <img src="http://img1.mukewang.com/5458640c0001b0a702200220-100-100.jpg" alt="刘昊琛-UI设计金牌导师">
+
+            </a>
+            <i class="star-img"></i>
+        </li>
+        <li>
+            <a class="goldtea1">
+                <div>
+                    <h4 class="font12 tea-tit">="智慧文章王者"=<i class="tea_tag"></i></h4>
+                    <span class="font10 col-a1">无无法师</span>
+                    <p class="desc">一周发布手记 5 篇</p>
+                </div>
+                <img src="http://img1.mukewang.com/54584f0b000124f802200220-100-100.jpg" alt="刘昊琛-UI设计金牌导师">
+
+            </a>
+            <i class="star-img"></i>
+        </li>
+        <li>
+            <a class="goldtea1">
+                <div>
+                    <h4 class="font12 tea-tit">="智慧文章王者"=<i class="tea_tag"></i></h4>
+                    <span class="font10 col-a1">无无法师</span>
+                    <p class="desc">一周发布手记 5 篇</p>
+                </div>
+                <img src="http://img2.mukewang.com/5847dd8800018e3308000751-100-100.jpg" alt="刘昊琛-UI设计金牌导师">
+
+            </a>
+            <i class="star-img"></i>
+        </li>
+        <li>
+            <a class="goldtea1">
+                <div>
+                    <h4 class="font12 tea-tit">="智慧文章王者"=<i class="tea_tag"></i></h4>
+                    <span class="font10 col-a1">无无法师</span>
+                    <p class="desc">一周发布手记 5 篇</p>
+                </div>
+                <img src="http://img3.mukewang.com/57f9b8fd0001753d02790279-100-100.jpg" alt="刘昊琛-UI设计金牌导师">
+
+            </a>
+            <i class="star-img"></i>
+        </li>
+        <li>
+            <a class="goldtea1">
+                <div>
+                    <h4 class="font12 tea-tit">="智慧文章王者"=<i class="tea_tag"></i></h4>
+                    <span class="font10 col-a1">无无法师</span>
+                    <p class="desc">一周发布手记 5 篇</p>
+                </div>
+                <img src="http://img1.mukewang.com/55fac6190001f86e01000100-100-100.jpg" alt="刘昊琛-UI设计金牌导师">
+
+            </a>
+            <i class="star-img"></i>
+        </li>
+        <li>
+            <a class="goldtea1">
+                <div>
+                    <h4 class="font12 tea-tit">="智慧文章王者"=<i class="tea_tag"></i></h4>
+                    <span class="font10 col-a1">无无法师</span>
+                    <p class="desc">一周发布手记 5 篇</p>
+                </div>
+                <img src="http://img.mukewang.com/58cfcf0c0001fe4102200220-100-100.jpg" alt="刘昊琛-UI设计金牌导师">
+
+            </a>
+            <i class="star-img"></i>
+        </li>
+    </ul>
+</div>
+<!--吊炸天大佛结束-->
+
+<!--名师开始-->
+<div class="teacher floor">
+    <div class="teacher-content">
+        <h3 class="teacher-tit">
+            <span class="tit-icon1"></span>
+            <em>慧</em>
+            /
+            <em>与</em>
+            /
+            <em>课</em>
+            /
+            <em>堂</em>
+            /
+            <em>精</em>
+            /
+            <em>英</em>
+            /
+            <em>名</em>
+            /
+            <em>师</em>
+            <span class="tit-icon2"></span>
+            <a href="javascript:void(0)" class="more">
+                <span>查看更多</span>
+                <i class="more-i">></i>
+            </a>
+        </h3>
+        <div class="clearfix"></div>
+        <div class="teacher-list">
+            <a href="javascript:void(0)" class="list-unit">
+                <img src="http://img3.mukewang.com/58d9c48f0001ad0304070270-100-100.jpg" class="unit-img" title="__bobby">
+                <span class="unit-name">__bobby</span>
+                <span class="unit-job">全栈工程师</span>
+                <span class="unit-des" title="python全栈工程师，五年工作经验，喜欢钻研python技术，对爬虫、web开发以及机器学习有浓厚的兴趣，关注前沿技术以及发展趋势。">python全栈工程师，五年工作经验，喜欢钻研python技术，对爬虫、web开发以及机器学习有浓厚的兴趣，关注前沿技术以及发展趋势。</span>
+            </a>
+            <a href="javascript:void(0)" class="list-unit">
+                <img src="http://img4.mukewang.com/589ae8ef00012f9711081111-100-100.jpg" class="unit-img" title="Jason李捷">
+                <span class="unit-name">Jason李捷</span>
+                <span class="unit-job">PHP开发工程师</span>
+                <span class="unit-des" title="资深金牌讲师，80后，搞IT的，但不想被IT搞，PHP高级工程师，有六年项目开发经验，多家知名上市培训机构金牌讲师，某知名互联网公司高级服务端工程师，对Linux、PHP、Lua、MySQL等都有着较深入的研究，一直致力于服务端程序的培训和开发。">资深金牌讲师，80后，搞IT的，但不想被IT搞，PHP高级工程师，有六年项目开发经验，多家知名上市培训机构金牌讲师，某知名互联网公司高级服务端工程师，对Linux、PHP、Lua、MySQL等都有着较深入的研究，一直致力于服务端程序的培训和开发。</span>
+            </a>
+            <a href="javascript:void(0)" class="list-unit">
+                <img src="http://img3.mukewang.com/54584d7300011cfa02200220-100-100.jpg" class="unit-img" title="linda888">
+                <span class="unit-name">linda888</span>
+                <span class="unit-job">软件测试工程师</span>
+                <span class="unit-des" title="高级测试工程师，精通测试理论和测试技术。
+熟悉掌握功能、性能、接口、安全等测试，
+熟悉使用各种工具进行自动化功能和性能测试。
+擅长大型项目的性能测试及整体调优。
+成为全栈工程师是最终梦想。">高级测试工程师，精通测试理论和测试技术。
+熟悉掌握功能、性能、接口、安全等测试，
+熟悉使用各种工具进行自动化功能和性能测试。
+擅长大型项目的性能测试及整体调优。
+成为全栈工程师是最终梦想。</span>
+            </a>
+            <a href="javascript:void(0)" class="list-unit">
+                <img src="http://img4.mukewang.com/598bcaf70001f13309600960-100-100.jpg" class="unit-img" title="ccmouse">
+                <span class="unit-name">ccmouse</span>
+                <span class="unit-job">全栈工程师</span>
+                <span class="unit-des" title="现任汽车赛事及活动的组织策划，赛车手。曾就职于谷歌和摩根士丹利，担任高级软件工程师，拥有十余年后端开发经验，精通C  ，Java，分布式系统开发，参与金融，搜索及在线广告系统开发。">现任汽车赛事及活动的组织策划，赛车手。曾就职于谷歌和摩根士丹利，担任高级软件工程师，拥有十余年后端开发经验，精通C  ，Java，分布式系统开发，参与金融，搜索及在线广告系统开发。</span>
+            </a>
+            <a href="javascript:void(0)" class="list-unit last">
+                <img src="http://img3.mukewang.com/57c558840001f65c01500150-100-100.jpg" class="unit-img" title="逆流的鱼yuiop">
+                <span class="unit-name">逆流的鱼yuiop</span>
+                <span class="unit-job">全栈工程师</span>
+                <span class="unit-des" title="负责多媒体开发，播放器开发，擅长Java及NDK/C++开发，2016CSDN博客之星，喜欢交流技术，分享心得，公众号：DriodDeveloper">负责多媒体开发，播放器开发，擅长Java及NDK/C++开发，2016CSDN博客之星，喜欢交流技术，分享心得，公众号：DriodDeveloper</span>
+            </a>
+        </div>
+    </div>
+</div>
+<!--名师结束-->
+
+<!--footer&right-side开始-->
+<!-- footer -->
+<div class="footer">
+    <div class="footer-t">
+        <div class="footer-t-l">
+            <a href="" class="footer-l-a">项目介绍</a>
+            <ul class="ul">
+                <li>
+                    <a href="">项目介绍</a>
+                </li>
+            </ul>
+        </div>
+        <div class="footer-t-l">
+            <a href="" class="footer-l-a">主办单位</a>
+            <ul class="ul">
+                <li>
+                    <a href="">遵义软件园</a>
+                </li>
+                <li>
+                    <a href="">HPE</a>
+                </li>
+                <li>
+                    <a href="">HPE大学</a>
+                </li>
+            </ul>
+        </div>
+        <div class="footer-t-l">
+            <a href="" class="footer-l-a">精品课程</a>
+            <ul class="ul">
+                <li>
+                    <a href="">大数据</a>
+                </li>
+                <li>
+                    <a href="">WEB前端</a>
+                </li>
+                <li>
+                    <a href="">JAVA</a>
+                </li>
+                <li>
+                    <a href="">软件测试</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="footer-t-l">
+            <a href="" class="footer-l-a">常见问题</a>
+            <ul class="ul">
+                <li>
+                    <a href="">住宿交通</a>
+                </li>
+                <li>
+                    <a href="">培训政策</a>
+                </li>
+            </ul>
+        </div>
+        <div class="footer-t-l last">
+            <a href="" class="footer-l-a">关注我们</a>
+            <ul class="ul">
+                <li>
+                    <a href="">官方微信</a>
+                </li>
+                <li>
+                    <a href="">新浪微博</a>
+                </li>
+                <li>
+                    <a href="">最新咨询</a>
+                </li>
+                <li>
+                    <a href="">了解更多</a>
+                </li>
+            </ul>
+        </div>
+        <!-- <div class="footer-line"></div> -->
+        <div class="footer-t-m">
+            <p class="footer-m-p">
+                <img src="img/ma.jpg">
+            </p>
+            <p class="footer-t-p">官方微信公众号</p>
+        </div>
+        <div class="footer-t-r">
+            <img src="img/phone.png">
+            <p class="footer-r-p1">报名咨询电话:</p>
+            <p class="footer-r-p2">0851-28776663</p>
+            <p class="footer-r-p3">周一至周日9:00-21:00</p>
+        </div>
+    </div>
+    <div class="footer-b">
+        <p>Copyright © 2017 IfThink. All rights reserved. 黔ICP备12001935号-2</p>
+        <p>地址：遵义新蒲新区大学城平安街B2区1号楼1层
+            <a href="">[地图]</a></p>
+    </div>
+</div>
+<!-- footer -->
+
+<div class="fh-wrapper">
+    <div class="jj">
+        <div class="dh">
+            <a href="javascript:void(0);" class="dh-list">
+                <i class="icon-bubbles3 yjfh"></i>
+                <span>意见反馈</span>
+            </a>
+            <a href="javascript:void(0);" class="dh-list">
+                <i class="icon-question yjfh"></i>
+                <span>常见问题</span>
+            </a>
+            <a href="javascript:void(0);" class="dh-list">
+                <i class="icon-cloud-download yjfh"></i>
+                <span>APP下载</span>
+                <div class="app-box"></div>
+            </a>
+            <a href="javascript:void(0);" class="dh-list">
+                <i class="icon-bubble yjfh"></i>
+                <span>官方微信</span>
+                <div class="wx-box"></div>
+            </a>
+            <a href="javascript:void(0);" class="dh-list" id="fhdb">
+                <i class="icon-ctrl yjfh"></i>
+                <span>返回顶部</span>
+            </a>
+        </div>
+    </div>
+</div>
+<!--footer&right-side结束-->
+<!--梯导航栏开始-->
+<div class="side-nav-wrampper">
+    <ul class="side-nav-list">
+        <li class="side-unit acitve"><img src="img/new%20().png" alt="">最新课程</li>
+        <li class="side-unit"><img src="img/案例.png" alt="">实战推荐</li>
+        <li class="side-unit"><img src="img/精品.png" alt="">精品好课</li>
+        <li class="side-unit"><img src="img/后端.png" alt="">后端开发</li>
+        <li class="side-unit"><img src="img/web.png" alt="">WEB前端</li>
+        <li class="side-unit"><img src="img/云计算.png" alt="">云计算&大数据</li>
+        <li class="side-unit"><img src="img/软件测试.png" alt="">运维&测试</li>
+        <li class="side-unit"><img src="img/数据库.png" alt="">数据库</li>
+        <li class="side-unit"><img src="img/UI.png" alt="">UI设计</li>
+        <li class="side-unit"><img src="img/随手记.png" alt="">手记分享</li>
+        <li class="side-unit"><img src="img/名师风采.png" alt="">名师在线</li>
+    </ul>
+</div>
+<!--梯导航栏结束-->
+
+<script>
+    var resData =[
+        {imgUrl:'http://jiuye-res.jikexueyuan.com/others/20170901/b01691f9-ce36-42b2-8ae1-3388e1972c27.jpg'},
+        {imgUrl:'http://jiuye-res.jikexueyuan.com/others/20170808/eb09671c-f390-4af2-8ed8-058e6937088c.jpg'},
+        {imgUrl:'http://jiuye-res.jikexueyuan.com/others/20170906/3f3f6113-4df7-4419-aea8-3a492ae59c2d.jpg'},
+        {imgUrl:'http://jiuye-res.jikexueyuan.com/others/20170901/b01691f9-ce36-42b2-8ae1-3388e1972c27.jpg'}
+
+    ];
+
+    var vm = new Vue({
+        el: '#banner',
+        data: {
+            bannerData: resData,
+            currentIndex: 0,
+            beforeIndex: 0,
+            namechange: 'prev',
+            stopClick: true
+
+        },
+        methods: {
+            clickBannerLi (i){
+//                console.log(123123);
+                this.beforeIndex = this.currentIndex;
+                this.currentIndex =i;
+            },
+            prev (){
+
+                if(this.stopClick){
+//                    this.stopClick=false;
+//                console.log(' b '+this.currentIndex +' before'+this.beforeIndex);
+
+                    this.currentIndex = --this.currentIndex% this.bannerData.length;
+                    if(this.currentIndex < 0 ) {this.currentIndex=this.bannerData.length-1;}
+                    this.namechange = this.beforeIndex < this.currentIndex ? 'guodu' :'prev';
+
+//                console.log(' b '+this.currentIndex +' before'+this.beforeIndex);
+
+//                    this.timeout();
+                }else {
+                    console.log('cuol111 ')
+                }
+
+            },
+            next (){
+//                if(this.stopClick){
+//                    this.stopClick=false;
+                    if(this.currentIndex> this.bannerData.length ){this.currentIndex=0;}
+                    this.currentIndex = ++this.currentIndex% this.bannerData.length;
+                    this.namechange = this.beforeIndex > this.currentIndex ? 'guodu' :'prev';
+
+//                    this.timeout();
+               /* }else {
+                    console.log('cuol222 ')
+                }
+*/
+            },
+            timeout (){
+                setTimeout(function () {
+                    this.stopClick = true;
+                },1010);
+            }
+
+        }
+    });
+</script>
+
+</body>
+</html>

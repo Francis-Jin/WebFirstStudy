@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>DOM节点操作</title>
+</head>
+<body>
+	<div id="box">
+		<p class="text">1,我是box下的第1个节点</p>
+		<p class="text">2,我是box下的第2个节点</p>
+		<p class="text">3,我是box下的第3个节点</p>
+		<p class="text">4,我是box下的第4个节点</p>
+		<p class="text">5,我是box下的第5个节点</p>
+	</div>
+	<script type="text/javascript">
+	/**
+	1、创建元素节点：createElement
+
+	用法：document.createElement("p");//创建p标签；
+
+	    创建文本节点：createTextNode;
+
+	用法：document.createTextNode("txt");//创建文本标签；
+
+	2、插入节点：appendchild:在要插入的元素节点上调用，他插入指定的节点使其成为那个节点的最后一个子节点。
+
+	                   insertBefore:在已有的元素前插入一个新元素；
+
+	                   insertAfter:在现有的元素后面插入一个新元素；
+
+	3、删除节点：removeChild;从文档树中删除一个节点（先找到要删除节点的父节点，用父节点删除）；
+
+	                  用法：var para1=document.getElementById("p1");
+
+	                               para1.parentNode.removeChild(para1);
+
+	4、替换节点：replaceChild;将一个节点替换为另一个节点（先找到要替换的节点的父节点，用父节点替换）；
+					用法：var Demo = document.createElement('div');
+						  document.body.appendChild(Demo);
+						  var Demo2 = document.createElement('h1');
+						  Demo.appendChild(Demo2);
+						  var h1Text = document.createTextNode('HelloWorld!');
+						  var h1Text2 = document.createTextNode('你好世界！');
+						  Demo2.appendChild(h1Text);
+						  h1Dom.replaceChild(h1Text2,h1Text);
+
+	*/
+/*		var Demo = document.createElement('div');
+	    document.body.appendChild(Demo);
+	    var Demo2 = document.createElement('h1');
+	    Demo.appendChild(Demo2);
+	    var h1Text = document.createTextNode('HelloWorld!');
+	    var h1Text2 = document.createTextNode('你好世界！');
+	    Demo2.appendChild(h1Text);
+	    Demo2.replaceChild(h1Text2,h1Text);*/
+		var oDiv = document.getElementById('box');
+		var aPs = oDiv.getElementsByClassName('text');
+		var pDom = document.createElement('p');
+		pDom.className = 'text1';
+		pDom.style.width = 200 + 'px';
+		pDom.style.height = 200 + 'px';
+		pDom.style.backgroundColor = 'red';
+		oDiv.appendChild(pDom);
+		var pDom1Text = document.createTextNode('我是插在pDom1里的文本');
+		var pDom1 = pDom.cloneNode(false);
+		pDom1.appendChild(pDom1Text);
+		// console.log(pDom1);
+		// 克隆节点
+		var pDom2Text = pDom1Text.cloneNode(false);
+		var pDom2 = pDom1.cloneNode(false);
+		pDom2.appendChild(pDom2Text);
+		// 替换节点
+		oDiv.replaceChild(pDom2,aPs[3]);
+		// 在节点之前追加一个节点
+		oDiv.insertBefore(pDom1,aPs[2]);
+		// 删除节点
+		oDiv.removeChild(aPs[1]);
+
+	</script>
+</body>
+</html>

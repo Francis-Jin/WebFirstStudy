@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript">
+	window.addEventListener("DOMContentLoaded",()=>{
+		new SubmitLiuyan();
+	},false);
+function SubmitLiuyan(id)
+{
+	var _this=this;
+	this.oBtn = document.getElementById('btn');
+	this.oTxt1= document.getElementById('txt1');
+	this.oTxt2= document.getElementById('txt2');
+
+	this.oBtn.onclick =function(){
+		_this.fnClick();
+	};
+
+	this.oTxt2.onkeydown=function(){
+		_this.fnDown();
+	};
+}
+
+SubmitLiuyan.prototype.fnClick = function ()
+{
+	this.oTxt1.value += this.oTxt2.value+'\n';
+	this.oTxt2.value = '';
+}
+
+SubmitLiuyan.prototype.fnDown = function (ev)
+{
+	var oEvent = ev || window.event;
+	if(oEvent.ctrlKey && oEvent.keyCode===13)
+	{
+		this.oTxt1.value += this.oTxt2.value+'\n';
+		this.oTxt2.value = '';
+	}
+}
+	</script>
+</head>
+<body>
+	<textarea id = "txt1" rows="10" cols="40"></textarea>
+	<hr>
+	<input type="text" id="txt2" name="">
+	<input type="button" id="btn" name="" value="提交留言">
+</body>
+</html>

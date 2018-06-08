@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>removeChild删除子节点</title>
+	<script type="text/javascript">
+		window.onload=function(){
+			var aA=document.getElementsByTagName('a');
+			var oUl=document.getElementById('ul1');
+			var i=0;
+			for(i;i<aA.length;i++){
+				aA[i].onclick=function(){
+					oUl.removeChild(this.parentNode);
+				}
+			}
+		}
+	</script>
+</head>
+<body>
+	<ul id="ul1">
+		<li>djf dkl <a href="javascript:;">删除</a></li>
+		<li>dfs <a href="javascript:;">删除</a></li>
+		<li>都是发斯蒂芬 <a href="javascript:;">删除</a></li>
+		<li>d打 <a href="javascript:;">删除</a></li>
+		<li>鼎折覆餗 <a href="javascript:;">删除</a></li>
+		<li>无法v <a href="javascript:;">删除</a></li>
+		<li>答复 <a href="javascript:;">删除</a></li>
+		<li>d阿哥此次 <a href="javascript:;">删除</a></li>
+	</ul>
+</body>
+</html>

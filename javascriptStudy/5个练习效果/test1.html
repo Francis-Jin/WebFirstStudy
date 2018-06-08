@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		*{
+			margin:0;
+			padding: 0;
+		}
+		#ul1{
+			width: 300px;
+			margin: 50px auto;
+			list-style: none;
+			background: #eee;
+		}
+		#ul1 li{
+			position: relative;
+			z-index: 2;
+			width:100%;
+			height: 50px;
+			background: transparent;
+			border-bottom: 1px solid #ccc;
+		}
+		#ul1 li .div{
+			position: absolute;
+			top:0;
+			right: 0;
+			width:0;
+			height: 50px;
+		}
+	</style>
+</head>
+<body>
+	<ul id="ul1">
+		<li class="item">
+			<div class="div"></div>
+		</li>
+		<li class="item">
+			<div class="div"></div>
+		</li>
+		<li class="item">
+			<div class="div"></div>
+		</li>
+		<li class="item">
+			<div class="div"></div>
+		</li>
+		<li class="item">
+			<div class="div"></div>
+		</li>
+		<li class="item">
+			<div class="div"></div>
+		</li>
+		<li class="item">
+			<div class="div"></div>
+		</li>
+		<li class="item">
+			<div class="div"></div>
+		</li>
+		<li class="item">
+			<div class="div"></div>
+		</li>
+		<li class="item">
+			<div class="div"></div>
+		</li>
+		<li class="item">
+			<div class="div"></div>
+		</li>
+		<li class="item">
+			<div class="div"></div>
+		</li>
+		<li class="item">
+			<div class="div"></div>
+		</li>
+		<li class="item">
+			<div class="div"></div>
+		</li>
+		<li class="item">
+			<div class="div"></div>
+		</li>
+	</ul>
+	<script type="text/javascript">
+		function getClases(className){
+			return document.getElementsByClassName(className);
+		}
+		function getArray(arr){
+			return Array.prototype.slice.call(arr);
+		}
+		function setCss(dom,obj){
+			for(var key in obj){
+				dom.style[key] = obj[key];
+			}
+		}
+		function randomColor(){
+			var r = Math.round(Math.random()*255),
+				g = Math.round(Math.random()*255),
+				b = Math.round(Math.random()*255);
+			return 'rgb('+r+','+g+','+b+')';
+		}
+		var lisDom = getClases('item');
+		var divsDom = getClases('div');
+		var lis = getArray(lisDom);
+		var divs = getArray(divsDom);
+
+		lis.forEach((e,i,res)=>{
+			e.addEventListener('mouseenter',(ev)=>{
+				setCss(divs[i],{
+					width: 300+'px',
+					background: randomColor(),
+					transition: 'all .5s ease'
+				});
+			},false);
+			e.addEventListener('mouseleave',function(ev){
+				setTimeout(()=>{
+					setCss(divs[i],{
+						width: 0,
+						background: randomColor(),
+						transition: 'all .5s ease'
+					});
+				},200);
+			},false);
+		});
+	</script>
+</body>
+</html>

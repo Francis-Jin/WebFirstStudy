@@ -1,0 +1,281 @@
+.nav-wrampper{
+	width: 100%;
+	height: 60px;
+	background-color: #fff;
+}
+.nav{
+	width: 1180px;
+	height: 60px;
+	margin: 0 auto;
+	/*background: red;*/
+}
+.nav-logo{
+	display: inline-block;
+	margin-right: 10px;
+	/*margin: 1px 0;*/
+}
+.nav-l-unit{
+	float: left;
+	width: 80px;
+	height: 60px;
+	position: relative;
+	text-align: center;
+	line-height: 60px;
+	color: #666;
+	border-top: 4px solid transparent;
+	border-right: 1px solid transparent;
+	border-left: 1px solid transparent;
+	transform: all 1s ease;
+}
+.items-cnt{
+	width: 80px;
+	position: absolute;
+	top:56px;
+	left: 0;
+	display: none;
+	transition: all .5s ease;
+
+}
+.nav-l-unit .items-cnt ul{
+	
+}
+.nav-l-unit .items-cnt ul li{
+	font-size: 14px;
+	font-weight: 600px;
+	color: #666;
+	background: #fff;
+}
+.nav-l-unit .items-cnt ul li:hover{
+	color: #3498db;
+	background: #eff3f5;
+}
+
+
+
+
+.nav-l-unit:hover{
+	border-top: 4px solid #3498DB;
+	border-right: 1px solid #eee;
+	border-left: 1px solid #eee;
+	color: #3498db;
+	transform: all 1s ease;
+}
+.nav-l-unit:hover .items-cnt{
+	display: block;
+	transition: all .5s ease;
+}
+.nav-r .search{
+	padding: 0 5px;
+	display: inline-block;
+	width: 20px ;
+	height: 20px;
+	margin-right: 5px;
+	border-right: 1px solid #eee;
+	border-left: 1px solid #eee;
+}
+.nav-r .search .search-icon{
+	width: 20px;
+	height: 20px;
+	display: inline-block;
+	margin-top: -4px;
+}
+.nav-r .login{
+	width: 60px;
+	height:60px;
+	display: inline-block;
+	color:#3498db;
+	/*margin-top: -20px;*/
+	text-align: center;
+	font-size: 14px;
+	line-height: 60px;
+	border-top: 4px solid transparent;
+	border-right: 1px solid transparent;
+	border-left: 1px solid transparent;
+	transform: all 1s ease;
+}
+.nav-r .login:hover{
+	border-top: 4px solid #3498DB;
+	border-right: 1px solid #eee;
+	border-left: 1px solid #eee;
+	color: #3498db;
+	transform: all 1s ease;
+	background-color: #eff3f5;
+}
+/*end nav*/
+/*start bann*/
+.banner{
+	width: 1180px;
+	margin:0px auto;
+	margin-top: 20px;
+}
+.banner img{
+	width: 1180px;
+}
+
+.project{
+	width: 1180px;
+	margin: 20px auto 0;
+}
+.project-nav .nav-l{
+
+}
+.project-nav .nav-l li{
+	padding: 10px 16px;
+	border:1px solid transparent;
+	border-radius: 16px;
+	margin-right: 20px;
+	float: left;
+}
+.project-nav .nav-l li:nth-child(1){
+	border:2px solid #3498DB;
+
+}
+.project-nav .nav-l li:nth-child(1) .nav-link{
+	color:#3498db;
+}
+.project-nav .nav-l li .nav-link{
+	font-size: 14px;
+	color: #7C7C7C;
+	transition: all .3s ease;
+
+
+}
+.project-nav .nav-l li:hover .nav-link{
+	color: #3498DB;
+	font-weight: 600;
+	transition: all .3s ease;
+
+}
+/*.project-nav .nav-l li.first{
+	margin-left: 0;
+}
+	*/
+.project-nav .nav-r{
+	background-color: #FFF7E7;
+	padding: 8px 20px;
+	border-radius: 20px;
+	/*盒陰影*/
+	box-shadow: 1px 1px 0px 1px #d2d2d2;
+}
+.nav-r .txt{
+	font-size: 14px;
+	font-weight: 500;
+	color: #6B3612;
+}
+.nav-r .txt .icon-warn,.nav-r .txt .icon-star1,.nav-r .txt .icon-heart-round{
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	font-size: 16px;
+}
+.nav-r .txt .icon-warn,.nav-r .txt .icon-star1{
+	color: #d2d2d2;
+}
+.nav-r .txt .icon-heart-round{
+	color: #E67E22;
+}
+/*start project-content*/
+.project-content{
+	margin-top: 20px;
+}
+.project-content-unit{
+	width: 280px;
+	float: left;
+	margin-left:20px;
+	margin-bottom: 20px;
+
+}
+.project-content .project-content-unit:nth-child(4n-3){
+	margin-left: 0;
+}
+.project-content-unit .des-img img{
+	width: 280px;
+}
+.project-content-unit .info .info-title{
+	font-size: 18px;
+	font-weight: 600;
+	margin: 8px 0;
+	/*以下三个通常是一起使用的，记住了哦*/
+	white-space: nowrap;/* 文本不換行 */
+	overflow: hidden;
+	text-overflow: ellipsis;/* 文本超出範圍添加圓點 */
+}
+.project-content-unit .info .msg span{
+	display: inline-block;
+	color: #666;
+	font-size: 14px;
+	padding: 5px;
+
+}
+.project-content-unit .info .msg span.msg-1{
+	border-radius: 4px;
+	background-color: #d8d8d8;
+	
+}
+.project-content-unit .info .cert{
+	color: red;
+}
+.msg{
+	margin-bottom: 8px;
+}
+.project-content-unit .info .usericon{
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	background-image: url('../img/uicon.jpg');
+	background-size: 20px 20px;
+	border-radius: 50%;
+	vertical-align: middle;
+	margin-right: 5px;
+}
+.project-content-unit .info .username{
+	font-size: 12px;
+	color: #666;
+}
+
+/*start pagination*/
+
+.pagination{
+	width: 1180px;
+	text-align: center;
+	margin-bottom: 20px;
+}
+.pagination .pager-unit{
+	display: inline-block;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	line-height: 40px;
+	border:2px solid #999;
+	font-size: 18px;
+	color: #999;
+	margin: 10px 10px 0 0;
+}
+.pagination .pager-unit:nth-child(1){
+	color: #2d2d2d;
+	border:2px solid #2d2d2d;
+}
+.pagination .pager-unit:hover{
+	color: #2d2d2d;
+	border:2px solid #2d2d2d;
+}
+/*start wpn*/
+.wpn-wramper{
+	clear: both;
+	width: 100%
+	height:1500px;
+	background-color:#fff;
+}
+.wpn{
+	width: 1180px;
+	height: 300px;
+	margin: 0 auto;
+	background-color: #0f0;
+}
+
+
+
+
+
+
+

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>轮播图</title>
+    <script src="../js/jquery-3.2.1.js"></script>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        .banner-box{
+            width:960px;
+            height:324px;
+            margin:20px auto;
+            overflow: hidden;
+        }
+        .banner-wrampper{
+            width:4000px;
+            overflow: hidden;
+            list-style: none;
+        }
+        .banner-wrampper .banner-unit{
+            width:960px;
+            height:324px;
+            float: left;
+
+        }
+        .dot-wrampper{
+            width:100px;
+            height: 10px;
+            margin:0 auto;
+        }
+        .dot-wrampper .dot{
+            vertical-align: top;
+            display: inline-block;
+            width:10px;
+            height:10px;
+            background: #c0c0c0;
+            border-radius: 50%;
+
+        }
+        .dot-wrampper .dot.active{
+            background: #DD5862;
+        }
+    </style>
+</head>
+<body>
+<div class="banner-box">
+    <ul class="banner-wrampper">
+        <li class="banner-unit">
+            <img src="img/1.jpg" alt=""></li>
+        <li class="banner-unit">
+            <img src="img/2.jpg" alt="">
+        </li>
+        <li class="banner-unit">
+            <img src="img/3.jpg" alt="">
+        </li>
+        <li class="banner-unit">
+            <img src="img/4.jpg" alt="">
+        </li>
+    </ul>
+</div>
+<div class="dot-wrampper">
+    <a href="javascript:void(0);" class="dot active"></a>
+    <a href="javascript:void(0);" class="dot"></a>
+    <a href="javascript:void(0);" class="dot"></a>
+    <a href="javascript:void(0);" class="dot"></a>
+</div>
+</body>
+</html>
+<script>
+    var $dot = $('.dot');
+//    var $bannerUnit = $('.banner-box .banner-wrampper .banner-unit');
+    var $bannerWrampper = $('.banner-box .banner-wrampper');
+    var _index = 0;
+    $dot.click(function (ev) {
+
+        _index = $(this).index();
+        $(this).addClass('active').siblings().removeClass('active');
+//        $bannerUnit.eq(_index).slideDown().siblings('.banner-unit').slideUp();
+//        $bannerUnit.eq(_index).fadeIn().siblings('.banner-unit').fadeOut();
+        $bannerWrampper.eq(0).animate({'margin-left':-1*960*_index});
+    })
+</script>

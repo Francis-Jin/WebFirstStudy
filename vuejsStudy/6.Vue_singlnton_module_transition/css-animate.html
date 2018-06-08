@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Vue-Css-animate</title>
+	<script type="text/javascript" src="../1.vue_start_1/node_modules/vue/dist/vue.min.js"></script>
+</head>
+<body>
+	<style type="text/css">
+		.bounce-enter-active{
+			animation: bounce-in .5s;
+		}
+		.bounce-leave-active{
+			animation: bounce-in .5s;
+		}
+		@keyframes bounce-in{
+			0% {
+				transform: scale(0);
+			}
+			50% {
+				transform: scale(1.5);
+			}
+			100% {
+				transform: scale(1);
+			}
+		}
+	</style>
+	<div id="example-2">
+		<button @click.prevent.stop="show = !show">Toggle Show</button>
+		<!-- bounce 弹跳 -->
+		<transition name="bounce">
+			<p v-if="show">Hello Css animate</p>
+		</transition>
+	</div>
+
+	<script type="text/javascript">
+		
+		new Vue({
+			el:"#example-2",
+			data:{
+				show:true
+			}
+		});
+
+	</script>
+</body>
+</html>

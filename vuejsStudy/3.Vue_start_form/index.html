@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Vue-from</title>
+	
+	<link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="node_modules/animate.css/animate.min.css">
+	<script type="text/javascript" src="../1.vue_start_1/node_modules/vue/dist/vue.min.js"></script>
+	<style type="text/css">
+		#app{
+			width:500px;
+			margin:0 auto;
+		}	
+	</style>
+</head>
+<body>
+<!-- v-on:click="name"缩写为@click="name"   v-bind:key="123"缩写为:key="123" -->
+	<div id="app">
+		<form class="form-inline">
+			<div class="from-group">
+				<input class="form-control" type="text" id="inp" v-model='inpVal'>
+				<button class="btn btn-primary" @click.prevent.stop='submit'>提交</button>
+			</div>
+		</form>
+		<p class="alert alert-info">{{inpVal}}</p>
+		<transition-group
+				tag="ul"
+				class="list-group"
+				name="top"
+				enter-active-class="animated bounceInLeft"
+				leave-active-class="animated bounceOutRight"
+				mode="out-in"
+			>
+					<li v-for="(res,i) in inpVals" :key="res" class="list-group-item list-item"><span>{{res}}</span><button class="pull-right btn btn-sm btn-danger" @click.prevent.stop="remove(i)">&times;</button> </li>
+			</transition-group>
+	</div>
+
+
+	<script type="text/javascript">
+		new Vue({
+			el:'#app',
+			data:{
+				inpVal:'',
+				inpVals:[1,2,3,4,5]
+			},
+			methods:{
+				submit:function(){
+					this.inpVals.push(this.inpVal);
+					this.inpVal='';
+				},
+				remove:function(i){
+					this.inpVals.splice(i,1);
+				}
+			}
+		});
+	</script>
+</body>
+</html>

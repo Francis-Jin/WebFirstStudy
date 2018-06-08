@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>js基础</title>
+	<script type="text/javascript">
+		/*function sum(a,b){//有返回值
+			return a+b;
+		}
+		alert(sum(2,3));*/
+		/*function show(){//无返回值
+
+		}
+		alert(show());*/
+		function sum(){
+	     	var result=0;
+	     	var i=0;
+	     	for(i;i<arguments.length;i++){
+	          	result += arguments[i];
+	    	 }
+	          alert(result);
+		}
+		sum(2,3,42,3,42,3,42,3,42,3,42,3,42,3,4,2,3,42,3,42,3,42,3,42,3,4);
+
+	</script>
+</head>
+<body>
+	<div id="box1">
+		12321
+	</div>
+</body>
+</html>
+<script type="text/javascript">
+	/*var a=12;
+	alert(typeof a);//number
+	var a='abc';
+	alert(typeof a);//string
+	var a=true;
+	alert(typeof a);//boolean
+	a=document.getElementById('box1');
+	alert(typeof a);//object
+	a=function(){
+		alert('abc');
+	}
+	alert(typeof a);//function
+	*/
+	/*var b;
+	alert(typeof b);*///undefind
+	//NaN --->not a number;
+</script>

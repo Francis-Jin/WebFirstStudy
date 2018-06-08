@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>把一个数组arr按照指定的数组大小size分割成若干个数组块。</title>
+	<script type="text/javascript">
+		var arr = [1,2,3,4,5,6,7];
+		console.log(chunk(arr,4));
+
+		/*function chunk(arr, size) {
+		  var newarr=[];
+		  for(var i = 0;i < arr.length; i += size) {
+		    var brr = arr.slice(i,i+size);
+		    newarr.push(brr);
+		  }
+		  return newarr;
+		}*/
+		function chunk(arr,count){
+			var result = [];
+			for(var i = 0; i < arr.length; i += count){
+				result.push(arr.slice(i,i+count))
+			};
+			return result;
+		}
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

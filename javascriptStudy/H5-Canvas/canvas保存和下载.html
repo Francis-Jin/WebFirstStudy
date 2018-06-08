@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>canvas保存和下载</title>
+	<script type="text/javascript">
+	window.onload = function ()
+	{
+		var canvasDom = getObject('canvas');
+		var saveImgDom = getObject('saveImg');
+		var downloadImgDom = getObject('downloadImg');
+		draw(canvasDom);
+		addBtnEvent(saveImgDom,"click",saveImgBtn());
+		addBtnEvent(downloadImgDom,"click",downloadImgBtn(canvasDom));
+
+	};
+
+	function draw(canvas)
+	{
+		var context = canvas.getContext('2d');
+		context.fillStyle = 'green';
+		context.fillRect(100,100,200,200);
+		// context.clip();
+		context.font="60px Arial";
+		context.fillText("Hello World",10,50);
+		context.strokeText('hello world',100,100);
+		context.fillStyle = 'blue';
+		context.fillRect(150,150,200,200);
+	}
+
+	function getObject(id)
+	{
+		return document.getElementById(id);
+	};
+
+	function addBtnEvent(obj,event,handler)
+	{
+		obj.addEventListener(event,handler,false);
+	};
+
+	function saveImgBtn()
+	{
+		var canvasDom = getObject('canvas');
+		var image = canvasDom.toDataURL('png');
+		var w=window.open(image,"smallwin");
+	};
+
+	function downloadImgBtn(canvas)
+	{
+		var image = canvas.toDataURL("image/png").replace('image/png',"image/octet-stream");
+		window.location.href = image;
+
+	};
+	</script>
+</head>
+<body>
+	<canvas id="canvas" width="600" height="600" style="border: 1px solid red;"></canvas>
+	<button id="saveImg">保存</button>
+	<button id="downloadImg">下载</button>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>第一个jQuery程序</title>
+	<script type="text/javascript" src="../jqueryLibrary/jquery-3.2.1.js"></script>
+</head>
+<body>
+	<script type="text/javascript">
+		/*$(document).ready(function(){
+			alert("helloworld");
+		});*/
+		// 两种方法等价
+		$(function(){
+			alert("helloworld");
+		});
+		$(document).ready(function(){
+			alert("helloworld123");
+		});
+		//两个都输出
+		
+		/*window.onload = function(){
+			alert("helloworld");
+		}
+		window.onload = function(){
+			alert("helloworld1232");
+		}
+		//只输出helloworld1232;
+		*/
+	</script>
+</body>
+</html>

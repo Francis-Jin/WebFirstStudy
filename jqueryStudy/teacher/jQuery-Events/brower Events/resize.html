@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>resize</title>
+    <script src="../../js/jquery-3.2.1.js"></script>
+    <style>
+        *{
+            margin:0 ;
+            padding:0;
+        }
+        #log{
+            width:200px;
+            height: 200px;
+            background: #f00;
+        }
+    </style>
+</head>
+<body>
+<div id="log"></div>
+</body>
+</html>
+<script>
+    $( window ).resize(function() {
+        $( "#log" ).append( "<div>Handler for .resize() called.</div>" );
+    });
+</script>

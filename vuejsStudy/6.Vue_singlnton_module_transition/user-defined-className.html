@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Vue-user-defined-className</title>
+	<script type="text/javascript" src="../1.vue_start_1/node_modules/vue/dist/vue.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="node_modules/animate.css/animate.min.css">
+</head>
+<body>
+	<div id="example-3">
+		<button @click="show = !show">
+			Toggle render
+		</button>
+		<transition
+			name="custom-classes-transition"
+			enter-active-class="animated tada"
+			leave-active-class="animated bounceOutRight"
+		>
+			<p v-if="show">Hello Vue user-defined ClassName</p>
+		</transition>
+	</div>
+
+	<script type="text/javascript">
+		new Vue({
+			el:"#example-3",
+			data:{
+				show:true
+			}
+		})
+	</script>
+</body>
+</html>

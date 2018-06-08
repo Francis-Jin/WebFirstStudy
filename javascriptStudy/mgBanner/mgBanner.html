@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="http://at.alicdn.com/t/font_383531_w851b9l45nxywrk9.css" />
+	<title>mgBanner</title>
+  <script type="text/javascript" src="js/mgBanner.js"></script>
+</head>
+<body>
+   <style>
+   *{
+   	padding: 0;
+   	margin: 0;
+   }
+   a{
+   	text-decoration: none;
+   }
+   body{
+   	background: #eff3f5;
+   }
+   	#box{
+    position: relative;
+    width: 1420px;
+    height: 460px;
+    margin: 100px auto;
+    background: #eee;
+    overflow: hidden;
+   	}
+    .unit-wrampper{
+      overflow: hidden;
+    }
+   	#box .unit{
+  	position: absolute;
+  	display: inline-block;
+  	top: 0;
+  	left: 0;
+    opacity: 0;
+    visibility: visible;
+  	width: 1420px;
+    height: 460px;
+  	transition: all .3s ease-in-out;
+   	}
+    #box .unit:nth-child(1){
+      opacity: 1;
+    }
+   	#box .unit img{
+   	  width: 1420px;
+   	  height: 460px;
+   	}
+    .action{
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100.5%;
+      height: 60px;
+      font-size: 0;
+      background: rgba(0,0,0,.8);
+      overflow: hidden;
+    }
+    .action .btn{
+      float: left;
+      width: 12.5%;
+      height: 100%;
+      border-top: 4px solid transparent;
+    }
+    .action .btn.active {
+      border-top: 4px solid #f06000;      
+    }
+    .action .btn a{
+    	display: inline-block;
+      text-align: center;
+    	width: 100%;
+    	height: 100%;
+    }
+    .action .btn a p{
+      border-right: 1px solid #525252;
+      font-size: 14px;
+      color: #fff;
+    }
+    .action .btn a p:nth-child(1){
+      margin:10px auto 0px;
+    }
+   </style>
+   <div id="box">
+     <div class="unit-wrapper">
+  		<a href="javascript:void(0)" class="unit">
+  			<img src="http://4img.mgtv.com/preview/cms_icon/2017/08/20170823224912652.jpg_1420x460.jpg" alt="加载失败！" title="mg1">
+  		</a>
+  		<a href="javascript:void(0)" class="unit">
+  			<img src="http://2img.mgtv.com/preview/cms_icon/2017/08/20170823224953085.jpg_1420x460.jpg" alt="加载失败！" title="mg2">
+  		</a>
+  		<a href="javascript:void(0)" class="unit">
+  			<img src="http://4img.mgtv.com/preview/cms_icon/2017/08/20170822155119558.jpg_1420x460.jpg" alt="加载失败！" title="mg3">
+  		</a>
+  		<a href="javascript:void(0)" class="unit">
+  			<img src="http://3img.mgtv.com/preview/cms_icon/2017/08/20170823194207336.jpg_1420x460.jpg" alt="加载失败！" title="mg4">
+  		</a>
+  		<a href="javascript:void(0)" class="unit">
+  			<img src="http://3img.mgtv.com/preview/cms_icon/2017/08/20170823225102578.jpg_1420x460.jpg" alt="加载失败！" title="mg5">
+  		</a>
+  	 <a href="javascript:void(0)" class="unit">
+        <img src="http://0img.mgtv.com/preview/cms_icon/2017/08/20170823225204871.jpg_1420x460.jpg" alt="加载失败！" title="mg6">
+      </a>
+    	<a href="javascript:void(0)" class="unit">
+        <img src="http://2img.mgtv.com/preview/cms_icon/2017/08/20170811110349499.jpg_1420x460.jpg" alt="加载失败！" title="mg7">
+      </a>
+      <a href="javascript:void(0)" class="unit">
+  			<img src="http://2img.mgtv.com/preview/cms_icon/2017/08/20170823191851742.jpg_1420x460.jpg" alt="加载失败！" title="mg8">
+  		</a>
+     </div>
+     <ul class="action">
+        <li class="btn active">
+          <a href="javascript:void(0)">
+            <p>人间至味是清欢</p>
+            <p>更新至第15级</p>
+          </a>
+        </li>
+        <li class="btn">
+          <a href="javascript:void(0)">
+            <p>浪花一朵朵</p>
+            <p>更新至第35级</p>
+          </a>
+        </li>
+        <li class="btn">
+          <a href="javascript:void(0)">
+            <p>进击吧闪电</p>
+            <p>发布会全程回顾</p>
+          </a>
+        </li>
+        <li class="btn">
+          <a href="javascript:void(0)">
+            <p>通天狄仁杰</p>
+            <p>更新至第12级</p>
+          </a>
+        </li>
+        <li class="btn">
+          <a href="javascript:void(0)">
+            <p>我们的爱</p>
+            <p>更新至第26级</p>
+          </a>
+        </li>
+        <li class="btn">
+          <a href="javascript:void(0)">
+            <p>守卫者浮出水面</p>
+            <p>更新至第19级</p>
+          </a>
+        </li>
+        <li class="btn">
+          <a href="javascript:void(0)">
+            <p>三星盖乐世S8剧场</p>
+            <p>好剧连连看</p>
+          </a>
+        </li>
+        <li class="btn">
+         	<a href="javascript:void(0)">
+            <p>新版流星花园</p>
+            <p>更新至第5级</p>
+          </a>
+        </li>
+     
+     </ul>
+   </div>
+	
+</body>
+</html>

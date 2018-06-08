@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>反弹球</title>
+</head>
+<body>
+	<script type="text/javascript">
+	/*
+		一球从100米高度自由落下，每次落地后反跳回原高度的一半；再落下，求它在 第10次落地时，共经过多少米？第10次反弹多高？
+	*/
+		var num1 = 0, num2 = 0, hight = 100.0;
+        for (var i = 0; i < 10; i++){
+            num1 = num1 + hight;
+            hight = hight / 2;
+            if (i < 9)num2 = num2 + hight;
+        }
+        var pDom = document.createElement('p');
+        var pDom2 = pDom.cloneNode(pDom);
+        document.body.appendChild(pDom);
+        document.body.appendChild(pDom2);
+        pDom.innerHTML = "第10次落地时，共经过" + (num1 + num2) + "米";
+        pDom2.innerHTML = "第十次反弹高度为:" + hight + "米";
+	</script>
+</body>
+</html>

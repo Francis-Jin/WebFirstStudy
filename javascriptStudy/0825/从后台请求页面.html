@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+
+<script type="text/javascript">
+	var xhr = new XMLHttpRequest();
+	xhr.open('GET',' https://cnodejs.org/api/get/topics');
+	xhr.onreadystatechange= function(){
+		if(xhr.readyState == 4 && xhr.readyState ==200){
+			var res = xhr.respones;
+			var resData = JSON.parse(res);
+			if(rasData.success){
+				var data = resData.data;
+				console.log(Object.prototype.toString.call(data));
+				document.body.innerHTML = data[0].content;
+			}
+
+		}
+	}
+	xhr.send();
+</script>
+</body>
+</html>

@@ -1,0 +1,8 @@
+.headline{
+    height: 120px;
+    font-size:36px;
+    background:red;
+    line-height: 120px;
+    text-align: center;
+    color:white;
+}

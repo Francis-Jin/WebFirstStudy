@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		*{margin:0;padding: 0;}
+		div{width: 10px;height: 10px;background: green;position:absolute;}
+	</style>
+	<script type="text/javascript">
+		window.addEventListener('DOMContentLoaded',function(e){
+			var aDiv = document.getElementsByTagName('div');
+			var aDivs = Array.prototype.slice.call(aDiv);
+			document.onmousemove = function (ev) {
+				var oEvent = ev || event;
+				for(i=aDivs.length-1;i>0;i--){
+					aDivs[i].style.left = aDivs[i-1].style.left;
+					aDivs[i].style.top = aDivs[i-1].style.top;
+				}
+				aDivs[0].style.left = oEvent.clientX+'px';
+				aDivs[0].style.top = oEvent.clientY+'px';
+			}
+		},false);
+	</script>
+</head>
+<body>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+</body>
+</html>

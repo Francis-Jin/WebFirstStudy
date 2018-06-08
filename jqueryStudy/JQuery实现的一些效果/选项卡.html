@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>选项卡</title>
+    <script src="../jqueryLibrary/jquery-3.2.1.js"></script>
+    <style>
+        .tab{
+            width: 500px;
+            margin: 0 auto;
+            border: 1px solid #00c0a5;
+        }
+        .tab_menu{
+            width: 100%;
+            overflow: hidden;
+
+        }
+        .tab_menu ul{
+            list-style: none;
+            width:100%;
+        }
+        .tab_menu ul li {
+            float:left;
+            width:100px;
+            padding:18px 0px;
+            margin-right: 10px;
+            text-align: center;
+            background: #c0c0c0;
+        }
+        .tab_menu ul li.selected{
+            background:#f00;
+        }
+        .tab-box{
+            position: relative;
+            width:100%；
+            height:300px;
+
+        }
+        .tab-box div{
+            position:absolute;
+            height: 500px;
+            width: 100%;
+            border:1px solid blue;
+
+        }
+        .tab-box div.hide{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<div class="tab">
+    <div class="tab_menu">
+        <ul>
+            <li class="selected">时事</li>
+            <li>新闻</li>
+            <li>体育</li>
+        </ul>
+    </div>
+    <div class="tab-box">
+        <div>时事</div>
+        <div class="hide">新闻</div>
+        <div class="hide">体育</div>
+    </div>
+    <script>
+        $(document).ready(function () {
+            $('li').click(function () {
+                $(this).addClass('selected').siblings().removeClass('selected');
+                var index = $('li').index(this);
+                $('.tab-box div').eq(index).show().siblings().hide();
+            })
+        })
+    </script>
+</div>
+</body>
+</html>

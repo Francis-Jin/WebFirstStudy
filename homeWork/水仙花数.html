@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>求水仙花数</title>
+</head>
+<body>
+	<script type="text/javascript">
+	/*
+		2.创建shuixianhua.html，用p标签输出1000以内所有的"水仙花数"
+		tip：所谓"水仙花数"是指一个三位数，其各位数字立方和等于该数本身。
+	    例如：153是一个"水仙花数"，因为153=1的三次方＋5的三次方＋3的三次方。
+	*/
+	/*console.log(Math.floor(153/100));
+		console.log(Math.floor((153/10)%10));
+		console.log(Math.floor(153%10));*/
+		var arr = [];
+		function getShuixianhua(){
+			 for(var i=100;i<1000;i++){
+			 	var a = Math.floor(i/100);
+			 	var b = Math.floor((i/10)%10);
+			 	var c = Math.floor(i%10);
+			if((a*a*a+b*b*b+c*c*c) == i)
+			  	arr.push(i);
+			 }
+			 return arr;
+		}
+		getShuixianhua();
+		// console.log(arr);
+		for(var i = 0; i < arr.length; i++){
+			var pDom = document.createElement('p');
+			document.body.appendChild(pDom);
+			pDom.innerHTML = "我是1000以内的第"+(i+1)+"个水仙花数:"+arr[i]+",我在第"+(i+1)+"个p标签里面";
+		}
+		
+	</script>
+</body>
+</html>

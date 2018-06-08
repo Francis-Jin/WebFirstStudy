@@ -1,0 +1,59 @@
+$color:#c0c0c0;
+$font:'微软雅黑';
+*{
+	margin:0;
+	padding:0;
+}
+header{
+	background:$color;
+	width:100%;
+	min-width:1226px;
+	height:300px;
+	font-size:26px;
+	text-align:center;
+	line-height:300px;
+}
+nav{
+	width:100%;
+	min-width:1226px;
+	height:100px;
+	text-align:center;
+	line-height:100px;
+	background-color:pink;
+}
+main{
+	//overflow:hidden;/* 清除浮动方法一 */
+	width:1226px;
+	margin:0 auto;
+	/* float:left; */ /* 清除浮动方法二*/
+}
+article{
+	width:1000px;
+	height:1000px;
+	float:left;
+	background:green;
+	line-height:1000px;
+	text-align:center;
+}
+aside{
+	width:200px;
+	height:1000px;
+	float:right;
+	background:red;
+	line-height:1000px;
+	text-align:center;
+	color:#fff;
+}
+footer:after{
+	clear:both;
+	content:'.';
+}
+footer{
+	//clear:both;/*清除浮动方法三  */
+	width:100%;
+	min-width:1226px;
+	height:200px;
+	background:#666;
+	text-align:center;
+	line-height:200px;
+}

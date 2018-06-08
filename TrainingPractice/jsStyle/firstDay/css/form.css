@@ -1,0 +1,19 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+.form_wramp{
+	width: 500px;
+	height: 500px
+	margin:0 auto;
+	background-color: #ff0;
+}
+.form_wramp {
+	text-align: center;
+}
+.form_wramp input{
+	margin: 20px 10px;
+}
+.form_wramp input:nth-child(2n){
+	margin-left: 20px;
+}

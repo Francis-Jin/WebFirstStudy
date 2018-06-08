@@ -1,0 +1,84 @@
+body{
+	height: 2000px;
+}
+.toTop{
+	width: 100px;
+	height: 100px;
+	background-color: #ccc;
+	position: fixed;
+	right: 20px;
+	bottom: 20px;
+	transition: all 1s ease;
+	opacity: 1;
+}
+ a{
+	text-decoration: none;
+	color: red;
+	font-size: 26px;
+}
+.toTop1{
+	width: 100px;
+	height: 100px;
+	background-color: #ccc;
+	position: fixed;
+	right: 20px;
+	top: 20px;
+	transition: all 1s ease;
+}
+.toTop2{
+	width: 100px;
+	height: 100px;
+	background-color: #ccc;
+	position: fixed;
+	left: 20px;
+	top: 20px;
+	transition: all 1s ease;
+}
+.toTop3{
+	width: 100px;
+	height: 100px;
+	background-color: #ccc;
+	position: fixed;
+	left: 20px;
+	bottom: 20px;
+	transition: all 1s ease;
+}
+.toTop4{
+	width: 100px;
+	height: 100px;
+	background-color: #ccc;
+	position: fixed;
+	left: 46%;
+	bottom: 46%;
+	transition: all 1s ease;
+}
+p:nth-child(2n-1){
+	background-color: rgba(0,0,0,.3);
+}
+p:nth-child(2n){
+	background-color:rgba(0,0,0,.5);
+}
+p:nth-child(5n-1){
+	background-color: rgba(0,0,0,.7);
+}
+body:hover .toTop{
+	right: 1400px;
+	opacity: 0.5;
+	transition: all 1s ease;
+}
+body:hover .toTop1{
+	right: 1400px;
+	top:700px;
+	transition: all 1s ease;
+}
+body:hover .toTop2{
+	left:1300px;
+	top:700px;
+	transition: all 1s ease;
+}
+body:hover .toTop3{
+	left: 1200px;
+	bottom:700px;
+	opacity: 0;
+	transition: all 1s ease;
+}

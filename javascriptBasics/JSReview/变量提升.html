@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>变量提升</title>
+</head>
+<body>
+	<script type="text/javascript">
+		/*fn();*/
+		/*var fn = function ()//定义式或表达式
+		{
+			alert(123);
+		}*/
+		/*function fn()//声明变量
+		{
+			alert(123);
+		}*/
+		/*;(function() {
+			 console.log(1); 
+			 setTimeout(function(){console.log(2)}, 1000); 
+			 setTimeout(function(){console.log(3)}, 0); 
+			 console.log(4);
+		})();*/
+
+		for (var i = 0; i < 5; i++) {
+		 ;(function(){
+		 	var btn = document.createElement('button');
+		 	btn.addEventListener('click', function(){ console.log(i); });
+		 	btn.appendChild(document.createTextNode('Button ' + i));
+		 	document.body.appendChild(btn);
+		 })();
+		}
+
+		var a=2,b="3";
+		console.log(a+b);//23
+		console.log(a-b);//-1
+		console.log(b-a);//1
+		console.log(a*b);//6
+		console.log(a/b);//0.667
+		console.log(b/a);//1.5
+	</script>
+</body>
+</html>

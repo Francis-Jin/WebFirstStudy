@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<canvas id="canvas" width="400" height="400">
+		你的浏览器不支持Canvas
+	</canvas>
+	<script type="text/javascript">
+		var canvasDom = document.getElementById('canvas');
+		// 获取2d环境
+		var cxt = canvasDom.getContext('2d');
+		
+		cxt.beginPath(); /*画布开始*/
+
+
+		cxt.moveTo(0,0);
+		cxt.lineTo(0,400);
+		cxt.lineTo(400,400);
+		cxt.fillStyle='green';
+		cxt.closePath();
+		cxt.fill();
+
+
+		cxt(); /*画布结束*/
+	</script>
+</body>
+</html>

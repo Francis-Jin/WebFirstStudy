@@ -1,0 +1,198 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+a{
+	text-decoration: none;
+}
+.clearfix{
+	clear: both;
+}
+.index-footer{
+	position: fixed;
+	bottom: 145px;
+	width: 100%;
+	height: 270px;
+    background-color: #ededed;
+    border-top: 3px solid #b9ecd7;
+}
+.index-footer .index-footerT{
+	width: 980px;
+    margin: 0 auto;
+    padding: 37px 0 0;
+    border-bottom: 1px solid #d5d5d5;
+    overflow: hidden;
+}
+.index-footer .index-footerT li{
+	list-style: none;
+	float: left;
+    overflow: hidden;
+    margin: 8px 30px 39px 0;
+    width: 230px;
+    height: 80px;
+    border-right: 1px solid #d0d0d0;
+}
+.index-footer .index-footerT li p{
+	width: 108px;
+	height: 71px;
+	display: inline-block;
+	float: left;
+    vertical-align: top;
+    margin: 2px 5px 2px 0;
+}
+.index-footer .index-footerT li p .l-title{
+	font-size: 16px;
+    color: #202020;
+    line-height: 35px;
+}
+.index-footer .index-footerT li p .l-deriction{
+	display: block;
+    margin-top: 25px;
+    font-size: 12px;
+    color: #898989;
+}
+.index-footer .index-footerT li a{
+	float: right;
+	width: 80px;
+    height: 80px;
+    margin-right: 30px;
+}
+.index-footer .index-footerT li a img{
+	height: 80px;
+    width: 80px;
+}
+.index-footer .index-footerT li:nth-child(3) .l-title{
+	font-size: 14px;
+    color: #898989;
+}
+.index-footer .index-footerT li:nth-child(3) .l-deriction{
+	font-size: 12px;
+    height: 26px;
+    margin-left: 4px;
+    margin-right: 10px;
+    line-height: 26px;
+    border: 1px solid #bcbcbc;
+    text-align: center;
+    border-radius: 12px;
+    margin-top: 15px;
+    transition: all 200ms;
+}
+.index-footer .index-footerT li:nth-child(3) .l-deriction:hover{
+	color: #fff;
+	background: #1cd388;
+	border-color: #1cd388;
+	transition: all 200ms;
+}
+.index-footer .index-footerT .l-fox{
+	/*position: relative;*/
+    float: right;
+    /*overflow: hidden;*/
+    /*width: 248px;
+    height: 90px;*/
+   /* padding-left: 20px;
+    margin-right: 0;*/
+    /*padding-right: 0;
+    margin: 0 auto;
+    margin-left: 0;*/
+}
+.index-footer .index-footerT .l-fox a{
+	width: 187px;
+    height: 90px;
+    text-indent: -999em;
+    display: block;
+    transition: all 200ms;
+    background: url('https://i.h2.pdim.gs/b6f7c76b1530bfd480326948b6a1084e.png') no-repeat 0 0;
+}
+.index-footer .index-footerT .l-fox a:hover{
+	/*transform: translate(-10px,0);*/
+	transition: all 200ms;
+}
+.index-footer .index-footerB{
+	width: 810px;
+    padding: 20px 6px;
+    margin: 0 auto;
+    list-style: none;
+}
+.index-footer .index-footerB .index-t{
+	margin-bottom: 20px;
+	overflow: hidden;
+    height: 21px;
+    line-height: 21px;
+}
+.index-footer .index-footerB .index-t h2{
+	float: left;
+    margin-right: 15px;
+    font-size: 16px;
+    color: #a8a8a8;
+}
+.index-footer .index-footerB .index-t p{
+	float: left;
+    margin-right: 10px;
+    width: 100px;
+    font-size: 12px;
+    color: #3e3e3e;
+    display: block;
+    height: 21px;
+    line-height: 21px;
+    transition: all 200ms;
+}
+.index-footer .index-footerB .index-t #p{
+	width: 75px;
+}
+.index-footer .index-footerB .index-t span{
+	float: left;
+    font-size: 12px;
+    height: 21px;
+    width: 220px;
+    color: #3e3e3e;
+    line-height: 21px;
+}
+.index-footer .index-footerB .index-t p:hover{
+	color: #1cd388;
+    transition: all 200ms;
+}
+.panda-foot{
+	position: fixed;
+	bottom: 0;
+	overflow: hidden;
+    background: #3f3f3f;
+    width: 100%;
+    /*height: 146px;*/
+    /*position: relative;*/
+    text-align: center;
+    padding: 30px 0;
+    color: #979797;
+}
+.panda-foot .foot-text{
+	text-align: center;
+    display: inline-block;
+    vertical-align: bottom;
+}
+.panda-foot .foot-text p{
+	margin: 5px 0;
+	font-size: 12px;
+    line-height: 22px;
+}
+.panda-foot a,span{
+	color: #979797;
+    transition: color ease-out 200ms;
+}
+.panda-foot a:hover{
+	color: #1cd388;
+	transition: color ease-out 200ms;
+}
+.panda-foot span:hover{
+	cursor: pointer;
+	color: #1cd388;
+	transition: color ease-out 200ms;
+}
+.panda-foot a img{
+	position: relative;
+    top: -2px;
+    margin-right: 2px;
+    vertical-align: middle;
+}
+.panda-foot .foot-text a{
+	font-size: 12px;
+    line-height: 22px;
+}

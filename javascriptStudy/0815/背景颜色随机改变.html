@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>背景色随机改变</title>
+</head>
+<body id="body">
+	<script type="text/javascript">
+		var oBody = document.getElementById('body');
+		function changeBgColor(ele){
+			setInterval(function(){
+				var r,g,b;
+				r = Math.round(Math.random()*255);
+				g = Math.round(Math.random()*255);
+				b = Math.round(Math.random()*255);
+				ele.style.backgroundColor = 'rgb(' + r + ',' + g + ',' + b + ')';
+			},1000);
+		}
+		changeBgColor(oBody);
+	</script>
+</body>
+</html>

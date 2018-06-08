@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>确保字符串的每个单词首字母都大写，其余部分小写。</title>
+	<script type="text/javascript">
+		var str = 'dsfsdaflksdfsdFDFJDLFJ';
+		var a = str.charAt(0).toUpperCase(str.charAt(0));
+		var arr = a.split('');
+		var arr1 = str.split('');
+		arr1.shift();
+		var str1 = arr1.join('');
+		var str2 = str1.toLowerCase();
+		var str3 = arr.concat(str2);
+		var strs = str3.join('');
+		console.log(strs);
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>事件分级了解</title>
+	<script type="text/javascript">
+		window.addEventListener('DOMContentLoaded',function(){
+			var oBoxDom = document.getElementById('box');
+			oBoxDom.addEventListener('click',function(e){
+				alert('helloworld');
+			},false);
+		},false);
+	</script>
+	<style type="text/css">
+		#box{
+			width: 200px;
+			height: 200px;
+			background: #000;
+		}
+	</style>
+</head>
+<body>
+	<div id="box"></div>
+</body>
+</html>
+<script type="text/javascript">
+	var oBox = document.getElementById('box');
+	oBox.onclick = function (e) {
+/*// 阻止冒泡；
+		e.stopPropagation();
+// 阻止浏览器默认行为
+		e.preventDefault();*/
+		console.log(123);
+	}
+</script>

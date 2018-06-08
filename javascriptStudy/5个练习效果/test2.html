@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>网页换肤-面向对象</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		a{
+			text-decoration: none;
+			color: #666;
+		}
+		a:hover{
+			text-decoration: underline;
+		}
+		body{
+			width: 100%;height: 1200px;
+			background-size: 100% 100%;
+			background-repeat: repeat;
+			background-image:url('img/1.jpg'); 
+		}
+
+		header{
+			position: relative;
+			z-index: 2;
+			background: #fff;
+			border-bottom: 1px solid #eee;
+		}
+		nav{
+			width:1200px;
+			height: 80px;
+			margin: 0 auto;
+			line-height: 80px;
+		}
+		nav a{
+			margin-left: 50px;
+		}
+		#div1{
+			position: absolute;
+			left: 0;
+			top: -20px;
+			width: 100%;
+			height: 100px;
+			background: #fff;
+			transition: all .3s linear;
+		}
+		#div1 #div2{
+			width:1200px;
+			height: 100px;
+			line-height: 100px;
+			margin: 20px auto;
+		}
+		#div1 #div2 img{
+			float: left;
+			margin-right: 20px;
+			border:1px solid red;
+			width:200px;
+			width:100px;
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<nav>
+			<a href="javascript:void(0);">首页</a>
+			<a id="huanfu" href="javascript:void(0);">换肤</a>
+		</nav>
+	</header>
+	<div id="div1">
+		<div id="div2">
+			<img src="img/1.jpg">
+			<img src="img/2.jpg">
+			<img src="img/3.jpg">
+			<img src="img/4.jpg">
+			<img src="img/5.jpg">
+			<img src="img/6.jpg">
+			<a id="shoyqi" href="javascript:void(0);">收起</a>
+		</div>
+	</div>
+	<script type="text/javascript">
+		var huanfuDom = document.getElementById('huanfu');
+		var shoyqiDom = document.getElementById('shoyqi');
+		var div1Dom = document.getElementById('div1');
+		var imgDoms = div1Dom.getElementsByTagName('img');
+		var imgs = Array.prototype.slice.call(imgDoms);
+		var bodyDom = document.body;
+		console.log(bodyDom);
+
+		huanfuDom.addEventListener('click',()=>{
+			div1Dom.style.top = 80 + 'px';
+			div1Dom.style.transition = 'all .3s linear';
+		},false);
+		huanfuDom.addEventListener('mousedown',()=>{
+			return false;
+		},false);
+		huanfuDom.addEventListener('mouseup',()=>{
+			return true;
+		},false);
+		shoyqiDom.addEventListener('click',()=>{
+			div1Dom.style.top = -20 + 'px';
+			div1Dom.style.transition = 'all .3s linear';
+		},false);
+		imgs.forEach((e,i)=>{
+			e.addEventListener('click',()=>{
+				bodyDom.style['background-image']= "url('img/"+(i+1)+".jpg')";
+			},false);
+		})
+	</script>
+</body>
+</html>

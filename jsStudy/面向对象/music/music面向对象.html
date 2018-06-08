@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--<audio src="music/1.mp3" controls id="audio"></audio>-->
+<button id="play">播放</button>
+<button id="pause">暂停</button>
+<button id="novol">静音</button>
+
+<script type="text/javascript">
+    function JsonMusic() {
+        this.volume = 1;
+        this.percentage = 1;
+        this.isPlay = false;
+        this.isNoVol = false;
+        this.musicDom;
+
+//        初始化
+        this.init = function () {
+            this.musicDom = document.createElement('audio');
+            this.musicDom.src = 'music/1.mp3';
+            this.play();
+            this.pause();
+            this.setVolume();
+
+        }
+
+        this.play = function () {
+            var _this = this;
+            var playDom = document.getElementById('play');
+            playDom.addEventListener('click',function (ev) {
+                _this.musicDom.play();
+            },false);
+//            alert('play');
+        }
+        this.pause = function () {
+            var _this = this;
+            var pauseDom = document.getElementById('pause');
+            pauseDom.addEventListener('click',function (ev) {
+                _this.musicDom.pause();
+            })
+//            alert('pause');
+        }
+        this.setVolume = function (volume) {
+            var _this = this;
+            var novolDom = document.getElementById('novol');
+            novolDom.addEventListener('click',function (ev) {
+                _this.musicDom.volume = 0;
+            },false);
+//            alert('设置静音');
+        }
+    }
+    var Jsonmusic = new JsonMusic();
+
+</script>
+</body>
+</html>

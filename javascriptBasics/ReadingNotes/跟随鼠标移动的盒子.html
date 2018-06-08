@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript">
+		window.addEventListener('DOMContentLoaded',function(e){
+			document.onmousemove=function(e){
+				var oEv = e || event;
+				var oDiv = document.getElementById('box');
+				oDiv.style.left = oEv.clientX+'px';
+				oDiv.style.top = oEv.clientY+'px';
+			}
+		},false);
+	</script>
+</head>
+<body style="height: 2000px;">
+	<div id="box" style="width: 100px;height: 100px;background: rgba(255,0,0,.5);position: absolute;"></div>
+</body>
+</html>

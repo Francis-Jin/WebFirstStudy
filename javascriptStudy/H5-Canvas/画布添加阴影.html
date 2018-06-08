@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<canvas id="canvas" width="300" height="300"></canvas>
+</body>
+<script type="text/javascript">
+	var canvasDom = document.getElementById('canvas');
+	var cxt =canvasDom.getContext('2d');
+	cxt.shadowBlur = 40;
+	cxt.shadowColor = 'black';
+	cxt.shadowOffsetX = -20;
+	cxt.shadowOrrsetY = -20;
+	cxt.rect(50,50,100,100);
+	/*cxt.fillStyle = 'blue';
+	cxt.fill();*/
+	cxt.stroke();
+</script>
+</html>

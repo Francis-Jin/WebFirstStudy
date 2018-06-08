@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript">
+	// instanceof 判断对象（实例）是否属于某个类；
+		var arr1 = [1,2,4];
+		// alert(arr1 instanceof Array);
+		function Person(name)
+		{
+			this.name=name;
+		}
+		Person.prototype.showName=function()
+		{
+			alert(this.name);
+		}
+		var p = new Person('json');
+		alert(p instanceof Person);
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

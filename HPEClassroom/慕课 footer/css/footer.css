@@ -1,0 +1,180 @@
+
+.footer{
+ width: 100%;
+ margin-top: 1100px;
+ background: #f8fafc;
+}
+.content-foot{
+ width: 1350px;
+ margin: 0 auto;
+ padding: 30px 0;
+ font-size: 14px;
+ color: #999;
+ position: relative;
+}
+.content-foot .unit-tp{
+ float: left;
+ width: 100%;
+}
+.content-foot .unit-tp a{
+ color: #999;
+ margin-right: 10px;
+ line-height: 40px;
+}
+.content-foot .unit-tp a:hover{
+ color: #333;
+}
+.content-foot .footer-sns {
+ float: right;
+ text-align: center;
+}
+.footer-sns .l{
+ position: absolute;
+ right: 100px;
+ top: 40px;
+ width: 80px;
+}
+.footer-sns .l a{
+ padding: 10px 25px;
+ height: 32px;
+ width: 32px;
+ background-image: url('http://www.imooc.com/static/img/idx-btm.png');
+ background-repeat: no-repeat;
+ background-position: -45px -217px;
+}
+.footer-sns .l a .logo-wx{
+ position: absolute;
+ display: none;
+ width: 172px;
+ height: 212px;
+ left: -55px;
+ bottom: 60px;
+ background: url('http://www.imooc.com/static/img/common/elevator.png?t=2') no-repeat;
+}
+.footer-sns .l a:hover{
+ background-position: -45px -258px;
+}
+.footer-sns .l a:hover .logo-wx{
+ display: block;
+}
+.footer-sns  p{
+ margin-top: 15px;
+ color: #666;
+}
+.footer-sns .ll{
+ position: absolute;
+ right: 10px;
+ top: 40px;
+ width: 80px;
+}
+.footer-sns .ll a{
+ padding: 10px 25px;
+ height: 32px;
+ width: 32px;
+ background-image: url('http://www.imooc.com/static/img/idx-btm.png');
+ background-repeat: no-repeat;
+ background-position: 8px -217px;
+}
+.footer-sns .ll a:hover{
+ background-position: 8px -258px;
+}
+.fh-wrapper {
+ position: fixed;
+ right: -0px;
+ bottom: 80px;
+ width: 50px;
+ z-index: 99;
+}
+.fh-wrapper .jj{
+ width: 100px
+}
+.fh-wrapper:hover .jj{
+ margin-left: -50px
+}
+.fh-wrapper:hover .xr{
+ display: none;
+}
+.fh-wrapper .xr{
+ float: left;
+ width: 50px;
+ height: 65px;
+ margin-top: 60px;
+ background: url('http://s.c.yinyuetai.com/v2/images/modules/returntop/returntop.png') no-repeat;
+}
+.fh-wrapper .dh{
+ float: right;
+ background: #f2f2f2;
+ border-radius: 10px;
+ box-shadow: 2px 1px 1px 2px #ddd;
+}
+.fh-wrapper .dh .dh-list{
+ display: block;
+ width: 26px;
+ height: 26px;
+ padding: 8px 0 ;
+ text-align: center;
+ margin: 0 10px;
+ border-top: 1px solid #ccc;
+}
+.fh-wrapper .dh .dh-list:nth-child(1){
+ border: transparent;
+}
+.fh-wrapper .dh .dh-list .app-box {
+ position: absolute;
+ right: 35px;
+ bottom: -5px;
+ width: 0;
+ height: 212px;
+ opacity: 0;
+ /*transform: scale(0.01);*/
+ background: url('http://www.imooc.com/static/img/common/elevator.png?t=2') 0 -220px no-repeat;
+ transition: all .25s ease;
+}
+.fh-wrapper .dh .dh-list:hover .app-box{
+ opacity: 1;
+ width: 172px;
+ /*height: 212px;*/
+ /*transform: scale(1);*/
+ transition: all .25s ease;
+}
+.fh-wrapper .dh .dh-list .wx-box {
+ position: absolute;
+ right: 35px;
+ bottom: -15px;
+ width: 0;
+ height: 212px;
+ opacity: 0;
+ /*transform: scale(0.01);*/
+ background: url('http://www.imooc.com/static/img/common/elevator.png?t=2') 0 -10px no-repeat;
+ transition: all .25s ease;
+}
+.fh-wrapper .dh .dh-list:hover .wx-box{
+ opacity: 1;
+ width: 172px;
+ /*height: 212px;*/
+ /*transform: scale(1);*/
+ transition: all .25s ease;
+}
+.dh .dh-list i {
+ font-size: 22px;
+ height: 26px;
+ line-height: 26px;
+ color: #ccc;
+}
+.fh-wrapper .dh .dh-list .icon-ctrl{
+ font-size: 36px;
+ line-height: 36px;
+ margin-left: -4px;
+}
+.fh-wrapper .dh .dh-list span{
+ display: none;
+ font-size: 12px;
+ color: #333;
+}
+.fh-wrapper .dh .dh-list:hover i{
+ display: none;
+}
+.fh-wrapper .dh .dh-list:hover span{
+ display: block;
+ margin-top: -5px;
+}

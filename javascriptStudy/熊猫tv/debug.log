@@ -1,0 +1,19 @@
+[0828/205244:ERROR:renderer_main.cc(203)] Running without renderer sandbox
+[0828/205247:INFO:CONSOLE(1)] "Mixed Content: The page at 'https://www.kuaishou.com/photo/627135815/3083751845?userId=627135815&photoId=3083751845&cc=share_qq_friend&timestamp=1503924191669&fid=627135815&et=1_a%2F1576978792463933444_p0' was loaded over HTTPS, but requested an insecure image 'http://icon.szfw.org/sf.png'. This content should also be served over HTTPS.", source: https://www.kuaishou.com/photo/627135815/3083751845?userId=627135815&photoId=3083751845&cc=share_qq_friend&timestamp=1503924191669&fid=627135815&et=1_a%2F1576978792463933444_p0 (1)
+[0828/205248:ERROR:child_discardable_shared_memory_manager.cc(266)] size: 4194304
+[0828/205248:INFO:CONSOLE(0)] "Mixed Content: The page at 'https://www.kuaishou.com/photo/627135815/3083751845?userId=627135815&photoId=3083751845&cc=share_qq_friend&timestamp=1503924191669&fid=627135815&et=1_a%2F1576978792463933444_p0' was loaded over HTTPS, but requested an insecure image 'http://icon.szfw.org/sf.png'. This content should also be served over HTTPS.", source: https://www.kuaishou.com/photo/627135815/3083751845?userId=627135815&photoId=3083751845&cc=share_qq_friend&timestamp=1503924191669&fid=627135815&et=1_a%2F1576978792463933444_p0 (0)
+[0828/205248:ERROR:audio_low_latency_output_win.cc(181)] Bailing out due to non-perfect timing.  Buffer size of 480 is not an even divisor of 1056
+[0828/205248:ERROR:gpu_video_decode_accelerator.cc(276)] HW video decode not available for profile 3
+[0828/205248:ERROR:child_discardable_shared_memory_manager.cc(266)] size: 4194304
+[0828/205249:ERROR:gpu_video_decode_accelerator.cc(276)] HW video decode not available for profile 3
+[0828/205319:INFO:CONSOLE(1)] "Mixed Content: The page at 'https://www.kuaishou.com/' was loaded over HTTPS, but requested an insecure image 'http://icon.szfw.org/sf.png'. This content should also be served over HTTPS.", source: https://www.kuaishou.com/ (1)
+[0828/205320:ERROR:child_discardable_shared_memory_manager.cc(266)] size: 6144000
+[0828/205320:ERROR:child_discardable_shared_memory_manager.cc(266)] size: 4194304
+[0828/205320:ERROR:child_discardable_shared_memory_manager.cc(266)] size: 6144000
+[0828/205320:ERROR:child_discardable_shared_memory_manager.cc(266)] size: 6144000
+[0828/205320:ERROR:child_discardable_shared_memory_manager.cc(266)] size: 4194304
+[0828/205321:ERROR:gpu_video_decode_accelerator.cc(276)] HW video decode not available for profile 1
+[0828/205322:ERROR:gpu_video_decode_accelerator.cc(276)] HW video decode not available for profile 1
+[0828/205322:ERROR:render_media_log.cc(18)] MediaEvent: PIPELINE_ERROR pipeline: read error
+[0828/205322:INFO:CONSOLE(1)] "Mixed Content: The page at 'https://www.kuaishou.com/kwai-live.html' was loaded over HTTPS, but requested an insecure image 'http://icon.szfw.org/sf.png'. This content should also be served over HTTPS.", source: https://www.kuaishou.com/kwai-live.html (1)
+[0828/205323:INFO:CONSOLE(0)] "Mixed Content: The page at 'https://www.kuaishou.com/kwai-live.html' was loaded over HTTPS, but requested an insecure image 'http://icon.szfw.org/sf.png'. This content should also be served over HTTPS.", source: https://www.kuaishou.com/kwai-live.html (0)

@@ -1,0 +1,19 @@
+{
+  "name": "6.vue_singlnton_module_transition",
+  "version": "1.0.0",
+  "description": "this is singleton module transition project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "singleton",
+    "module",
+    "transition"
+  ],
+  "author": "Francis",
+  "license": "MIT",
+  "dependencies": {
+    "velocityjs": "^0.9.6"
+  }
+}

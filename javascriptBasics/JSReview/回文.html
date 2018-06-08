@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>回文</title>
+</head>
+<body>
+	<script type="text/javascript">
+		function isString(str)
+		{
+			if(typeof str == "string")
+			{
+				return true;
+			}
+			else
+			{
+				return "不是字符串";
+			}
+		}
+		function reSame(str)
+		{
+			isString(str);
+			var strToUpper = str.toUpperCase(); 
+			var reverseStr = strToUpper.split("").reverse().join("");
+			return strToUpper===reverseStr;
+		}
+		var strSame="Eye";
+		console.log(reSame(strSame));
+	</script>
+</body>
+</html>

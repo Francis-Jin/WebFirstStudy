@@ -1,0 +1,336 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>teacher</title>
+    <script src="../jqueryLibrary/jquery-3.2.1.js"></script>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        body{
+            font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+        }
+        ul,li{
+            list-style: none;
+        }
+        .clearfix{
+            clear: both;
+        }
+        .teacher-wrapper{
+            width:100%;
+            background: url("img/teacher1.jpg") no-repeat left center;
+            background-size: 100% 100%;
+            border-bottom: 1px solid transparent;
+        }
+        .teacher-content{
+            width:100%;
+            margin:0 auto;
+            background: rgba(0,0,0,.8);
+            border-bottom: 1px solid transparent;
+        }
+        .teacher-content
+        .title,
+        .teacher-content
+        .small-explain{
+            position: relative;
+            top:0;
+            text-align: center;
+            color:#fff;
+            cursor: pointer;
+            -webkit-transition: all .5s ease;
+            -moz-transition: all .5s ease;
+            -ms-transition: all .5s ease;
+            -o-transition: all .5s ease;
+            transition: all .5s ease;
+
+        }
+        .teacher-content
+        .title:hover,
+        .teacher-content
+        .small-explain:hover{
+            top:-10px;
+            -webkit-transition: all .5s ease;
+            -moz-transition: all .5s ease;
+            -ms-transition: all .5s ease;
+            -o-transition: all .5s ease;
+            transition: all .5s ease;
+        }
+        .teacher-content
+        .title{
+            padding: 10px 0;
+            font-size:40px;
+        }
+        .teacher-content
+        .small-explain{
+            font-size: 26px;
+        }
+        .teacher-content
+        .teacher-lists-wrapper{
+            max-width: 1350px;
+            margin:10px auto;
+        }
+        .teacher-content
+        .teacher-lists-wrapper
+        .teacher-lists{
+
+
+        }
+        .teacher-content
+        .teacher-lists-wrapper
+        .teacher-lists
+        .teacher-lists-unit{
+            position: relative;
+            float:left;
+            overflow: hidden;
+            width:321px;
+            height:450px;
+            margin-left:22px;
+            margin-bottom: 22px;
+        }
+        .teacher-content
+        .teacher-lists-wrapper
+        .teacher-lists
+        .teacher-lists-unit:nth-child(4n-3){
+            margin-left: 0;
+        }
+        .teacher-content
+        .teacher-lists-wrapper
+        .teacher-lists
+        .teacher-lists-unit
+        .teacher-image{
+            width:321px;
+            height: 450px;
+        }
+        .teacher-content
+        .teacher-lists-wrapper
+        .teacher-lists
+        .teacher-lists-unit
+        .teacher-explain{
+            position: absolute;
+            left: 0;
+            top: 0;
+            width:100%;
+            height: 100%;
+            background:rgba(0,0,0,.5);
+        }
+        .teacher-content
+        .teacher-lists-wrapper
+        .teacher-lists
+        .teacher-lists-unit
+        .teacher-explain
+        .explain-header-image{
+            display: inline-block;
+            width:120px;
+            height: 120px;
+            margin:50px 0 20px 90px;
+            text-align: center;
+            border:2px solid #fff;
+            -webkit-border-radius:50%;
+            -moz-border-radius:50%;
+            border-radius:50%;
+        }
+        .teacher-content
+        .teacher-lists-wrapper
+        .teacher-lists
+        .teacher-lists-unit
+        .teacher-explain
+        .explain-title,
+        .teacher-content
+        .teacher-lists-wrapper
+        .teacher-lists
+        .teacher-lists-unit
+        .teacher-explain
+        .subtitle{
+            color:#fff;
+            text-align: center;
+        }
+        .teacher-content
+        .teacher-lists-wrapper
+        .teacher-lists
+        .teacher-lists-unit
+        .teacher-explain
+        .explain-title{
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
+        .teacher-content
+        .teacher-lists-wrapper
+        .teacher-lists
+        .teacher-lists-unit
+        .teacher-name,
+        .teacher-content
+        .teacher-lists-wrapper
+        .teacher-lists
+        .teacher-lists-unit
+        .teacher-synopsis{
+            position: absolute;
+            left:0;
+            width:100%;
+            z-index: 3;
+            color:#fff;
+            background:rgba(26,188,156,.8);
+        }
+        .teacher-content
+        .teacher-lists-wrapper
+        .teacher-lists
+        .teacher-lists-unit
+        .teacher-name{
+            top:-90px;
+            height: 90px;
+            line-height: 90px;
+            text-align: center;
+            font-size: 32px;
+            -webkit-transition: all .4s cubic-bezier(.4,0,.2,1);
+            -moz-transition: all .4s cubic-bezier(.4,0,.2,1);
+            -ms-transition: all .4s cubic-bezier(.4,0,.2,1);
+            -o-transition: all .4s cubic-bezier(.4,0,.2,1);
+            transition: all .4s cubic-bezier(.4,0,.2,1);
+
+        }
+        .teacher-content
+        .teacher-lists-wrapper
+        .teacher-lists
+        .teacher-lists-unit
+        .teacher-synopsis{
+            bottom: -360px;
+            height: 360px;
+            -webkit-transition: all .4s cubic-bezier(.4,0,.2,1);
+            -moz-transition: all .4s cubic-bezier(.4,0,.2,1);
+            -ms-transition: all .4s cubic-bezier(.4,0,.2,1);
+            -o-transition: all .4s cubic-bezier(.4,0,.2,1);
+            transition: all .4s cubic-bezier(.4,0,.2,1);
+        }
+        .teacher-content
+        .teacher-lists-wrapper
+        .teacher-lists
+        .teacher-lists-unit
+        .teacher-synopsis
+        p{
+            width:80%;
+            text-indent: 2em;
+            margin-left:10%;
+            margin-top:10px;
+            font-size: 22px;
+        }
+        .teacher-content
+        .teacher-lists-wrapper
+        .teacher-lists
+        .teacher-lists-unit:hover
+        .teacher-name{
+            top:0px;
+            -webkit-transition: all .4s cubic-bezier(.4,0,.2,1);
+            -moz-transition: all .4s cubic-bezier(.4,0,.2,1);
+            -ms-transition: all .4s cubic-bezier(.4,0,.2,1);
+            -o-transition: all .4s cubic-bezier(.4,0,.2,1);
+            transition: all .4s cubic-bezier(.4,0,.2,1);
+        }
+        .teacher-content
+        .teacher-lists-wrapper
+        .teacher-lists
+        .teacher-lists-unit:hover
+        .teacher-synopsis{
+            bottom:0px;
+            -webkit-transition: all .4s cubic-bezier(.4,0,.2,1);
+            -moz-transition: all .4s cubic-bezier(.4,0,.2,1);
+            -ms-transition: all .4s cubic-bezier(.4,0,.2,1);
+            -o-transition: all .4s cubic-bezier(.4,0,.2,1);
+            transition: all .4s cubic-bezier(.4,0,.2,1);
+        }
+        .teacher-content
+        .teacher-lists-wrapper
+        .teacher-lists
+        .teacher-lists-unit
+        .teacher-synopsis
+        .synopsis-more-link{
+            display: inline-block;
+            width:100px;
+            height:40px;
+            line-height: 40px;
+            margin-left:110px;
+            margin-top:20px;
+            color:#fff;
+            font-size:18px;
+            border:1px solid #fff;
+            text-align: center;
+        }
+        .teacher-content
+        .teacher-lists-wrapper
+        .teacher-lists
+        .teacher-lists-unit
+        .teacher-synopsis
+        .synopsis-more-link:hover{
+            background:#fff;
+            color:#1abc9c;
+        }
+    </style>
+</head>
+<body>
+    <div class="teacher-wrapper">
+        <div class="teacher-content">
+            <h3 class="title">HPE学院精英名师团</h3>
+            <p class="small-explain">您的选择决定您走向哪个方向的IT技术前沿</p>
+            <div class="teacher-lists-wrapper">
+                <ul class="teacher-lists">
+                    <li class="teacher-lists-unit">
+                        <img class="teacher-image" src="img/teacher.jpg" alt="图片加载中...">
+                        <div class="teacher-explain">
+                            <img class="explain-header-image" src="img/header.jpg" alt="图片加载中...">
+                            <h3 class="explain-title">JAVA工程师</h3>
+                            <p class="subtitle">七年工作经验</p>
+                        </div>
+                        <h3 class="teacher-name">李老师</h3>
+                        <div class="teacher-synopsis">
+                            <p>2010年加入HPE，距今已在HPE工作7年，出师学员1000多个，现平均每个学员工资1.2万，在这期间,现平均每个学员工资1.2万，在这期间现平均每个学员工资1.2万，在这期间...</p>
+                            <a class="synopsis-more-link" href="javascript:void(0);">查看详情</a>
+                        </div>
+                    </li>
+                    <li class="teacher-lists-unit">
+                        <img class="teacher-image" src="img/teacher.jpg" alt="图片加载中...">
+                        <div class="teacher-explain">
+                            <img class="explain-header-image" src="img/header.jpg" alt="图片加载中...">
+                            <h3 class="explain-title">JAVA工程师</h3>
+                            <p class="subtitle">七年工作经验</p>
+                        </div>
+                        <h3 class="teacher-name">李老师</h3>
+                        <div class="teacher-synopsis">
+                            <p>2010年加入HPE，距今已在HPE工作7年，出师学员1000多个，现平均每个学员工资1.2万，在这期间,现平均每个学员工资1.2万，在这期间现平均每个学员工资1.2万，在这期间...</p>
+                            <a class="synopsis-more-link" href="javascript:void(0);">查看详情</a>
+                        </div>
+                    </li>
+                    <li class="teacher-lists-unit">
+                        <img class="teacher-image" src="img/teacher.jpg" alt="图片加载中...">
+                        <div class="teacher-explain">
+                            <img class="explain-header-image" src="img/header.jpg" alt="图片加载中...">
+                            <h3 class="explain-title">JAVA工程师</h3>
+                            <p class="subtitle">七年工作经验</p>
+                        </div>
+                        <h3 class="teacher-name">李老师</h3>
+                        <div class="teacher-synopsis">
+                            <p>2010年加入HPE，距今已在HPE工作7年，出师学员1000多个，现平均每个学员工资1.2万，在这期间,现平均每个学员工资1.2万，在这期间现平均每个学员工资1.2万，在这期间...</p>
+                            <a class="synopsis-more-link" href="javascript:void(0);">查看详情</a>
+                        </div>
+                    </li>
+                    <li class="teacher-lists-unit">
+                        <img class="teacher-image" src="img/teacher.jpg" alt="图片加载中...">
+                        <div class="teacher-explain">
+                            <img class="explain-header-image" src="img/header.jpg" alt="图片加载中...">
+                            <h3 class="explain-title">JAVA工程师</h3>
+                            <p class="subtitle">七年工作经验</p>
+                        </div>
+                        <h3 class="teacher-name">李老师</h3>
+                        <div class="teacher-synopsis">
+                            <p>2010年加入HPE，距今已在HPE工作7年，出师学员1000多个，现平均每个学员工资1.2万，在这期间,现平均每个学员工资1.2万，在这期间现平均每个学员工资1.2万，在这期间...</p>
+                            <a class="synopsis-more-link" href="javascript:void(0);">查看详情</a>
+                        </div>
+                    </li>
+                </ul>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

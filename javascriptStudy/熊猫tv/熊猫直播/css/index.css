@@ -1,0 +1,483 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+a{
+	text-decoration:none;
+	color:#fff;
+}
+body{
+	background:#eee;
+}
+.clearfix{
+	clear: both;
+}
+.Meiu-wrapper{
+     width: 1460px;
+     height:328px;
+     margin: 20px auto 15px;
+     background:#eee;
+}
+.Meiu-wrapper .M-wrapper{
+	width:100%;
+	height:328px;
+}
+.M-wrapper .content-unit{
+   float:left;
+   width: 472px;
+   height: 278px;
+   margin-right:22px;
+}
+.M-wrapper .content-unit:nth-child(3){
+	margin-right:0;
+}
+.M-wrapper .content-unit .unit-top{
+	width:100%;
+	height:28px;
+	margin-bottom:10px;
+	border-bottom:1px solid #ccc;
+}
+.content-unit .unit-top span:before{
+	content: '';
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    left: 0;
+    top: 10px;
+    background: url(https://i.h2.pdim.gs/a5d0caaa2dd47f60d50d1f4ed2440776.png) no-repeat left center;
+}
+.content-unit .unit-top.zd span:before{
+	content: '';
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    left: 0;
+    top: 10px;
+    background: url(https://i.h2.pdim.gs/a5d0caaa2dd47f60d50d1f4ed2440776.png) no-repeat center;
+    background-position:-23px 0;
+}
+.content-unit .unit-top.yl span:before{
+	content: '';
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    left: 0;
+    top: 10px;
+    background: url(https://i.h2.pdim.gs/a5d0caaa2dd47f60d50d1f4ed2440776.png) no-repeat center;
+    background-position:-46px 0;
+}
+.content-unit .unit-top span{
+	border-bottom: 2px solid #1cd388;
+    padding: 9px 0;
+    height: 22px;
+    line-height: 22px;
+    padding-left: 28px;
+    font-size: 18px;
+    top: -5px;
+    position: relative;
+}
+.content-unit img{
+	width:228px;
+	height:128px;
+}
+.content-unit .unit-bottom{
+	float:left;
+	width: 100%;
+}
+.content-unit .unit-bottom .list{
+	float:left;
+	width:228px;
+	height:128px;
+	margin-left:14px;
+	margin-top:10px;
+	position:relative;
+	cursor:pointer;
+	overflow:hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.content-unit .unit-bottom .list:nth-child(1){
+	margin-left:0;
+}
+.content-unit .unit-bottom .list:nth-child(4){
+	margin-left:0;
+}
+.content-unit .unit-bottom .list:nth-child(5n+1){
+	margin-left:0;
+}
+.content-unit .unit-bottom .list img{
+	width: 228px;
+	height: 128px;
+}
+.content-unit .unit-bottom .list .zhez{
+	position:absolute;
+	top:0;
+	left:0;
+	width:228px;
+	height:128px;
+	background:rgba(0,0,0,.2);
+	opacity:0;
+}
+.content-unit .unit-bottom .list .zhez .bf{
+	position: absolute;
+    z-index: 10;
+    top: 50%;
+    left: 50%;
+    margin-left: -20px;
+    margin-top: -20px;
+    width: 40px;
+    height: 40px;
+    opacity:0;
+    transform: scale(2);
+    background: url(https://i.h2.pdim.gs/bd7431bc663cd90b0a0b56b682f3bef9.png) no-repeat;
+    transition:all .5s ease;
+}
+.content-unit .unit-bottom .list:hover .zhez{
+	opacity:1;
+}
+.content-unit .unit-bottom .list:hover .bf{
+	position: absolute;
+    z-index: 10;
+    top: 36%;
+    left: 50%;
+    opacity:1;
+    transform: scale(1.5);
+    transition:all .5s ease;
+}
+.content-unit .unit-bottom .list .info{
+	position:relative;
+	margin-top:-18px;
+	margin-left:10px;
+	font-size:12px;
+	z-index:12;
+	transition:all .5s ease;
+}
+.content-unit .unit-bottom .list .info .ert{
+	margin-bottom:5px;
+	color:#fff;
+	overflow:hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.content-unit .unit-bottom .list .info .fors{
+	color:#1cd388;
+}
+.content-unit .unit-bottom .list:hover .info{
+	margin-top:-38px;
+	transition:all .5s ease;
+}
+.Meiu-action{
+	width:1460px;
+	height:349px;
+	margin:0 auto 20px;
+	background:#eee;
+	overflow:hidden;
+}
+.Meiu-action .action-first{
+	float:left;
+	width:770px;
+	height:349px;
+	background:#eee;
+	margin-right:20px;
+}
+.Meiu-action .action-first .title{
+	width:770px;
+	font-size:26px;
+	color:#000;
+	font-weight:400;
+	line-height:30px;
+	margin-bottom:15px;
+}
+.Meiu-action .action-first .title span{
+	color:#1cd388;
+}
+.Meiu-action .action-first .title .dian{
+	color:#aaa;
+}
+.Meiu-action .action-first .left-bottom{
+	float:left;
+	margin-right:10px;
+	background:#fff;
+	cursor:pointer;
+}
+.Meiu-action .action-first .left-bottom .im{
+	width:358px;
+	height:225px;
+}
+.Meiu-action .action-first .left-bottom p{
+	font-size:18px;
+	line-height:30px;
+	color:#333;
+	padding-left:10px;
+	background:#fff;
+}
+.Meiu-action .action-first .left-bottom .name{
+	margin-top:6px;
+	color:#333;
+}
+.Meiu-action .action-first .left-bottom .art{
+	font-size:14px;
+	color:#1cd388;
+	padding-bottom:5px;
+}
+.Meiu-action .left-bottom:hover .name{
+	color:#1cd388;
+}
+.Meiu-action .action-first .right{
+	float:right;
+	width:410px;
+	margin-top: -298px;
+}
+.Meiu-action .action-first .right .list{
+	overflow:hidden;
+	float:right;
+	width:186px;
+	height: 140px;
+	margin-bottom:18px;
+	margin-left: 18px;
+	overflow:hidden;
+	background:#fff;
+}
+.Meiu-action .action-first .right img{
+	cursor:pointer;
+   width:186px;
+   height:104px;
+}
+.Meiu-action .action-first .list .txt{
+	width:168px;
+	font-size:12px;
+	border:none;
+	margin-left: 10px;
+	line-height:30px;
+	color:#515151;
+	overflow:hidden;
+    white-space:nowrap;
+    text-overflow:ellipsis;
+}
+.Meiu-action .action-first .list:hover{
+	background:#1cd388;
+}
+.Meiu-action .action-first .list:hover .txt{
+	color:#fff;
+}
+
+.Meiu-action .action-er{
+	position:relative;
+	float:left;
+	width:280px;
+	height:349px;
+	overflow: hidden;
+}
+.Meiu-action .action-er .er-top .title{
+	width:200px;
+	width:445px;
+	font-size:26px;
+	color:#000;
+	font-weight:500;
+	line-height:30px;
+	margin-bottom:15px;
+}
+.Meiu-action .action-er .er-top span{
+	color:#1cd388;
+}
+.Meiu-action .action-er .er-top .dian{
+	color:#aaa;
+}
+.Meiu-action .action-er .er-bott{
+	width:100%;
+	height:250px;
+	cursor:pointer;
+}
+.Meiu-action .action-er .er-bott .unit{
+	background:#fff;
+}
+.Meiu-action .action-er .er-bott img{
+	width:100%;
+}
+.Meiu-action .action-er .er-bott .list{
+	width:100%;
+	background:#fff;
+}
+.Meiu-action .action-er .er-bott .title{
+	width:100%;
+	font-size:16px;
+	font-weight:600;
+	color:#333;
+	padding:10px 10px 0;
+	overflow:hidden;
+    white-space:nowrap;
+    text-overflow:ellipsis;
+}
+.Meiu-action .action-er .er-bott .unit:hover .title{
+	color:#1cd388;
+}
+.Meiu-action .action-er .er-bott .info{
+	width:260px;
+	font-size:13px;
+	color:#1cd388;
+	margin:10px 10px 0;
+	padding-bottom:15px;
+	border-bottom:1px solid #ddd;
+	overflow:hidden;
+    white-space:nowrap;
+    text-overflow:ellipsis;
+}
+.Meiu-action .action-er .er-bott ul{
+	width:100%;
+	height:96px;
+	padding-top:10px;
+	background:#fff;
+}
+.Meiu-action .action-er .er-bott ul li{
+	width:100%;
+	overflow:hidden;
+    white-space:nowrap;
+    text-overflow:ellipsis; 
+    padding:2px 10px;
+    cursor:pointer;
+}
+.Meiu-action .action-er .er-bott ul li a{
+	width:100%;
+    height:22px;
+	font-size:14px;
+    line-height:22px;
+    color:#333;
+}
+.Meiu-action .action-er .er-bott ul li a:hover{
+	color:#1cd388;
+}
+.Meiu-action .action-er .link{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 39px;
+    height: 45px;
+    background: url(https://i.h2.pdim.gs/a7b361ada00bde67f3fc88b93744d66e.png) no-repeat;
+}
+.Meiu-action .action-san{
+	float:right;
+	width:350px;
+	height:295px;
+}
+.Meiu-action .action-san .fonction{
+	width:100%;
+	height:30px;
+}
+.Meiu-action .action-san .fonction .top{
+	float:left;
+}
+.Meiu-action .action-san .fonction .title{
+	width:100%;
+	font-size:26px;
+	color:#000;
+	font-weight:500;
+	line-height:30px;
+}
+.Meiu-action .action-san .fonction span{
+	color:#1cd388;
+}
+.Meiu-action .action-san .fonction .dian{
+	color:#aaa;
+}
+
+ .Meiu-action .action-san .fonction i {
+    float:right;
+    background:#eee;
+    width: 51px;
+    height: 23px;
+    background: url(https://i.h2.pdim.gs/5b477e8d4f382c43c32a2bddb6a78631.png) no-repeat 0 -90px;
+    cursor: default;
+}
+ .Meiu-action .action-san ul{
+ 	width:100%;
+ 	height:100%;
+ 	margin-top:15px;
+ 	background:url(https://i.h2.pdim.gs/86b3d9f3ede073ab2f9026d267258407.jpg) no-repeat;
+ 	cursor: default;
+ 	background-size: 100% 100%
+ }
+ .Meiu-action .action-san .xinx{
+ 	float:left;
+ 	width:116px;
+ 	height:100px;
+ 	position:relative;
+ }
+  .Meiu-action .action-san .xinx img{
+	  width:50px;
+	  height:34px;
+	  margin:15px 32.5px;
+	  border-radius:50%;
+  }
+   .Meiu-action .action-san .xinx p{
+   	margin-left:20px;
+   	width:60px;
+   	font-size:12px;
+   	text-align:center;
+   	margin-top: 10px;
+   	overflow:hidden;
+   	white-space:nowrap;
+    text-overflow:ellipsis;
+   }
+ .Meiu-action .action-san .xinx .avt{
+ 	position:absolute;
+ 	top:-2px;
+ 	right:16px;
+ 	width:30px;
+ 	height:30px;
+  	background:url(https://i.h2.pdim.gs/5b477e8d4f382c43c32a2bddb6a78631.png) no-repeat;
+  	background-position:0px 6px;
+ }
+  .Meiu-action .action-san .xinx .je{
+ 	position:absolute;
+ 	bottom:34px;
+ 	right:24px;
+ 	width:60px;
+ 	height:40px;
+  	background:url(https://i.h2.pdim.gs/5b477e8d4f382c43c32a2bddb6a78631.png) no-repeat;
+  	background-position:-32px 15px;
+ }
+  .Meiu-action .action-san .xinx .kao{
+ 	position:absolute;
+ 	top:3px;
+ 	right:16px;
+ 	width:30px;
+ 	height:30px;
+  	background:url(https://i.h2.pdim.gs/5b477e8d4f382c43c32a2bddb6a78631.png) no-repeat;
+  	background-position:2px -58px;
+ }
+  .Meiu-action .action-san .xinx .erg{
+ 	position:absolute;
+ 	bottom:34px;
+ 	right:24px;
+ 	width:60px;
+ 	height:20px;
+  	background:url(https://i.h2.pdim.gs/5b477e8d4f382c43c32a2bddb6a78631.png) no-repeat;
+  	background-position:-32px -30px;
+ }
+   .Meiu-action .action-san .xinx .abc{
+ 	position:absolute;
+ 	top:6px;
+ 	right:16px;
+ 	width:28px;
+ 	height:24px;
+  	background:url(https://i.h2.pdim.gs/5b477e8d4f382c43c32a2bddb6a78631.png) no-repeat;
+  	background-position:0px -31px;
+ }
+  .Meiu-action .action-san .xinx .qwe{
+ 	position:absolute;
+ 	bottom:34px;
+ 	right:24px;
+ 	width:60px;
+ 	height:20px;
+  	background:url(https://i.h2.pdim.gs/5b477e8d4f382c43c32a2bddb6a78631.png) no-repeat;
+  	background-position:-32px -60px;
+ }
+ .Meiu-action .action-san .xinx:nth-child(1) img{
+  	border:2px solid #D08668;
+}
+  .Meiu-action .action-san .xinx:nth-child(2) img{
+  	border:2px solid #C3C6C9;
+  }
+  .Meiu-action .action-san .xinx:nth-child(3) img{
+  	border:2px solid #D08668;
+  }  

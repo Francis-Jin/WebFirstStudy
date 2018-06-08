@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<canvas id="canvas" width="1000" height="900" style="background: green; margin: 0 auto; display: block;">
+		you 
+	</canvas>
+	<script type="text/javascript">
+		var canvas=document.getElementById("canvas");
+		    var context=canvas.getContext('2d');
+		    
+		    //1.绘制一个完整的空心圆
+		    context.beginPath();
+		    context.arc(500,500,400,1.5*Math.PI,Math.PI*.5,false);
+		    context.fillStyle='white';
+		    context.fill();
+		 
+		   //2.绘制半黑半白  默认为黑色
+		    context.beginPath();
+		    context.arc(500,500,400,Math.PI*3/2,Math.PI/2,true);
+		    context.fillStyle='black';
+		    context.fill();
+		 
+		   //3.绘制一黑一白两个半圆
+		    context.beginPath();
+		    context.arc(500,300,200,0,Math.PI*2,true);
+		    context.fillStyle="white";
+		    context.fill();
+		 
+		    context.beginPath();
+		    context.arc(500,700,200,0,Math.PI*2,true);
+		   	context.fillStyle="black";
+		    context.fill();
+		    
+		    //4.绘制两个小圆
+		    context.beginPath();
+		    context.arc(500,300,10,0,Math.PI*2,true);
+		    context.fillStyle="black";
+		    context.fill();
+		 
+		    context.beginPath();
+		    context.arc(500,700,10,0,Math.PI*2,true);
+		   	context.fillStyle="white";
+		    context.fill();
+	</script>
+</body>
+</html>

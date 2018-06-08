@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<canvas id="canvas" width="500" height="500" style="border: 2px solid #ccc;"></canvas>
+	<script type="text/javascript">
+		var canvasDom = document.getElementById('canvas');
+		var cxt = canvasDom.getContext('2d');
+		cxt.rect(50,50,200,200);
+		cxt.stroke();
+		cxt.clip();
+		cxt.fillStyle = "yellow";
+		cxt.fillRect(10,10,100,100);
+		var save = function (canvas) {
+			var image = new Image();
+			image.src = canvas.toDataURL('image/png');
+			return image;
+		}
+		console.log(save(canvasDom));
+	</script>
+</body>
+</html>

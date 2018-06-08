@@ -1,0 +1,187 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+ul li{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+}
+.clearfix{
+	clear: both;
+}
+.teacher{
+	height: 408px;
+	background: url('http://www.imooc.com/static/img/index/eliteTbg.jpg') 
+	center center no-repeat #f3f5f7;
+    background-size: cover;
+}
+.teacher .teacher-content{
+	width: 1350px;
+    margin:0 auto;
+    padding: 36px 0 48px;
+}
+.teacher .teacher-tit{
+	color: rgba(255,255,255,.4);
+	position: relative;
+    font-size: 14px;
+    letter-spacing: .6px;
+    line-height: 36px;
+    text-align: center;
+    font-weight: 400;
+}
+.teacher .teacher-tit .tit-icon1{
+	margin-right: 24px;
+	display: inline-block;
+    vertical-align: bottom;
+    width: 56px;
+    height: 36px;
+    background: url('http://www.imooc.com/static/img/index/icon.png') no-repeat;
+    background-position: center -432px;
+    background-size: 100%;
+}
+.teacher .teacher-tit em{
+	color: #fff;
+	font-size: 20px;
+    font-weight: 600;
+    margin: 0 3px;
+    font-style: normal;
+}
+.teacher .teacher-tit .tit-icon2{
+	margin-left: 24px;
+	display: inline-block;
+    vertical-align: bottom;
+    width: 56px;
+    height: 36px;
+    background: url('http://www.imooc.com/static/img/index/icon.png') no-repeat;
+    background-position: center -468px;
+    background-size: 100%;
+}
+.teacher .teacher-tit .more{
+	position: absolute;
+	transition: all .3s;
+    color: rgba(255,255,255,.6)!important;
+    height: 20px;
+    top: 8px;
+    right: 10px;
+    font-size: 12px;
+    line-height: 36px;
+}
+.teacher .teacher-tit .more:hover{
+	color: #fff!important;
+	transition: all .3s;
+}
+.teacher .teacher-tit .more span{
+	float: left;
+    margin-right: 4px;
+    line-height: 20px;
+}
+.teacher .teacher-tit .more .more-i{
+	float: left;
+	font-size: 16px;
+    margin-right: 4px;
+    line-height: 20px;
+    speak: none;
+    font-style: normal;
+    font-weight: 400;
+    font-variant: normal;
+    text-transform: none;
+}
+/*.more-i:before{
+	 content: "\e409";
+}*/
+.teacher .teacher-list{
+	margin-top: 40px;
+}
+.teacher .teacher-list .list-unit{
+	float: left;
+    position: relative;
+    width: 254px;
+    height: 248px;
+    margin-right: 20px;
+    box-sizing: border-box;
+    text-align: center;
+    background: rgba(255,255,255,.8);
+    box-shadow: 0 4px 8px 0 rgba(7,17,27,.05);
+    border-radius: 12px;
+    transition: all .3s;
+}
+.teacher .teacher-list .list-unit.last{
+	margin-right:0;
+}
+.teacher .teacher-list .list-unit .unit-img{
+	position: absolute;
+    top: -16.6px;
+    left: 50%;
+    margin-left: -48px;
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+}
+.teacher .teacher-list .list-unit .unit-name{
+	font-size: 18px;
+    line-height: 24px;
+    margin-top: 92px;
+    white-space: nowrap;
+    color: #07111b;
+    font-weight: 700;
+    -webkit-line-clamp: 1;
+    display: block;
+    padding: 0 36px;
+    word-wrap: break-word;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    word-break: break-all;
+}
+.teacher .teacher-list .list-unit .unit-job{
+	display: block;
+    font-size: 14px;
+    margin-bottom: 12px;
+    color: #4D555D;
+    height: 24px;
+    line-height: 24px;
+    text-align: center;
+}
+.teacher .teacher-list .list-unit .unit-des{
+	position: relative;
+    top: 0;
+    font-size: 13px;
+    line-height: 24px;
+    color: #4D555D;
+    height: 72px;
+    -webkit-line-clamp: 3;
+    text-align: justify;
+    font-weight: 200;
+    display: block;
+    padding: 0 36px;
+    word-wrap: break-word;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    word-break: break-all;
+}
+.teacher .teacher-list .list-unit:hover{
+	background-color: #fff;
+    box-shadow: 0 8px 16px 0 rgba(7,17,27,.2);
+}
+.teacher .teacher-list .list-unit:hover .unit-img{
+	width: 70px;
+    height: 70px;
+    margin-left: -30px;
+    transition: all .3s;
+}
+.teacher .teacher-list .list-unit:hover .unit-name{
+	opacity: 0;
+}
+.teacher .teacher-list .list-unit:hover .unit-job{
+	opacity: 0;
+}
+.teacher .teacher-list .list-unit:hover .unit-des{
+	color: #000;
+	position: relative;
+    height: 168px;
+    top: -82px;
+    font-weight: 400;
+    color: #07111B;
+    transition: all .3s;
+}

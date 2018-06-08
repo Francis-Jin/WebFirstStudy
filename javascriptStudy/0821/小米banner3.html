@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="js/mi.banner3.js"></script>
+	<style>
+		*{
+			padding: 0;
+			margin: 0;
+		}
+		ul{
+			list-style: none;
+		}
+		a{
+			text-decoration: none;
+			color: #000;
+		}
+		.clearfix{
+			clear: both;
+		}
+		#box{
+			position: relative;
+		    width: 296px;
+		    height: 374px;
+		    padding: 45px 0 0;
+		    border-top: 1px solid #e0e0e0;
+		    margin: 0 auto;
+		    background: #f0f0f0;
+		    -webkit-transition: all .2s linear;
+		    transition: all .2s linear;
+		    overflow: hidden;
+		}
+		.content-title{
+			color:#ffac13;
+			text-align: center;
+			font-size: 16px;
+			font-weight: normal;
+		}
+		.content-list{
+			width: 1500px;
+			transition: margin-left 0.6s ease;
+		}
+		.content-unit{
+			float: left;
+			width: 296px;
+			height: 340px;
+		}
+		.content-unit img{
+			width: 296px;
+			margin-top: 30px;
+		}
+		.btn-wrapper{
+			text-align: center;
+		}
+		.btn-wrapper .btn{
+			position: relative;
+			vertical-align: top;
+			display: inline-block;
+			width: 6px;
+			height: 6px;
+			background-color: #aaa;
+			border-radius: 50%;
+			margin-right: 10px;
+		}
+		.btn-wrapper .btn.active:before{
+			content: '';
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			left: -2px;
+			top: -2px;
+			border: 2px solid #ffac13;
+			border-radius: 50%;
+		}
+		.btn-wrapper .btn.active{
+			background-color: #fff;
+		}
+		.ear{
+			position: absolute;
+			width: 20px;
+			height: 24px;
+			padding: 12px 0;
+			font-size: 18px;
+			font-weight: bold;
+			line-height: 24px;
+			text-align: center;
+			top: 175px;
+			color: #fafafa;
+			background-color: #00b388;
+		}
+		.ear.left_ear{
+			left: 0;
+		}
+		.ear.right_ear{
+			right: 0;
+		}
+	</style>
+</head>
+<body>
+	
+	<div id="box">
+		<h3 class="content-title">图书</h3>
+		<ul class="content-list">
+			<li class="content-unit">
+				<img src="https://i3.mifile.cn/a4/5e5da924-84e3-4959-9e25-5891cdf30757" alt="" />
+			</li>
+			<li class="content-unit">
+				<img src="https://i3.mifile.cn/a4/61e1385e-54de-48f3-8717-5e4f4b1cdd14" alt="" />
+			</li>
+			<li class="content-unit">
+				<img src="https://s01.mifile.cn/i/index/more-duokan.jpg" alt="">
+			</li>
+			<li class="content-unit">
+				<img src="https://s01.mifile.cn/i/index/more-duokan.jpg" alt="">
+			</li>
+			<div class="clearfix"></div>
+		</ul>
+		<div class="btn-wrapper">
+			<a href="javascript:void(0)" class="btn active"></a>
+			<a href="javascript:void(0)" class="btn"></a>
+			<a href="javascript:void(0)" class="btn"></a>
+		</div>
+		<a href="javascript:void(0)" class="ear left_ear" id="left_ear">&lt;</a>
+		<a href="javascript:void(0)" class="ear right_ear" id="right_ear">&gt;</a>
+	</div>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!-- 
+		 /**
+             * JS获取 dom样式的几种情况
+             * 一：获取元素的行内样式
+             * 二：获取计算后的样式
+             * 三：获取<link>和<style>标签写入的样式
+             * 四、获取元素的实际大小
+                    1. clientWidth和clientHeight
+                        这组属性可以获取元素可视区的大小，
+                        可以得到元素内容及内边距所占据的空间大小。
+                        返回了元素大小，但没有单位，默认单位是px，如果你强行设置了单位，
+                        比如100em之类，它还是会返回px的大小。(CSS获取的话，是照着你设置的样式获取)。
+                        对于元素的实际大小，clientWidth和clientHeight理解方式如下：
+                    a. 增加边框，无变化；
+                    b. 增加外边距，无变化；
+                    c. 增加滚动条，最终值等于原本大小减去滚动条的大小；
+                    d. 增加内边距，最终值等于原本大小加上内边距的大小；
+                    ##注意：当box-sizing属性值是border-box的时候上述abcd不成立
+             *
+            */
+ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>DOM</title>
+</head>
+<body>
+<div id="box" class="boxs">
+	<div class="cntbox">
+		<a href="" class="text">helloWorld</a>
+		<a href="" class="text">helloWorld</a>
+		<a href="" class="text">HELLOWORLD</a>
+	</div>
+</div>
+	<script type="text/javascript">
+		var oDiv = document.getElementById('box');
+		var aCntboxs = oDiv.getElementsByClassName('cntbox')[0];
+		var aAs = document.getElementsByTagName('a');
+		aAs[1].innerHTML = '我替换了原有的内容';
+		//attributes elements NamedNodeMap 
+		console.log(oDiv.attributes.getNamedItem("id").nodeValue); 
+		console.log(oDiv.attributes.item(0).nodeValue); 
+		console.log(oDiv.getAttributeNode("id").nodeValue); 
+		console.log(oDiv.getAttribute("id")) 
+		console.log(aCntboxs,typeof aCntboxs);
+		// console.log(aA[0].nextSibling);/*取到它下边的兄弟元素*/
+		// console.log(oDiv.className);
+		// console.log(aAs[0].href);
+		// console.log(aAs[2].text);
+		// console.log(aCntboxs.firstChild);
+		// console.log(aCntboxs.lastChild);
+        //1 定义获取dom的函数
+        function getDom(str){
+            return document.querySelector(str);
+        }
+        //2 、定义获取
+        function getStyle(dom){
+            var style=null;
+            window.getComputedStyle?style=window.getComputedStyle(dom):style=dom.currentStyle;
+            return style;
+        }
+        var dom1=getDom('#box');
+        console.log(dom1.clientWidth);// 得到的是没带px的数字
+        var domstyle=getStyle(dom1);// 字符创的宽度带px 和上面的clientWidth实质上是一样的
+        console.log(domstyle.width);
+
+        //a 的宽度
+        var dom2=getDom('.text');
+        console.log(dom2.clientWidth);
+        console.log(getStyle(dom2).width);
+	</script>
+</body>
+</html>

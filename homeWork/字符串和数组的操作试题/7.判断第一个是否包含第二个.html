@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript">
+		/*
+		如果数组第一个字符串元素包含了第二个字符串元素的所有字符，函数返回true。
+ 		举例，["hello", "Hello"]应该返回true，因为在忽略大小写的情况下，
+		第二个字符串的所有字符都可以在第一个字符串找到。
+		*/
+
+
+
+		//数组去掉重复的元素
+		var rawArr = ['h','h','h','h'];
+		var resArr = new Set(...rawArr);//方法一
+		/*var resArr = rawArr.filter(function(e,i){
+			return rawArr.indexOf(e) === i;
+		});//方法二*/
+		// var resArr = rawArr.filter((e)=>{return rawArr.indexOf(e)===1});
+		console.log(resArr);
+
+
+
+		
+		function isInclude(arr){
+		    for (var i = 0 ; i < arr[1].length ; i++){
+		        if(arr[0].toUpperCase().indexOf(arr[1].charAt(i).toUpperCase()) == -1){
+		            return false;
+		        }
+		    }
+		    return true;
+		}
+		var arr = ['Hello','hehehehEhehehehehe'];
+		console.log(isInclude(arr));
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

@@ -1,0 +1,209 @@
+@charset "UTF-8";
+body {
+  font: 13px/22px Verdana, "微软雅黑", "Microsoft YaHei", Helvetica, Arial;
+  color: #2d2d2d;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #2d2d2d;
+}
+
+.clearFix {
+  clear: fixed;
+}
+
+.section-m {
+  width: 960px;
+  margin: 0 auto;
+  overflow: hidden;
+  margin-bottom: 58px;
+  margin-top: 20px;
+}
+
+.section-musician {
+  float: left;
+  width: 465px;
+  /* 文字部分 */
+}
+.section-musician .section-head {
+  overflow: hidden;
+}
+.section-musician .section-head h3 {
+  float: left;
+  font-size: 24px;
+  padding-left: 16px;
+  border-left: 4px solid #DD5862;
+}
+.section-musician .section-ct {
+  margin-top: 22px;
+  overflow: hidden;
+}
+.section-musician .section-ct .section-img {
+  float: left;
+}
+.section-musician .section-ct .section-img .cover {
+  width: 150px;
+  height: 150px;
+  border-radius: 75px;
+}
+.section-musician .section-ct .title {
+  float: right;
+  width: 270px;
+  height: 150px;
+  overflow: hidden;
+}
+.section-musician .section-ct .title a {
+  display: inline-block;
+  font-size: 22px;
+  line-height: 28px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+.section-musician .section-ct .title a:hover {
+  color: #DD5862;
+}
+.section-musician .section-ct .title p {
+  color: #7d7d7d;
+  font-size: 18px;
+  font-weight: 600;
+  margin-top: 7px;
+}
+.section-musician .section-ct .title .days {
+  text-align: right;
+  font-weight: 200;
+}
+.section-musician .remark {
+  margin-top: 12px;
+}
+.section-musician .remark .quote-before, .section-musician .remark .quote-after {
+  display: inline-block;
+  width: 13px;
+  height: 15px;
+}
+.section-musician .remark .quote-before {
+  background: url("../img/icon-index.png") no-repeat 0 -190px;
+}
+.section-musician .remark .quote-after {
+  background: url("../img/icon-index.png") no-repeat -100px -190px;
+}
+
+.section-essay {
+  float: right;
+  width: 495px;
+}
+.section-essay .head {
+  text-align: right;
+  margin-top: 10px;
+}
+.section-essay .head a {
+  color: #7d7d7d;
+}
+.section-essay .head a:hover {
+  color: #DD5862;
+}
+.section-essay .essay-item {
+  float: left;
+  margin-top: 22px;
+  margin-left: 38px;
+}
+.section-essay .essay-item a img {
+  width: 208px;
+  height: 148px;
+  border-radius: 5px;
+}
+.section-essay .essay-item .meta p a {
+  font-size: 14px;
+  display: inline-block;
+  width: 208px;
+  margin-top: 20px;
+  margin-bottom: 12px;
+}
+.section-essay .essay-item .meta p a:hover {
+  color: #DD5862;
+}
+.section-essay .essay-item .meta .author {
+  color: #7d7d7d;
+}
+
+.section-event {
+  width: 960px;
+  height: 450px;
+  margin: 0 auto;
+  /* head */
+  /* eventHloder */
+}
+.section-event .section-head {
+  overflow: hidden;
+}
+.section-event .section-head h3 {
+  float: left;
+  font-size: 24px;
+  padding-left: 16px;
+  border-left: 4px solid #DD5862;
+}
+.section-event .section-head .fright {
+  float: right;
+}
+.section-event .section-head .fright a {
+  display: inline-block;
+  color: #7d7d7d;
+  margin-left: 3px;
+  margin-top: 14px;
+}
+.section-event .section-head .fright a:hover {
+  color: #DD5862;
+}
+.section-event .eventHolder {
+  overflow: hidden;
+}
+.section-event .eventHolder .event-item {
+  float: left;
+  width: 308px;
+  margin-top: 20px;
+  margin-right: 16px;
+}
+.section-event .eventHolder .event-item .cover-wrapper {
+  display: inline-block;
+  width: 120px;
+  float: left;
+  overflow: hidden;
+}
+.section-event .eventHolder .event-item .cover-wrapper img {
+  width: 120px;
+  height: 170px;
+}
+.section-event .eventHolder .event-item .info {
+  float: left;
+  margin-left: 15px;
+  width: 172px;
+}
+.section-event .eventHolder .event-item .info .title {
+  display: inline-block;
+  font-size: 16px;
+  line-height: 20px;
+  width: 172px;
+  height: 40px;
+  overflow: hidden;
+  margin-top: 18px;
+  margin-bottom: 15px;
+}
+.section-event .eventHolder .event-item .info .title:hover {
+  color: #DD5862;
+}
+.section-event .eventHolder .event-item .info .meta {
+  color: #7d7d7d;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.section-event .eventHolder .event-item:nth-child(3n) {
+  margin-right: 0;
+}
+
+/*# sourceMappingURL=luo-module.css.map */

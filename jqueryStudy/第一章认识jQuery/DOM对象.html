@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src = "../jqueryLibrary/jquery-3.2.1.js"></script>
+</head>
+<body>
+	<h3 id="test1">例子</h3>
+	<h3 id="test2">例子</h3>
+	<p title="选择你最喜欢的水果">你最喜欢的水果是？</p>
+	<ul>
+		<li>苹果</li>
+		<li>梨子</li>
+		<li>香蕉</li>
+	</ul>
+	<script type="text/javascript">
+		var domObj = document.getElementById('test1');
+		domObj.innerHTML = '列子第一个';
+		$("#test2").html('例子第二个');
+	</script>
+</body>
+</html>

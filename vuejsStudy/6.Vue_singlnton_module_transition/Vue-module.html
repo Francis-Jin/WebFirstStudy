@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Vue-module</title>
+	<script type="text/javascript" src="../1.vue_start_1/node_modules/vue/dist/vue.min.js"></script>
+
+</head>
+<body>
+<style type="text/css">
+	*{
+		margin:0;
+		padding: 0;
+	}
+	.bigbox{
+		width: 800px;
+		margin:20px auto;
+		background: pink;
+	}
+	ul{
+		list-style: none;
+		overflow: hidden;
+	}
+	li{
+		position: relative;
+		float: left;
+		margin-right: 10px;
+		cursor:pointer;
+		background: rgba(0,0,0,.3);
+		padding: 5px 12px;
+	}
+	.box{
+		position:relative;
+		width:100%;
+		height: 100px;
+		background: blue;
+		/*display: none;*/
+	}
+	.box li{
+		position:absolute;
+		left: 0;
+		top:0;
+		width: 100%;
+		height: 100%;
+		padding: 0;
+		color:#fff;
+		background:#ccc;
+		display: none;
+	}
+	.box li.active{
+		display: block;
+	}
+</style>
+	<div id="example-2">
+	  	<!-- <my-component/> -->
+	  	<scope-component/>
+	</div>
+	
+	<script type="text/javascript">
+		// 全局过滤器
+		// Vue.filter("name",function(){});
+		// 全局组件
+		/*Vue.component('simple-counter', {
+			name:"myComponent",
+			props:[],
+			mixin:[],
+		  	template: "<h1>我是全局组件</h1>",
+		  	computed:{},
+		  	methods:{},
+		  	components:{},
+		  	directives:{},
+		  	filter:{},
+		})*/
+		Vue.component('my-component',{
+			name:"myComponent",
+			template:'<h1>我是全局组件</h1>',
+		})
+		// 局部组件
+		let data = {
+			items:["选项一","选项二","选项三","选项四","选项五","选项六","选项七"],
+			news:["新闻一","新闻二","新闻三","新闻四","新闻五","新闻六","新闻七"],
+			str1:'我是局部组件',
+			str2:'我是局部子组件',
+			str3:'我是局部孙子组件',
+			str4:'我是局部孙子的儿子组件',
+			show:true
+		}
+		let scopeComponent={
+			name:'scopeComponent',
+			template:`<div class="bigbox">
+							<ul>
+								<li v-for='item in data.items' :key='item' @click='click(item)'>
+									<button>{{item}}</button>
+								</li>
+							</ul>
+							<div class="box" >
+								<ul>
+									<li class="active" v-for='index in data.news' :key="index">
+										<span>{{index}}</span>
+									</li>
+								</ul>
+							</div>
+								{{data.str1}}<child-component/>
+						</div>`,
+			components:{
+				"ChildComponent":{
+					name:'scopeComponent',
+					template:"<h3 style='background:blue'>{{data.str2}}<childChild-component/></h3>",
+					components:{
+						"ChildChildComponent":{
+							name:'scopeComponent',
+							template:"<h4 style='background:yellow'>{{data.str3}}<childChildChild-component/></h4>",
+							components:{
+								"ChildChildChildComponent":{
+									name:'scopeComponent',
+									template:"<h5 style='background:pink'>{{data.str4}}</h5>"
+								}
+							}
+						}
+					}
+				}
+			},
+			methods:{
+				click(item){
+					alert(item)
+				}
+			},
+			data(){
+				return data
+			}
+		}
+		new Vue({
+		  	el: '#example-2',
+		  	components:{
+		  		"ScopeComponent":scopeComponent
+		  	}
+		})
+
+	</script>
+
+</body>
+</html>

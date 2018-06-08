@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>创建元素</title>
+</head>
+<body>
+<p></p>
+	<script type="text/javascript">
+		var oP = document.createElement('p');
+		var oDiv = document.createElement('div');
+		var oTr = document.createElement('tr');
+		var oTd = document.createElement('td');
+		var aP = document.getElementsByTagName('p');
+		var oBody = document.body;
+		oBody.appendChild(oP);
+		aP[1].id = 'text1';
+		aP[0].id = 'text';
+		console.log(aP[0],typeof aP[0]);
+		function changeCss(ele,obj){
+			for(var key in obj){
+				ele.style[key] = obj[key];
+			}
+		}
+		changeCss(aP[0],{
+			width: "100px",
+			height: "200px",
+			backgroundColor: 'red'
+		});
+	</script>
+</body>
+</html>

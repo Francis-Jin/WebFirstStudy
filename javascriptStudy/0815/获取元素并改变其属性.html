@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>获取元素属性并改变其属性性质</title>
+</head>
+<body>
+	<div class="box">
+		
+	</div>
+	<script type="text/javascript">
+		var aDivs = document.getElementsByClassName('box');
+		var oDiv = aDivs[0];
+		// console.log(oDiv);
+// 通常写法
+		/*oDiv.style.width = 500 + 'px';
+		oDiv.style.height = 200 + 'px';
+		oDiv.style.backgroundColor = 'rgb(255,0,0)';*/
+// 稍微改动一下
+		/*function changeCss(propert,value){
+			oDiv.style[propert] = value;
+		}
+		changeCss('width','300px');
+		changeCss('height','300px');
+		changeCss('backgroundColor','blue');*/
+//大大改动
+		/*function changeCss(obj){
+			for(var key in obj){
+				oDiv.style[key] = obj[key];
+			}
+		}
+		changeCss({
+			width:"900px",
+			height:"300px",
+			backgroundColor:"pink"
+		});*/
+// 封装最终版
+		function changeCss(ele,obj){
+			for(var key in obj){
+				ele.style[key] = obj[key];
+			}
+		}
+		changeCss(oDiv,{
+			width:"1226px",
+			height:"300px",
+			margin:"0 auto",
+			backgroundColor:"rgba(0,0,0,.3)"
+		});
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Dom和文档碎片</title>
+	<script type="text/javascript">
+		window.onload=function(){
+			var oTxt=document.getElementById('txt');
+			var oBtn=document.getElementById('btn1');
+			var oUl=document.getElementById('ul1');
+			oBtn.onclick=function(){
+				var oLi=document.createElement('li');
+				var aLi=oUl.getElementsByTagName('li');
+				oLi.innerHTML=oTxt.value;
+				// oUl.insertBefore(oLi,aLi[0]);
+				if(aLi.length==0){
+					oUl.appendChild(oLi);
+				}
+				else{
+					oUl.insertBefore(oLi,aLi[0]);
+				}
+			}
+		}
+	</script>
+</head>
+<body>
+<input type="text" id="txt" name="">
+<input type="button" id="btn1" name="" value="添加Li">
+	<ul id="ul1"></ul>
+</body>
+</html>

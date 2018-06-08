@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>轮播图</title>
+    <script src="../js/jquery-3.2.1.js"></script>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        .banner-box{
+            position: relative;
+            width:960px;
+            height:324px;
+            margin:20px auto;
+            overflow: hidden;
+        }
+        .banner-wrampper{
+            width:4000px;
+            overflow: hidden;
+            list-style: none;
+        }
+        .banner-wrampper .banner-unit{
+            width:960px;
+            height:324px;
+            float: left;
+
+        }
+        .ear{
+            display: inline-block;
+            position: absolute;
+            top:50%;
+            margin-top: -40px;
+            /*filter: blur(20px);*/
+            background: rgba(0,0,0,.4);
+            width:50px;
+            height:80px;
+            z-index:10;
+            text-align: center;
+            line-height: 80px;
+            font-size: 50px;
+            color:#fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .leftear{
+            left:0px;
+        }
+        .rightear{
+            right:0px;
+        }
+
+        .dot-wrampper{
+            position:absolute;
+            bottom: 10px;
+            left:50%;
+            width:100px;
+            height: 10px;
+            margin-left: -50px;
+            font-size: 0;
+        }
+        .dot-wrampper .dot{
+            vertical-align: top;
+            display: inline-block;
+            width:10px;
+            height:10px;
+            margin-right: 15px;
+            background: #c0c0c0;
+            border-radius: 50%;
+
+        }
+        .dot-wrampper .dot.active{
+            background: #DD5862;
+        }
+    </style>
+</head>
+<body>
+<div class="banner-box">
+    <a href="javascript:void(0);" class="ear leftear">&lt;</a>
+    <a href="javascript:void(0);" class="ear rightear">&gt;</a>
+    <ul class="banner-wrampper">
+        <li class="banner-unit">
+            <img src="img/1.jpg" alt="">
+        </li>
+        <li class="banner-unit">
+            <img src="img/2.jpg" alt="">
+        </li>
+        <li class="banner-unit">
+            <img src="img/3.jpg" alt="">
+        </li>
+        <li class="banner-unit">
+            <img src="img/4.jpg" alt="">
+        </li>
+    </ul>
+    <!--<div class="dot-wrampper">
+        <a href="javascript:void(0);" class="dot active"></a>
+        <a href="javascript:void(0);" class="dot"></a>
+        <a href="javascript:void(0);" class="dot"></a>
+        <a href="javascript:void(0);" class="dot"></a>
+    </div>-->
+</div>
+</body>
+</html>
+<script>
+    var $box = $('.banner-box');
+    var $leftear = $('.banner-box .leftear');
+    var $rightear = $('.banner-box .rightear');
+    var $dot = $('.banner-box .dot-wrampper .dot');
+    var $bwp = $('.banner-wrampper');
+    var timer;
+    var _index = 1;
+   /* $dot.click(function (ev) {
+       $(this).addClass('active').siblings().removeClass('active');
+        $bwp.eq(0).animate({'margin-left':-1*960*_index});
+        _index = $(this).index();
+    });*/
+    $rightear.on('click',function (ev) {
+        show();
+    });
+    $leftear.on('click',function (ev) {
+        _index--;
+        if(_index<=0) _index=$bwp.children().length;
+        $dot.eq(_index).addClass('active').siblings().removeClass('active');
+        var $last = $bwp.children('.banner-unit').last();
+        $bwp.prepend($last).css('margin-left','-960px').stop(false,true).animate({'margin-left':0});
+
+    });
+
+    function show() {
+        _index++;
+        if(_index>=$bwp.children().length) _index=0;
+        $dot.eq(_index-1).addClass('active').siblings().removeClass('active');
+        $bwp.stop(true,true).animate({'margin-left':'-960px'},function (ev) {
+            var $first = $bwp.children('.banner-unit').first();
+            $(this).append($first).css('margin-left','0');
+        });
+    }
+    timer = setInterval(show,2000);
+    $box.mouseenter(function () {
+        clearInterval(timer);
+    })
+    $box.mouseleave(function () {
+        timer = setInterval(show,2000);
+    })
+</script>

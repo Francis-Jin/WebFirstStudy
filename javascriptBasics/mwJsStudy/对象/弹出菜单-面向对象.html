@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		#box{
+			width:300px;
+			height: 500px;
+			background: #e0e0e0;
+			display: none;
+		}
+	</style>
+	<script type="text/javascript">
+		window.onload = function()
+		{
+			new Tanchucaidan();
+		}
+
+function Tanchucaidan()
+{	
+	var _this = this;
+	this.oInput = document.getElementsByTagName('input')[0];
+	this.oDiv = document.getElementById('box');
+	this.oInput.addEventListener('click',(e)=>{_this.fnclick1(e);},false);
+	document.addEventListener('click',(e)=>{_this.fnClick2(e);},false);
+};
+
+Tanchucaidan.prototype.fnClick2 = function (e)
+{
+	this.oDiv.style['display'] = 'none';
+};
+
+Tanchucaidan.prototype.fnclick1 = function (e)
+{
+	var oEvent = e || event;
+	this.oDiv.style['display'] = 'block';
+	oEvent.cancelBubble = true;
+};
+
+	</script>
+</head>
+<body>
+	<input type="button" value="显示" name="">
+	<div id="box"></div>
+</body>
+</html>

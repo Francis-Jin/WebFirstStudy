@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>解决jQuery和其他库的冲突</title>
+	<!-- 
+	jquery库在其他库之后引入，在其他库和jQuery库都加载完后，可以在任何时候调用jQuery.noConflict()函数
+	来将变量$的控制权移交给其他javaScript库
+	 -->
+	<!-- 引入prototype -->
+	<script type="text/javascript" src = "../jqueryLibrary/prototype-1.7.3.js"></script>
+	<!-- 引入jQuery -->
+	<script type="text/javascript" src="../jqueryLibrary/jquery-3.2.1.js"></script>
+</head>
+<body>
+	<p id="pp">test-----ptototype</p>
+	<script type="text/javascript">
+	//方法一
+		/*jQuery.noConflict(); //将变量$的控制权移交个prototype.js
+		jQuery(function(){
+			jQuery("p").click(function(){
+				alert(jQuery(this).text());
+			});
+		});
+		$("pp").style.display='none';//使用prototype*/
+	//方法二
+		/*var $j=jQuery.noConflict();		//自定义一个快捷方式
+		$j(function(){					//使用jQuery，利用自定义快捷方式---$j
+			$j("p").click(function(){
+				alert($j(this).text());
+			})
+		});
+		$("pp").style.display = 'none';*/
+	//方法三
+		/*jQuery.noConflict();
+		jQuery(function($){
+			$("p").click(function(){
+				alert($(this).text());
+			});
+		});
+		$("pp").style.display = 'none';*/
+	//方法四
+		jQuery.noConflict();				//将变量$的控制权让渡给prototype.js
+		(function($){						//定义匿名函数并设置形参为$
+			$(function(){					//匿名函数内部的$均为jQuery
+				$("p").click(function(){	//继续使用$()方法
+					alert($(this).text());
+				});
+			});
+		})(jQuery);							//执行匿名函数且传递实参jQuery
+		$("pp").style.display = 'none';
+
+	</script>
+</body>
+</html>

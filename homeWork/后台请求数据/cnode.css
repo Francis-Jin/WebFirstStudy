@@ -1,0 +1,49 @@
+*{
+    margin:0;
+    padding:0;
+}
+#box{
+    width:1000px;
+    margin: 0 auto;
+}
+#box li{
+    list-style: none;
+    height: 70px;
+    line-height: 70px;
+    text-align: center;
+    font-size: 22px;
+    color:#333;
+}
+#box li:nth-child(2n){
+    color: #F5F5F5;
+    background: darkslategray;
+}
+#fenye{
+    width:1000px;
+    margin: 30px auto;
+    text-align: center;
+}
+#fenye span,#fenye a{
+    padding: 8px 14px;
+    font-size: 16px;
+    color: #1e1e1e;
+    background:#eee;
+    margin-right: 8px;
+    cursor:pointer;
+}
+#fenye a:hover{
+    background:peru;
+    color:#fff;
+}
+#fenye a.active{
+    background: peru !important;
+    color:#fff !important;
+}
+#more:hover{
+    padding: 8px 14px;
+    font-size: 16px;
+    color: #1e1e1e !important;
+    background:#eee !important;
+    margin-right: 8px;
+    cursor:not-allowed;
+}

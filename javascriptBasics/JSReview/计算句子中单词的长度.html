@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		function isString(str)
+		{
+			if(typeof str === "string")
+			{
+				return true;
+			}
+			else
+			{
+				return "只支持字符串";
+			};
+		}
+		var str = "hello php is very good";
+		/*console.log(isString(str));*/
+		function getMax(str)
+		{
+			var strArr = str.split(" ");
+			var maxLen = 0;
+			var maxIndex = 0;
+			strArr.forEach(function(e,i){
+				if(maxLen < e.length)
+				{
+					maxLen = e.length;
+					maxIndex = i;
+				}
+				console.log(maxLen,maxIndex,strArr[maxIndex]) ;
+			})
+
+		}
+		getMax(str);
+
+	</script>
+</body>
+</html>

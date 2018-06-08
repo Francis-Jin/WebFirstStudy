@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>cnode请求2</title>
+    <script type="text/javascript" src="./king-AJAX.js"></script>
+    <link rel="stylesheet" href="./cnode.css">
+</head>
+<body>
+<div id="box"></div>
+<div id="fenye">
+    <span id="firstPage">首页</span>
+    <span id="prev">上一页</span>
+    <a class="active" href="javascript:void (0);">1</a>
+    <a href="javascript:void (0);">2</a>
+    <a href="javascript:void (0);">3</a>
+    <a href="javascript:void (0);">4</a>
+    <a href="javascript:void (0);">5</a>
+    <a href="javascript:void (0);">6</a>
+    <a href="javascript:void (0);">7</a>
+    <a href="javascript:void (0);">8</a>
+    <a href="javascript:void (0);">9</a>
+    <span id="more">...</span>
+    <span id="next">下一页</span>
+    <span id="lastPage">尾页</span>
+</div>
+</body>
+</html>
+
+
+<script>
+    var index=0;
+    function ajax() {
+        json.ajax({
+            method: "GeT",
+            url: "https://cnodejs.org/api/v1/topics",
+            data:{
+                page:index+1,
+                Number:50
+            },
+            async: true,
+            success:function (res) {
+                painData(res);
+            },
+            error:function () {
+
+            }
+        });
+    }
+    ajax();
+    var boxDom = document.getElementById('box');
+    var fenyeDom = document.getElementById('fenye');
+    var fylinks = fenyeDom.getElementsByTagName('a');
+    var firstPage = document.getElementById('firstPage');
+    var lastPage = document.getElementById('lastPage');
+    var prevPage = document.getElementById('prev');
+    var nextPage = document.getElementById('next');
+    var fys = Array.prototype.slice.call(fylinks);
+    fys.forEach(function (item,i) {
+        item.addEventListener('click',function () {
+            fys.forEach(function (e) {
+                e.className = '';
+            })
+            item.className = 'active';
+            ajax();
+            index = i;
+        },false);
+    });
+    firstPage.addEventListener('click',function () {
+        index = 0;
+        fys.forEach(function (e) {
+            e.className = '';
+        })
+        fys[0].className = 'active';
+        ajax();
+    },false);
+    lastPage.addEventListener('click',function () {
+        index = fys.length-1;
+        fys.forEach(function (e) {
+            e.className = '';
+        })
+        fys[fys.length-1].className = 'active';
+        ajax();
+    },false);
+    prevPage.addEventListener('click',function () {
+        index--;
+        if(index <= 0)
+        {
+            index = 0;
+            prevPage.style.cursor = 'not-allowed';
+            nextPage.style.cursor = 'pointer';
+        }
+        else
+        {
+            prevPage.style.cursor = 'pointer';
+            nextPage.style.cursor = 'pointer';
+        }
+        fys.forEach(function (e) {
+            e.className = '';
+        })
+        fys[index].className = 'active';
+        ajax();
+    })
+    nextPage.addEventListener('click',function () {
+        index++;
+        if(index >= fys.length-1)
+        {
+            index = fys.length-1;
+            nextPage.style.cursor = 'not-allowed';
+            prevPage.style.cursor = 'pointer';
+        }
+        else {
+            nextPage.style.cursor = 'pointer';
+            prevPage.style.cursor = 'pointer';
+        }
+
+        fys.forEach(function (e) {
+            e.className = '';
+        })
+        fys[index].className = 'active';
+        ajax();
+    })
+    function painData(res) {
+        var Data = JSON.parse(res);
+        var oData = Data.data
+        var html = '';
+        oData.forEach(function (e, i, res) {
+            html += `<li>${e.title}</li>`;
+        })
+        boxDom.innerHTML = html;
+    }
+</script>

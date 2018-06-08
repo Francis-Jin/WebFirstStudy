@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <audio src="music/1.mp3" controls id="audio"></audio>
+    <button id="play">播放</button>
+    <button id="pause">暂停</button>
+    <button id="novol">静音</button>
+<!--第三方林开-->
+    <script type="text/javascript">
+        (function (window) {
+            var audioDom = document.getElementById('audio');
+            var pauseDom = document.getElementById('pause');
+            var playDom = document.getElementById('play');
+            var novolDom = document.getElementById('novol');
+            playDom.addEventListener('click',function (ev) {
+                audioDom.play();
+            },false);
+            pauseDom.addEventListener('click',function (ev) {
+                audioDom.pause();
+            },false);
+            var isNovol=false;
+            novolDom.addEventListener('click',function (ev) {
+                if(isNovol)
+                {
+                    audioDom.volume=1;
+                    isNovol=false;
+                    this.innerHTML='静音';
+                }else
+                {
+                    audioDom.volume=0;
+                    isNovol=true;
+                    this.innerHTML='恢复';
+                }
+            },false);
+        })(window);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<input type="button" name="" id="btn" value="添加">
+	<ul id="ul1">
+		<li>001</li>
+		<li>002</li>
+		<li>003</li>
+		<li>004</li>
+	</ul>
+	<script type="text/javascript">
+	//一般写法
+		/*var oBtn = document.getElementById("btn");
+        var oUl = document.getElementById("ul1");
+        var aLi = oUl.getElementsByTagName('li');
+        var num = 4;
+        
+        function mHover () {
+            //鼠标移入变红，移出变白
+            for(var i=0; i<aLi.length;i++){
+                aLi[i].onmouseover = function(){
+                    this.style.background = 'red';
+                };
+                aLi[i].onmouseout = function(){
+                    this.style.background = '#fff';
+                }
+            }
+        }
+        mHover ();
+        //添加新节点
+        oBtn.onclick = function(){
+            num++;
+            var oLi = document.createElement('li');
+            oLi.innerHTML = 111*num;
+            oUl.appendChild(oLi);
+            mHover ();
+        };*/
+
+
+
+
+//委托写法
+		var oBtn = document.getElementById('btn');
+		var oUl = document.getElementById('ul1');
+		var aLi = oUl.getElementsByTagName('li');
+		var num = 4;
+		function fn(ev){
+			var oEvent = ev || window.event;
+			var target = oEvent.target || oEvent.srcElement;
+			if(target.nodeName.toLowerCase() === 'li'){
+				target.style.background = "#fff";
+			}
+		}
+		oUl.addEventListener('mouseover',function(ev){
+			var oEvent = ev || window.event;
+			var target = oEvent.target || oEvent.srcElement;
+			if(target.nodeName.toLowerCase() === 'li'){
+				target.style.background = '#00f';
+			}
+		},false);
+		oUl.addEventListener('mouseout',fn,false);
+		oBtn.addEventListener('click',function(ev){
+			var oEvent = ev || window.event;
+			var target = oEvent.target || oEvent.srcElement;
+			num++;
+			var oLi = document.createElement('li');
+			oLi.innerHTML = 1111*num;
+			oUl.appendChild(oLi);
+		},false);
+	</script>
+</body>
+</html>

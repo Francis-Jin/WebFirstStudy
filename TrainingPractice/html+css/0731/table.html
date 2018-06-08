@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>表格</title>
+	<style type="text/css">
+		/**{
+			margin:0;
+			padding:0;
+		}*/
+		table{
+			border-collapse: collapse;
+			width: 100%;
+			text-align: center;
+		}
+		th{
+			background-color: #424242;
+			color: #fff;
+		}
+	</style>
+</head>
+<body>
+	<table border="1" id="table">
+	<caption>学生表</caption>
+		<thead>
+			<tr>
+				<th>学 号</th>
+				<th>姓 名</th>
+				<th>分 数</th>
+				<th>学 分</th>
+			</tr>			
+		<tbody>
+			<tr>
+				<td>1001</td>
+				<td>张三</td>
+				<td>80</td>
+				<td>3</td>
+			</tr>
+			<tr>
+				<td>1001</td>
+				<td>张三</td>
+				<td>80</td>
+				<td>3</td>
+			</tr>
+			<tr>
+				<td>1001</td>
+				<td>张三</td>
+				<td>80</td>
+				<td>3</td>
+			</tr>
+			<tr>
+				<td>1001</td>
+				<td>张三</td>
+				<td>80</td>
+				<td>3</td>
+			</tr>
+			<tr>
+				<td>1001</td>
+				<td>张三</td>
+				<td>80</td>
+				<td>3</td>
+			</tr>
+			<tr>
+				<td>1001</td>
+				<td>张三</td>
+				<td>80</td>
+				<td>3</td>
+			</tr>
+			<tr>
+				<td>1001</td>
+				<td>张三</td>
+				<td>80</td>
+				<td>3</td>
+			</tr>
+		</tbody>
+		<tfoot>
+			<tr>
+				<td>合计总分：</td>
+				<td colspan="3"></td>
+			</tr>
+		</tfoot>
+	</table>
+	<ul id="ul">
+		<li id="li"></li>
+		<li id="li"></li>
+		<li id="li"></li>
+	</ul>
+	<audio src="" alt="" id="img"></audio>
+	<script type="text/javascript">
+		var table=document.getElementById('table');
+		var ul=document.getElementById('ul');
+		var li=document.getElementById('li');
+		var Img=document.getElementById('img');
+		var tableDom=window.getComputedStyle(table).display;
+		var ulDom=window.getComputedStyle(ul).display;
+		var liDom=window.getComputedStyle(li).display;
+		var imgDom=window.getComputedStyle(Img).display;
+		console.log(tableDom);
+		console.log(ulDom);
+		console.log(liDom);
+		console.log(imgDom);
+	</script>
+</body>
+</html>

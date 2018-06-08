@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="../jqueryLibrary/jquery-3.2.1.js"></script>
+	<style type="text/css">
+		*{
+			margin:0;
+			padding: 0;
+		}
+		a{
+			text-decoration: none;
+			color:#000;
+		}
+		.SubCategoryBox{
+			width: 600px;
+			background: #d0d0d0;
+			margin: 10px auto;
+		}
+		ul{
+			overflow: hidden;
+		}
+		ul li{
+			list-style: none;
+			float: left;
+			width:200px;
+			height: 30px;
+			line-height: 30px;
+		}
+		.promoted{
+			font-size: 20px;
+			color: red;
+			background: rgba(0,0,0,.5);
+		}
+		.showmore{
+			clear:fixed;
+			padding-bottom: 20px;
+			text-align: center;
+		}
+		.showmore a{
+			display: inline-block;
+			height: 30px;
+			width: 220px;
+			background: #f5f5f5;
+		}
+	</style>
+</head>
+<body>
+	<div class="SubCategoryBox">
+		<ul>
+			<li><a href="javascript:;">佳能</a><i>(30440)</i></li>
+			<li><a href="javascript:;">索尼</a><i>(231)</i></li>
+			<li><a href="javascript:;">三星</a><i>(321)</i></li>
+			<li><a href="javascript:;">尼康</a><i>(43321)</i></li>
+			<li><a href="javascript:;">松下</a><i>(867)</i></li>
+			<li><a href="javascript:;">卡西欧</a><i>(35432)</i></li>
+			<li><a href="javascript:;">富士</a><i>(879)</i></li>
+			<li><a href="javascript:;">柯达</a><i>(43524)</i></li>
+			<li><a href="javascript:;">宾得</a><i>(5243)</i></li>
+			<li><a href="javascript:;">理光</a><i>(5234)</i></li>
+			<li><a href="javascript:;">奥林巴斯</a><i>(54235)</i></li>
+			<li><a href="javascript:;">明基</a><i>(4352)</i></li>
+			<li><a href="javascript:;">爱国者</a><i>(453)</i></li>
+			<li><a href="javascript:;">其他品牌相机</a></li>
+		</ul>
+		<div class="showmore">
+			<a href="javascript:;"><span>显示全部品牌</span></a>
+		</div>
+	</div>
+	<script type="text/javascript">
+		//从第七条开始隐藏后面的元素
+		//ul li:gt(5):not(:last)表示获取ul下面索引值大于5的li的集合，不包括最后一个元素
+		var $category = $("ul li:gt(5):not(:last)");
+		$category.hide();//将其隐藏；
+		var $toggleBtn = $("div.showmore > a");
+		$("ul li").filter(":contains('佳能'),:contains('尼康'),:contains('奥林巴斯')")
+				.addClass("promoted");
+//方法一
+			/*$toggleBtn.click(function(){
+			if($category.is(":visible")){//判断是否为显示
+			//显示全部的函数
+			$category.hide();
+			$(".showmore a span").text("显示全部品牌");
+			$("ul li").filter(":contains('佳能'),:contains('尼康'),:contains('奥林巴斯')")
+				.addClass("promoted");
+			}else{
+				$category.show();
+				$(".showmore a span").text("精简显示");
+				$("ul li").filter(":contains('佳能'),:contains('尼康'),:contains('奥林巴斯')")
+				.addClass("promoted");
+			}
+			return false;//阻止a的默认行为
+		});
+		*/
+//方法二 toggle()方法
+	$toggleBtn.toggle(function(){
+		$category.show();
+		$(".showmore a span").text("精简显示");
+		$("ul li").filter(":contains('佳能'),:contains('尼康'),:contains('奥林巴斯')")
+		.addClass("promoted");
+	},function(){
+		$category.hide();
+		$(".showmore a span").text("显示全部品牌");
+		// $("ul li").filter(":contains('佳能'),:contains('尼康'),:contains('奥林巴斯')")
+		// 	.addClass("promoted");
+	});
+
+	</script>
+</body>
+</html>

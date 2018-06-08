@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>鼠标移入提示框</title>
+	<style type="text/css">
+		#box1{
+			width: 300px;
+			height: 50px;
+			background: #e0e0e0;
+		}
+		#box2{
+			margin-top: 20px;
+			display: none;
+			width: 300px;
+			height: 500px;
+			background: red;
+		}
+
+	</style>
+</head>
+<body>
+	<div id="box1"></div>
+	<div id="box2"></div>
+	<script type="text/javascript">
+	/*setTimeout 延时器*/
+		var oDiv1=document.getElementById('box1');
+		var oDiv2=document.getElementById("box2");
+		var timer=null;
+		function hide(){
+			timer=setTimeout(function(){
+				oDiv2.style.display = "none";
+			},200);
+		};
+		function show(){
+			oDiv2.style.display = "block";
+			clearTimeout(timer);
+		};
+		oDiv1.onmouseover = show;
+		oDiv2.onmouseover = show;
+		oDiv1.onmouseout = hide;
+		oDiv2.onmouseout = hide;
+	</script>
+</body>
+</html>

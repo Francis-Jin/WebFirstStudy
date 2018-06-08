@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src = "../jqueryLibrary/jquery-3.2.1.js"></script>
+	<style type="text/css">
+		div,span,p{
+			width: 220px;
+			height: 220px;
+			margin: 5px;
+			background: #aaa;
+			border: #000 1px solid;
+			float: left;
+			font-size: 17px;
+			font-family: Verdana;
+		}
+		div.mini{
+			width: 80px;
+			height: 80px;
+			background-color: #aaa;
+			font-size: 12px;
+		}
+		div.hide{
+			display: none;
+		}
+	</style>
+</head>
+<body>
+	<div class="one" id="one">
+		id为one，class为one的div
+		<div class="mini">class为mini</div>
+	</div>
+	<div class="one" id="two" title="test">
+		id为two，class为one,title为test的div
+		<div class="mini" title="other">class为mini title为other</div>
+		<div class="mini" title="test">class为mini，title为test</div>
+	</div>
+	<div class="one">
+		<div class="mini">class为mini</div>
+		<div class="mini">class为mini</div>
+		<div class="mini">class为mini</div>
+		<div class="mini"></div>
+	</div>
+	<div class="one">
+		<div class="mini">class为mini</div>
+		<div class="mini">class为mini</div>
+		<div class="mini">class为mini</div>
+		<div class="mini" title="tesst">class为mini，title为tesst</div>
+	</div>
+	<div style="display: none;">style的display为"none"的div</div>
+	<div class="hide">class为hide的div</div>
+	<div>
+		包含input的type为hidden的div <input type="hidden" size="8" name="">
+	</div>
+	<span id="nover">正在执行动画的span元素</span>
+	<h1>helloworld</h1>
+	<h3>你好世界</h3>
+	<script type="text/javascript">
+		/*$("#one").css("background-color","#bfa");
+		$(".mini").css("background-color","#bfa");
+		$("div").css("background-color","red");
+		$("*").css("background","green");*/
+		// $("span,#two").css("background","yellow");
+		// $("body div").css("background","red");
+		// $("body>div").css("background","green");
+		// $(".one+div").css("background","yellow");
+		// $("#two ~ div").css("background","pink");
+		// $("#two").nextAll("div").css("background","blue");
+		// 基本过滤选择器
+		// $("div:first").css("background","red");
+		// $("div:last").css("background","blue");
+		// $('div:not(.one)').css("background"."pink");
+		// $(":header").css("color","red");
+		// $("div:even").css("background","blue");
+		// $("div:odd").css("background","pink");
+		//索引值为3的元素
+		// $("div:eq(3)").css("background","blue");
+		// 索引值大于3的元素
+		// $("div:gt(8)").css("background","red");
+		// 索引值小于3的元素
+		// $("div:lt(3)").css("background","pink");
+		// 改变正在执行动画的元素
+		// $(":animated").css("background","yellow");
+		// 内容过滤选择器
+		// $("div:contains(di)").css("background","blue");
+		//可见性过滤选择器
+		// $("div:visible").css("background","yellow");
+		// $("div:hidden").show(2000).css("background","red");
+		// 属性过滤选择器
+		// $("div[title]").css("background","yellow");
+		// $("div[title=other]").css("background","yellow");
+	</script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<title>无标题文档</title>
+	<style>
+		#div1 input {
+			background: #CCC
+		}
+		#div1 .active {
+			background: yellow
+		}
+		#div1 div {
+			width: 200px;
+			height: 200px;
+			background: #CCC;
+			display: none
+		}
+	</style>
+<script>
+//改写的前提
+//1:所有东西都在onload里
+// 2：不能有函数嵌套，可以有全局变量；
+window.onload=function () {
+	var tab = new TabSwitch('div1');
+}
+
+function TabSwitch (id)
+{
+	var oDiv=document.getElementById(id);
+	this.aBtn=oDiv.getElementsByTagName('input');
+	this.aDiv=oDiv.getElementsByTagName('div');
+	var _this=this;
+	for(var i=0;i<this.aBtn.length;i++)
+	{
+		this.aBtn[i].index=i;
+		this.aBtn[i].onclick=function () {
+			_this.tab(this);
+		};
+	}
+};
+
+TabSwitch.prototype.tab = function (oBtn)
+{
+	for(i=0;i<this.aBtn.length;i++)
+	{
+		this.aBtn[i].className='';
+		this.aDiv[i].style.display='none';
+	}
+	oBtn.className='active';
+	this.aDiv[oBtn.index].style.display='block';
+};
+</script>
+</head>
+
+<body>
+<div id="div1">
+	<input class="active" type="button" value="教育" />
+	<input type="button" value="财经" />
+	<input type="button" value="aaa" />
+	<div style="display:block;">1asdfasdfds</div>
+	<div>2xzcvxzcv</div>
+	<div>5332342345</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Vue-css-transition</title>
+	<script type="text/javascript" src="../1.vue_start_1/node_modules/vue/dist/vue.min.js"></script>
+</head>
+<body>
+<style type="text/css">
+	.side-fade-enter-active{
+		transition: all .3s ease-in;
+	}
+	.side-fade-leave-active{
+		transition: all .8s cubic-bezier(1.0,0.5,0.8,1.0);
+	}
+	.side-fade-enter,.side-fade-leave-to{
+		transform: translateY(-30px);
+		opacity: 0;
+	}
+</style>
+	<div id="example-1">
+		<button @click.prevent.stop="show = !show">Toggle render</button>
+		<transition name="side-fade">
+			<p v-if="show">Hello Css transition</p>
+		</transition>
+	</div>
+
+	<script type="text/javascript">
+		
+		new Vue({
+			el:'#example-1',
+			data:{
+				show:true
+			}
+		});
+
+	</script>
+</body>
+</html>

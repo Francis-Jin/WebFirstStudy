@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="../jqueryLibrary/jquery-3.2.1.js"></script>
+</head>
+<body>
+	<form id="form1" action="javascript:;">
+		<input type="button" value="button"><br>
+		<input type="checkbox" name="c">1
+		<input type="checkbox" name="c">2
+		<input type="checkbox" name="c">3<br>
+		<input type="file"><br>
+		<input type="hidden"><div style="display: none;">test</div><br>
+		<input type="image"><br>
+		<input type="password"><br>
+		<input type="radio" name="a">1
+		<input type="radio" name="a">2<br>
+		<input type="reset"><br>
+		<input type="submit" value="提交"><br>
+		<input type="text"><br>
+		<select><option>Option</option></select><br>
+		<textarea rows="10" cols="20"></textarea><br>
+		<button>Button</button><br>
+	</form>
+	<script type="text/javascript">
+		var $input = $("#form1 :input").length;
+		console.log($input);
+		var $text = $("#form1 :text").length;
+		console.log($text);
+		var $password = $("#form1 :password").length;
+		console.log($password);
+	</script>
+</body>
+</html>

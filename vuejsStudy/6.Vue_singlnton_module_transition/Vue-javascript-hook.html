@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Vue-javascript-hook</title>
+	<script type="text/javascript" src="../1.vue_start_1/node_modules/vue/dist/vue.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.3/velocity.min.js"></script>
+</head>
+<body>
+<!-- javascript钩子 -->
+	<!-- <div class="example-4">
+		<button>Toggle</button>
+		使用 JavaScript 过渡的元素添加 v-bind:css="false"，Vue 会跳过 CSS 的检测。这也可以避免过渡过程中 CSS 的影响。
+		<transition
+			@beforeEnter="beforeEnter"
+			@enter="enter"
+			@afterEnter='afterEnter'
+			@enterCancelled="enterCancelled"
+			@beforeLeave="beforeLeave"
+			@leave="leave"
+			@afterLeave="afterLeave"
+			@leaveCancelled="leaveCancelled"
+			:css="false"
+		>
+			
+			<p v-if="show">Vue-javascript-hook</p>
+		</transition>
+	</div> -->
+	<div id="example-4">
+	  <button @click="show = !show">
+	    Toggle
+	  </button>
+	  <transition
+	    @before-enter="beforeEnter"
+	    @enter="enter"
+	    @leave="leave"
+	    :css="false"
+	  >
+	    <p v-if="show">
+	      Demo
+	    </p>
+	  </transition>
+
+	<script type="text/javascript">
+		new Vue({
+			el:"#example-4",
+			data:{
+				show:false
+			},
+			methods:{
+				/* 当只用 JavaScript 过渡的时候， 在 enter 和 leave 中，回调函数 done 是必须的 。否则，它们会被同步调用，过渡会立即完成。*/
+				beforeEnter(el){
+					el.style.opacity = 0;
+					el.style.transformOrigin = 'left';
+				},
+				enter (el,done){
+					Velocity(el, { opacity: 1, fontSize: '1.4em' }, { duration: 300 })
+				    Velocity(el, { fontSize: '1em' }, { complete: done })
+					done();
+				},
+				afterEnter(el){},
+				enterCancelled(el){},
+				beforeLeave(el){},
+				leave(el,done){
+					Velocity(el, { 
+						translateX: '15px', 
+						rotateZ: '50deg' 
+					}, 
+					{ 
+						duration: 600 
+					})
+				    Velocity(el, { 
+				    	rotateZ: '100deg' 
+				    }, 
+				    { 
+				    	loop: 2 
+				    })
+				    Velocity(el, {
+				      rotateZ: '45deg',
+				      translateY: '30px',
+				      translateX: '30px',
+				      opacity: 0
+				    }, 
+				    { 
+				    	complete: done 
+				    })
+				},
+				afterLeave(el){},
+				leaveCancelled(){}
+			}
+		});
+	</script>
+</body>
+</html>

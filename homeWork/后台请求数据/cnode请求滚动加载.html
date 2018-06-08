@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>cnode请求2</title>
+    <script type="text/javascript" src="./king-AJAX.js"></script>
+    <link rel="stylesheet" href="./cnode.css">
+</head>
+<body>
+<ul id="box"></ul>
+</body>
+</html>
+
+
+<script>
+    var index;
+    ajax();
+    var boxDom = document.getElementById('box');
+    document.addEventListener('scroll',function whell(ev)
+    {
+        var _this = this;
+        var boxDomTop = boxDom.offsetHeight+boxDom.offsetTop;
+        var scrollTop = document.body.scrollTop+window.innerHeight;
+        console.log(boxDomTop,scrollTop);
+        if(boxDomTop <= scrollTop+100)
+        {
+            index++;
+            _this.removeEventListener('scroll',whell,false);
+            var ulDom = boxDom.cloneNode(true);
+            document.body.appendChild(ulDom)
+            var pDom = document.createElement('p');
+            pDom.textContent = '加载更多...';
+            document.body.appendChild(pDom);
+
+            setTimeout(function () {
+                ajax();
+                var newDom = document.createElement('ul');
+                for(var i = 0; i<=40;i++)
+                {
+                    var li = document.createElement('li');
+                    newDom.appendChild(li);
+                }
+                newDom.innerHTML = painData;
+                document.body.appendChild(newDom);
+                _this.addEventListener('scroll',whell,false);
+                boxDomTop = boxDom.offsetHeight+boxDom.offsetTop;
+            }, 2000);
+        }
+
+
+    },false);
+    function ajax() {
+        json.ajax({
+            method: "GeT",
+            url: "https://cnodejs.org/api/v1/topics",
+            data:{
+                page:index+1,
+                Number:50
+            },
+            async: true,
+            success:function (res) {
+                painData(res);
+            },
+            error:function () {
+
+            }
+        });
+    }
+    function painData(res) {
+        var Data = JSON.parse(res);
+        var oData = Data.data
+        var html = '';
+        oData.forEach(function (e, i, res) {
+            html += `<li>${e.title}</li>`;
+        })
+        boxDom.innerHTML = html;
+    }
+</script>

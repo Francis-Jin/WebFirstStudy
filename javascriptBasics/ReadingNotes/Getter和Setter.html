@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var getValue,setValue;
+		(function (){
+			var secret = 0;
+			getValue = function () {
+				return secret;
+			};
+			setValue = function (v) {
+				secret = v;
+			};
+		})();
+		console.log(getValue());
+		console.log(setValue(123));
+		console.log(getValue());
+	</script>
+</body>
+</html>

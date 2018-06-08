@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<canvas id="canvas" width="1000" height="1000"></canvas>
+
+	<script type="text/javascript">
+		var canvasDom = document.getElementById('canvas');
+
+		var context = canvasDom.getContext('2d');
+
+		var grd = context.createLinearGradient(0,0,175,50);
+
+		context.beginPath();
+
+		grd.addColorStop(.5,'red');
+		grd.addColorStop(1,'green');
+		context.fillStyle = grd;
+		context.fillRect(0,60,300,200);
+
+
+		context();
+	</script>
+</body>
+</html>

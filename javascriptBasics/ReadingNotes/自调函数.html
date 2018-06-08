@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>自调函数</title>
+</head>
+<body>
+	<script type="text/javascript">
+	// 自调函数（即调函数）用法：(这里放函数方法)();
+		/*(function () {
+			console.log("helloWorld!");
+		})();*/
+		(function (name){
+			console.log("我的名字叫"+name+"!");
+		})("json");
+	</script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>DOM0,DOM2级事件</title>
+</head>
+<body>
+	<button onclick="alert('行内0级事件')">点击</button>
+	<script type="text/javascript">
+		/*
+			DOM0级事件:on+事件类型
+				1.1、在html行内直接绑定，
+				1.2、在js中绑定
+				A.DOM0级事件和DOM0级事件相互之间会覆盖，比如以下代码执行后弹出jsDOM0级，
+				js中绑定的事件 
+			    覆盖了行内绑定的事件；
+			DOM2级事件：addEventListener(events,handler,boolean),
+						removeEventListener(events,handler),
+		*/
+		(function(){
+		    /*1.2*/
+		    var btn = document.getElementsByTagName('button')[0];
+		    /* 2.1 */
+		    btn.addEventListener('click',dom2);
+		    btn.addEventListener('click',dom2Plus);
+		    btn.onclick = function(){
+		      console.log('jsDOM0级');
+		    }
+		    function dom2(){
+		      console.log('DOM2级事件');
+		    }
+		    function dom2Plus(){
+		      console.log('DOM2级事件Plus');
+		    }
+		    /* 输出结果：
+		    DOM2级事件
+		    DOM2级事件Plus
+		    jsDOM0级
+		    */
+
+		    /* 以下代码解绑了DOM0和DOM2事件*/
+		    /* 3.1*/
+		    btn.onclick = null;
+		    /* 3.2 */
+		    btn.removeEventListener('click',dom2);
+
+		    /* 输出：
+		    DOM2级事件Plus
+		    */
+		  })();
+	</script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<ul id="ul1">
+		<li>
+			<p>11111</p>
+		</li>
+		<li>
+			<div>2222222222222</div>
+		</li>
+		<li>
+			<span>33333333333333</span>
+		</li>
+		<li>444444444</li>
+	</ul>
+	<script type="text/javascript">
+		var oUl = document.getElementById('ul1');
+		oUl.addEventListener('click',function(ev){
+			var oEvent = ev || window.event;
+			var target = oEvent.target || oEvent.srcElement;
+			while(target !== oUl){
+				if(target.nodeName.toLowerCase() === 'li'){
+					alert("主人需要我做什么呢？");
+					break;
+				}
+				target = target.parentNode;
+			}
+		},false);
+	</script>
+</body>
+</html>

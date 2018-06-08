@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>热门评论</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var inputDom = document.createElement('input');
+		var buttonDom = document.createElement('button');
+		var ulDom = document.createElement('ul');
+		var btnTextDom =document.createTextNode('添加评论');
+		var oBody = document.body;
+		ulDom.id = 'ul';
+		oBody.appendChild(inputDom);
+		oBody.appendChild(buttonDom);
+		oBody.appendChild(ulDom);
+		buttonDom.appendChild(btnTextDom);
+		inputDom.type = 'text';
+		buttonDom.onclick = createEle;
+		inputDom.placeholder = '请输入你的评论';
+
+/*		appChild({
+			oBody: 'inputDom',
+			oBody: 'buttonDom', 
+			oBody: 'ulDom',
+			buttonDom: 'btnTextDom'
+		})
+		function appChild(obj){
+			for(var key in obj){
+				key.appendChild(obj[key]);
+			}
+		}*/
+		function createEle(){
+			var oUl = document.getElementById('ul');
+			var liDom = document.createElement('li');
+			var aLis = oUl.getElementsByTagName('li');
+			liDom.innerHTML = (inputDom.value);
+			aLis.length == 0 ? oUl.appendChild(liDom) : oUl.insertBefore(liDom,aLis[0]);
+			var i = 0;
+			changeBgColor(aLis[i]);
+			i++;
+			inputDom.value = '';
+		}
+		function changeBgColor(ele){
+			var r,g,b;
+			r = Math.round(Math.random()*255);
+			g = Math.round(Math.random()*255);
+			b = Math.round(Math.random()*255);
+			chengCss(ele,{
+				height : '70px',
+				marginTop : '20px',
+				color : '#fff',
+				lineHeight : '70px',
+				textAlign : 'center',
+				fontSize : '36px',
+				textShadow : '5px 5px 10px rgba(0,0,0,.9)',
+				backgroundColor : 'rgba(' + r + ',' + g + ',' + b + ',' + .5 + ')'
+
+			});
+			/*ele.style.height = '70px';
+			ele.style.marginTop = '20px';
+			ele.style.color = '#fff';
+			ele.style.lineHeight = '70px';
+			ele.style.textAlign ='center';
+			ele.style.fontSize = '36px';
+			ele.style.textShadow = '5px 5px 10px rgba(0,0,0,.9)';
+			ele.style.backgroundColor = 'rgb(' + r + ',' + g + ',' + b + ')';*/
+		}
+		function chengCss(ele,obj){
+			for(var key in obj){
+				ele.style[key] = obj[key];
+			}
+		}
+	</script>
+</body>
+</html>

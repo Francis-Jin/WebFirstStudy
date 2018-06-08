@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript">
+		/*var obj=new Object();
+		obj.aaa = 12;
+		obj.show = function(){
+			console.log(this.aaa);
+		}*/
+
+		/*var obj=new Object();
+		obj.name = 'json';
+		obj.sex = '男';
+		obj.showName = function(){
+			console.log(this.name);
+		}
+		obj.showSex = function(){
+			console.log(this.sex);
+		}
+		var obj1=new Object();
+		obj1.name = 'walker';
+		obj1.sex = '女';
+		obj1.showName = function(){
+			console.log(this.name);
+		}
+		obj1.showSex = function(){
+			console.log(this.sex);
+		}
+		obj.showName();
+		obj.showSex();
+		obj1.showName();
+		obj1.showSex();*/
+
+		//工厂方式
+		/*
+		*不好的问题：
+		* 1.没有New;
+		* 2.每个对象都有自己的函数，及其浪费资源
+		*
+		*/
+		function createPerson(name,sex){
+			//1.创建，原料
+			var obj=new Object();
+			//2.加工
+			obj.name=name;
+			obj.sex = sex;
+			obj.showName = function () {
+				console.log(this.name);
+			};
+			obj.showSex = function () {
+				console.log(this.sex);
+			};
+			//3.出厂
+			return obj;
+		};
+		var p1 = createPerson('json','1');
+		var p2 = createPerson('walker','0');
+		p1.showName();
+		p1.showSex();
+		p2.showName();
+		p2.showSex();
+	</script>
+</head>
+<body>
+	
+</body>
+</html>
